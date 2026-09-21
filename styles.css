@@ -299,3 +299,30 @@ p {
 }
 
 footer { padding: 30px; font-size: 0.8rem; color: #557293; }
+// Función para obtener y actualizar el contador de visitas real
+async function actualizarContadorVisitas() {
+  // NOTA: Reemplaza 'tu-dominio-tender-parakeet.com' por la URL real de tu GitHub Pages o hosting
+  const namespace = "tu-dominio-tender-parakeet.com"; 
+  const key = "tender-parakeet-views";
+
+  try {
+    // La API incrementa automáticamente el valor en 1 con cada consulta 'hit'
+    const respuesta = await fetch(`https://countapi.xyz{namespace}/${key}`);
+    
+    if (respuesta.ok) {
+      const datos = await respuesta.json();
+      // Asigna el número real devuelto por la API al contenedor HTML
+      document.getElementById("contador-real").textContent = datos.value.toLocaleString();
+    } else {
+      throw new Error("Error en la respuesta del servidor");
+    }
+  } catch (error) {
+    console.error("No se pudo cargar el contador de visitas real:", error);
+    // En caso de fallo de red, muestra un número base o mensaje alternativo
+    document.getElementById("contador-real").textContent = "1"; 
+  }
+}
+
+// Ejecutar la actualización en cuanto el documento esté completamente cargado
+document.addEventListener("DOMContentLoaded", actualizarContadorVisitas);
+
