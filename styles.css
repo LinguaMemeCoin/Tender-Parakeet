@@ -325,10 +325,19 @@ async function actualizarContadorVisitas() {
 
 // Ejecutar la actualización en cuanto el documento esté completamente cargado
 document.addEventListener("DOMContentLoaded", actualizarContadorVisitas);
-<!-- Banner de Advertencia de Riesgo Cohete -->
-<div class="banner-riesgo">
-  <div class="banner-contenido">
-    <span>⚠️ <strong>ADVERTENCIA DE NAVEGACIÓN:</strong> $THND es una moneda 100% especulativa, creada exclusivamente con fines de entretenimiento y sin utilidad oficial. Las memecoins en la Robinhood Chain son altamente volátiles y conllevan el riesgo inminente de la <strong>pérdida total de tu capital</strong>. No expongas fondos que no estés dispuesto a ver hundirse en el océano cripto. ¡Navega con prudencia! 🏴‍☠️</span>
-  </div>
-</div>
+.banner-riesgo {
+  background: linear-gradient(90deg, #ff4d4d, #f9a825);
+  color: #ffffff;
+  padding: 12px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-bottom: 3px solid #d32f2f;
+}
 
+.banner-contenido strong {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
