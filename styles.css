@@ -1,416 +1,120 @@
-/* DISEÑO CRIPTO-NÁUTICO AGRESIVO DE MEMECOIN */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Impact', 'Arial Black', sans-serif;
-    letter-spacing: 1px;
-}
-
+/* DISEÑO GENERAL NÁUTICO */
 body {
-    background-color: #020b14;
-    color: #e2f0fe;
-    text-align: center;
-    padding-top: 60px;
+  margin: 0;
+  padding: 0;
+  background-color: #0b131a;
+  color: #f1f2f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Barra superior interactiva */
-.top-nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    height: 60px;
-    background: #05182d;
-    border-bottom: 2px solid #ff00ea;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    z-index: 1000;
-}
-
-.visitor-counter {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-
-.neon-text {
-    color: #00e5ff;
-    text-shadow: 0 0 10px #00e5ff;
-}
-
-.lang-selector button {
-    background: #020b14;
-    color: white;
-    border: 1px solid #00e5ff;
-    padding: 4px 8px;
-    margin-left: 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.8rem;
-}
-
-/* Estilo Hero de Lanzamiento */
-.hero {
-    background: radial-gradient(circle, #072242 0%, #020b14 100%);
-    padding: 40px 20px;
-    border-bottom: 4px dashed #00e5ff;
-}
-
-.animated-ship {
-    font-size: 6rem;
-    display: inline-block;
-    animation: floating 2s infinite ease-in-out alternate;
-}
-
-@keyframes floating {
-    0% { transform: translateY(0) rotate(-4deg); filter: drop-shadow(0 0 10px #00e5ff); }
-    100% { transform: translateY(-12px) rotate(4deg); filter: drop-shadow(0 0 25px #ff00ea); }
-}
-
-h1.main-title {
-    font-size: 4rem;
-    color: #00e5ff;
-    text-shadow: 4px 4px #ff00ea;
-}
-
-.tagline {
-    font-family: 'Segoe UI', sans-serif;
-    max-width: 650px;
-    margin: 15px auto;
-    font-size: 1.1rem;
-    color: #a5c7f7;
-    line-height: 1.4;
-}
-
-.crypto-stats {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin: 25px 0;
-    flex-wrap: wrap;
-}
-
-.stat-box {
-    background: #061f3d;
-    border: 2px solid #ff00ea;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-}
-
-/* Caja de Contrato (CA) */
-.contract-container {
-    max-width: 500px;
-    margin: 0 auto 30px auto;
-    background: #041426;
-    border: 2px solid #00e5ff;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,229,255,0.2);
-}
-
-.ca-title {
-    font-size: 0.9rem;
-    color: #ff00ea;
-    margin-bottom: 8px;
-}
-
-.ca-box {
-    display: flex;
-    background: #020b14;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid #555;
-}
-
-#ca-text {
-    flex: 1;
-    padding: 10px;
-    font-family: monospace;
-    font-size: 0.8rem;
-    color: #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    align-self: center;
-}
-
-#copy-btn {
-    background: #00e5ff;
-    color: black;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-/* Botones de acción principal */
-.cta-buttons a, .cta-buttons button {
-    display: inline-block;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    margin: 8px;
-    cursor: pointer;
-}
-
-.btn-main {
-    background: #00e5ff;
-    color: #000;
-    box-shadow: 0 0 20px #00e5ff;
-    border: none;
-}
-
-.btn-sub {
-    background: transparent;
-    color: #ff00ea;
-    border: 2px solid #ff00ea;
-}
-
-/* Secciones generales */
-.app-section, .tokenomics, .map-section {
-    padding: 40px 20px;
-}
-
-h2 {
-    color: #ff00ea;
-    font-size: 2.3rem;
-    margin-bottom: 8px;
-    text-shadow: 2px 2px #00e5ff;
-}
-
-p {
-    font-family: 'Segoe UI', sans-serif;
-    color: #b2d2fd;
-    margin-bottom: 25px;
-}
-
-/* Tarjeta Náutica */
-.card-container { display: flex; justify-content: center; }
-.card {
-    background: #05182d;
-    width: 360px;
-    border-radius: 20px;
-    overflow: hidden;
-    border: 3px solid #00e5ff;
-}
-
-.card-image {
-    height: 380px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    background-size: cover;
-    background-position: center;
-}
-
-.card-badge {
-    background: #ff00ea;
-    padding: 5px 12px;
-    font-size: 0.8rem;
-    margin: 12px;
-    align-self: flex-start;
-    border-radius: 4px;
-}
-
-.card-info {
-    padding: 15px;
-    background: linear-gradient(to top, rgba(2,11,20,0.95) 75%, transparent);
-}
-
-.card-info h3 { color: #00e5ff; font-size: 1.4rem; }
-.crypto-tier { font-size: 0.85rem; color: #fff; background: rgba(255,255,255,0.15); padding: 2px 6px; border-radius: 4px;}
-.card-info p { font-style: italic; font-size: 0.85rem; margin: 6px 0; color: #d1e3ff; }
-
-.tags span {
-    display: inline-block;
-    background: #020b14;
-    font-size: 0.75rem;
-    padding: 3px 8px;
-    border-radius: 4px;
-    border: 1px solid #ff00ea;
-    margin: 2px;
-}
-
-.card-actions { padding: 15px; background: #020b14; }
-.action-btn.sail {
-    width: 100%; padding: 12px; border-radius: 8px; border: none;
-    background: linear-gradient(90deg, #00e5ff, #ff00ea); color: white;
-    font-size: 1.1rem; cursor: pointer;
-}
-
-/* Cuadrícula Tokenomics */
-.token-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.token-box {
-    background: #05182d;
-    border: 2px solid #555;
-    border-radius: 12px;
-    padding: 20px;
-    flex: 1;
-    min-width: 250px;
-}
-
-.token-box.highlight {
-    border-color: #00e5ff;
-    box-shadow: 0 0 15px rgba(0,229,255,0.1);
-}
-
-.token-box h3 { font-size: 3rem; color: #00e5ff; }
-.token-box p { font-weight: bold; margin-bottom: 5px; color: #fff; }
-.sub-desc { font-family: 'Segoe UI', sans-serif; font-size: 0.85rem; color: #a5c7f7; display: block;}
-
-/* Mapa Wrapper */
-.map-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 8px;
-    background: #05182d;
-    border: 2px solid #ff00ea;
-    border-radius: 18px;
-}
-
-/* Botón de Sonido / Extras */
-.btn-main-btn {
-    background: linear-gradient(45deg, #00e5ff, #ff00ea);
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-family: 'Impact', sans-serif;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(0,229,255,0.4);
-    transition: transform 0.1s;
-    text-transform: uppercase;
-}
-.btn-main-btn:active {
-    transform: scale(0.95);
-}
-
-footer { padding: 30px; font-size: 0.8rem; color: #557293; }
-// Función para obtener y actualizar el contador de visitas real
-async function actualizarContadorVisitas() {
-  // NOTA: Reemplaza 'tu-dominio-tender-parakeet.com' por la URL real de tu GitHub Pages o hosting
-  const namespace = "tu-dominio-tender-parakeet.com"; 
-  const key = "tender-parakeet-views";
-
-  try {
-    // La API incrementa automáticamente el valor en 1 con cada consulta 'hit'
-    const respuesta = await fetch(`https://countapi.xyz{namespace}/${key}`);
-    
-    if (respuesta.ok) {
-      const datos = await respuesta.json();
-      // Asigna el número real devuelto por la API al contenedor HTML
-      document.getElementById("contador-real").textContent = datos.value.toLocaleString();
-    } else {
-      throw new Error("Error en la respuesta del servidor");
-    }
-  } catch (error) {
-    console.error("No se pudo cargar el contador de visitas real:", error);
-    // En caso de fallo de red, muestra un número base o mensaje alternativo
-    document.getElementById("contador-real").textContent = "1"; 
-  }
-}
-
-// Ejecutar la actualización en cuanto el documento esté completamente cargado
-document.addEventListener("DOMContentLoaded", actualizarContadorVisitas);
+/* BANNER DE ADVERTENCIA */
 .banner-riesgo {
-  background: linear-gradient(90deg, #ff4d4d, #f9a825);
+  background: linear-gradient(90deg, #d32f2f, #f9a825);
   color: #ffffff;
   padding: 12px 20px;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.4;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  border-bottom: 3px solid #d32f2f;
+  border-bottom: 3px solid #b71c1c;
 }
 
-.banner-contenido strong {
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-.puerto-bienvenida-container {
-  max-width: 650px;
-  margin: 25px auto;
-  background-color: #1a252f; /* Fondo oscuro marino */
-  border: 2px solid #34495e;
-  border-radius: 12px;
+/* HEADER Y CONTADOR */
+.header-barco {
+  background-color: #111e29;
   padding: 20px;
-  color: #ecf0f1;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-.puerto-estado {
   text-align: center;
-  color: #f1c40f; /* Amarillo brújula */
-  font-weight: bold;
+  border-bottom: 2px solid #1b2e3c;
 }
-
-/* Control de transiciones dinámicas */
-.puerto-mensaje-oculto {
-  display: none;
-  opacity: 0;
-}
-
-.puerto-mensaje-visible {
+.header-top {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
-
-.ave-avatar-box {
-  background-color: #2c3e50;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #2ae68e; /* Verde crypto activo */
-  box-shadow: 0 0 10px rgba(42, 230, 142, 0.3);
+.idiomas {
+  font-size: 14px;
+  letter-spacing: 2px;
 }
-
-.ave-emoji {
-  font-size: 35px;
-}
-
-.ave-texto-box {
-  flex: 1;
-}
-
-.ave-texto-box h3 {
-  margin: 0 0 8px 0;
-  font-size: 19px;
+.contador-global {
+  margin-top: 10px;
+  font-size: 14px;
   color: #2ae68e;
 }
 
-.discurso-capitan {
-  margin: 0;
-  font-size: 14.5px;
-  line-height: 1.5;
-  color: #bdc3c7;
-  font-style: italic;
+/* CONTENEDOR PRINCIPAL Y PANELES */
+.camarote-principal {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 15px;
 }
+.seccion-presentacion, .seccion-comunidad {
+  background-color: #162634;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid #23394c;
+}
+.resaltado-verde { color: #2ae68e; font-weight: bold; }
+.intro-lore { font-style: italic; color: #ced6e0; line-height: 1.6; }
 
-/* Ajuste responsivo para celulares */
-@media (max-width: 480px) {
-  .puerto-mensaje-visible {
-    flex-direction: column;
-    text-align: center;
-  }
+/* PUERTO GEOLOCALIZADO */
+.puerto-bienvenida-container {
+  background-color: #0f1b24;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  border-left: 4px solid #2ae68e;
 }
+.puerto-estado { color: #f1c40f; text-align: center; }
+.puerto-mensaje-oculto { display: none; opacity: 0; }
+.puerto-mensaje-visible { display: flex; align-items: center; gap: 15px; opacity: 1; transition: opacity 0.4s; }
+.ave-avatar-box { background-color: #1c2e3d; width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; border: 2px solid #2ae68e; font-size: 28px; }
+.ave-texto-box h3 { margin: 0 0 5px 0; font-size: 16px; color: #2ae68e; }
+.discurso-capitan { margin: 0; font-size: 13.5px; color: #a4b0be; line-height: 1.4; }
+
+/* CAJA DE CONTRATO (CA) */
+.caja-contrato {
+  background-color: #0f1b24;
+  padding: 15px;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+.ca-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #070d12;
+  padding: 10px;
+  border-radius: 4px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#contrato-ca { font-family: monospace; color: #eccc68; font-size: 13px; word-break: break-all; }
+.btn-copiar { background-color: #2ae68e; color: #0b131a; border: none; padding: 6px 12px; font-weight: bold; border-radius: 4px; cursor: pointer; }
+.btn-copiar:hover { background-color: #23cc7e; }
+
+/* BOTONES COMERCIALES Y SOCIALES */
+.acciones-comerciales, .social-links { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+.btn-comprar, .btn-social { flex: 1; min-width: 180px; text-align: center; padding: 14px; border-radius: 6px; font-weight: bold; text-decoration: none; border: none; cursor: pointer; color: #fff; transition: transform 0.2s; }
+.btn-comprar { background: linear-gradient(135deg, #ff4757, #ff6b81); }
+.btn-sonido { background-color: #2f3542; color: #fff; border: none; border-radius: 6px; padding: 14px; cursor: pointer; }
+.btn-comprar:hover, .btn-social:hover { transform: translateY(-2px); }
+.btn-x { background-color: #000; }
+.btn-telegram { background-color: #26A5E4; }
+
+/* EL MAPA DEL TESORO (FAQ) */
+.mapa-tesoro-wrapper { margin: 30px 0; font-family: 'Georgia', serif; }
+.btn-mapa-toggle { display: flex; width: 100%; justify-content: center; align-items: center; gap: 10px; background-color: #8c6239; color: #fff8e7; font-size: 16px; font-weight: bold; padding: 14px; border: 2px solid #5c3a21; border-radius: 6px; cursor: pointer; }
+.faq-contenido-oculto { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-in-out; }
+.pergamino-faq { background-color: #f4ecd8; border: 3px double #8b5a2b; padding: 20px; margin-top: 10px; box-shadow: inset 0 0 15px rgba(92,58,33,0.15); border-radius: 4px; }
+.faq-categoria h4 { color: #5c3a21; border-bottom: 2px dashed #8b5a2b; margin: 20px 0 10px 0; padding-bottom: 4px; font-size: 15px; text-transform: uppercase; }
+.faq-item { border-bottom: 1px solid rgba(139,90,43,0.15); }
+.faq-pregunta { width: 100%; background: none; border: none; text-align: left; padding: 12px 5px; font-size: 14.5px; font-weight: bold; color: #4a2f1b; cursor: pointer; }
+.faq-respuesta { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+.faq-respuesta p { padding: 0 5px 12px 5px; margin: 0; color: #2b1d11; font-size: 13.5px; line-height: 1.5; }
+
+.pie-barco { text-align: center; padding: 25px; color: #747d8c; font-size: 13px; border-top: 1px solid #1b2e3c; }
+
+@media (max-width: 480px) { .puerto-mensaje-visible { flex-direction: column; text-align: center; } }
