@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>\$TENDER - Parakeet Tinder Memecoin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="logo-container">
+            <span class="crypto-logo">🦜</span>
+        </div>
+        <h1>\$TENDER PARAKEET</h1>
+        <p class="tagline">La primera memecoin donde el amor de tu periquito cotiza en la blockchain. ¡Haz match y ve a la luna! 🚀🌕</p>
+        
+        <!-- Datos Ficticios Cripto -->
+        <div class="crypto-stats">
+            <div class="stat-box"><strong>PRECIO:</strong> \$0.0000420</div>
+            <div class="stat-box"><strong>HODLERS:</strong> 124,500 Píos</div>
+            <div class="stat-box"><strong>MARKET CAP:</strong> \$69M</div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="#tinder-app" class="btn-main">¡Buscar Pareja! ❤️</a>
+            <a href="https://github.com" target="_blank" class="btn-sub">Ver Whitepaper (Meme) 📜</a>
+        </div>
+    </header>
+
+    <!-- LA APP TINDER (ESTILO CRIPTO) -->
+    <main id="tinder-app" class="app-section">
+        <h2>🔥 Elige el Match de tu Periquito</h2>
+        <p>Cada "Like" quema 1 token \$TENDER. El amor es caro, las semillas también.</p>
+
+        <div class="card-container">
+            <div class="card" id="bird-card">
+                <div class="card-image">
+                    <div class="card-badge">✨ ALFA PARAKEET</div>
+                    <div class="card-info">
+                        <h3>Paco Nakamoto, <span class="age">1 año</span></h3>
+                        <p>"Hago trading mientras duermo en el columpio. Busco novia que no se asuste con las fluctuaciones del mercado ni los ruidos de la licuadora."</p>
+                        <div class="tags">
+                            <span>💎 Diamond Beak</span>
+                            <span>🌾 Semillas Crudas</span>
+                            <span>🚀 To The Moon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <button class="action-btn dislike" onclick="nextMeme('¡Rug Pull! Siguiente periquito... ❌')">❌</button>
+                    <button class="action-btn super" onclick="nextMeme('¡SUPER MATCH! 🚀 Directo a la luna')">⭐</button>
+                    <button class="action-btn like" onclick="nextMeme('¡Es un Match! Enviando tokens de amor... ❤️')">❤️</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ROADMAP / HOJA DE RUTA GRACIOSA -->
+    <section class="roadmap">
+        <h2>🗺️ Roadmap (Hoja de Ruta)</h2>
+        <div class="timeline">
+            <div class="step"><strong>Fase 1:</strong> Lanzar la web y robarle las semillas al canario del vecino.</div>
+            <div class="step"><strong>Fase 2:</strong> Listar \$TENDER en exchanges descentralizados de aves (BirdSwap).</div>
+            <div class="step"><strong>Fase 3:</strong> Dominación global. Los humanos nos limpiarán las jaulas para siempre.</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Creado con 🦜 para la comunidad cripto-pío. Esto no es un consejo financiero, alimenta a tu periquito con moderación.</p>
+    </footer>
+
+    <script>
+        // Lista de periquitos meme para rotar cuando el usuario hace clic
+        const parakeets = [
+            {
+                name: "Paco Nakamoto", age: "1 año",
+                bio: '"Hago trading mientras duermo en el columpio. Busco novia que no se asuste con las fluctuaciones del mercado ni los ruidos de la licuadora."',
+                tags: ["💎 Diamond Beak", "🌾 Semillas Crudas", "🚀 To The Moon"],
+                img: "https://unsplash.com"
+            },
+            {
+                name: "Luna Whale", age: "2 años",
+                bio: '"Tengo acumuladas 50 toneladas de mijo en el fondo de mi jaula. Busco socio/a para gastarlas en juguetes destructibles. Cero dramas."',
+                tags: ["🐋 Ballena", "🪞 Fan de los Espejos", "💅 Diva"],
+                img: "https://unsplash.com"
+            },
+            {
+                name: "Elon Flappy", age: "6 meses",
+                bio: '"Esquivo gatos en mi tiempo libre. Si me das un Like, prometo no morderte los dedos... muy fuerte."',
+                tags: ["⚡ Eléctrico", "🧗 Aventurero", "🥜 Adicto al Maní"],
+                img: "https://unsplash.com"
+            }
+        ];
+
+        let index = 0;
+
+        function nextMeme(alertMessage) {
+            alert(alertMessage);
+            index = (index + 1) % parakeets.length;
+            const bird = parakeets[index];
+            
+            // Actualizar la interfaz
+            document.querySelector('.card-info h3').innerHTML = `${bird.name}, <span class="age">${bird.age}</span>`;
+            document.querySelector('.card-info p').innerText = bird.bio;
+            document.querySelector('.card-image').style.backgroundImage = `url('${bird.img}')`;
+            
+            const tagsContainer = document.querySelector('.tags');
+            tagsContainer.innerHTML = '';
+            bird.tags.forEach(tag => {
+                const span = document.createElement('span');
+                span.innerText = tag;
+                tagsContainer.appendChild(span);
+            });
+        }
+    </script>
+</body>
+</html>
