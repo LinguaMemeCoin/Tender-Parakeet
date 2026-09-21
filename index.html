@@ -1,180 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$THND - La Bitácora del Perico Capitán 🦜⛵</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$THND - La Bitácora del Perico Capitán 🦜⛵</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- MENÚ SUPERIOR DE IDIOMAS Y CONTADOR -->
-    <nav class="top-nav">
-        <div class="visitor-counter">
-            📡 <span data-es="Marineros a bordo:" data-en="Sailors on board:" data-fr="Marins à bord:">Marineros a bordo:</span> 
-            <span id="counter-value" class="neon-text">42,069</span>
-        </div>
-        <div class="lang-selector">
-            <button onclick="changeLang('es')">🇲🇽 ES</button>
-            <button onclick="changeLang('en')">🇺🇸 EN</button>
-            <button onclick="changeLang('fr')">🇫🇷 FR</button>
-        </div>
-    </nav>
-
-    <audio id="sea-sound" src="https://mixkit.co" preload="auto"></audio>
-
-    <!-- SECCIÓN DEL CAPITÁN (HERO) -->
-    <header class="hero">
-        <div class="ship-container">
-            <span class="animated-ship">⛵🦜</span>
-        </div>
-        <h1 class="main-title">$THND PARAKEET</h1>
-        <p class="tagline" data-es="Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain!" 
-           data-en="Join the cutest and boldest Parakeet on his ship along the coasts of America. Discovering the most valuable birds on the blockchain!" 
-           data-fr="Rejoignez la perruche la plus mignonne et la plus audacieuse sur son navire le long des côtes de l'Amérique. Découvrez las oiseaux les plus précieux de la blockchain!">
-            Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺️
-        </p>
-        
-        <!-- Tablero de Navegación Cripto -->
-        <div class="crypto-stats">
-            <div class="stat-box"><span data-es="TU PAÍS:" data-en="YOUR COUNTRY:" data-fr="VOTRE PAYS:">TU PAÍS:</span> <span id="user-country">🧭...</span></div>
-            <div class="stat-box"><span data-es="BLOCKCHAIN:" data-en="BLOCKCHAIN:" data-fr="BLOCKCHAIN:">BLOCKCHAIN:</span> <span>ROBINHOOD CHAIN 🛡️</span></div>
-            <div class="stat-box"><span data-es="VELAS:" data-en="SAILS:" data-fr="VOILES:">VELAS:</span> <span class="neon-text">100% TO THE MOON</span></div>
-        </div>
-
-        <!-- SECCIÓN CONTRATO MEMECOIN -->
-        <div class="contract-container">
-            <p class="ca-title" data-es="🚀 DIRECCIÓN DE CONTRATO (CA)" data-en="🚀 CONTRACT ADDRESS (CA)" data-fr="🚀 ADRESSE DU CONTRAT (CA)">🚀 DIRECCIÓN DE CONTRATO (CA)</p>
-            <div class="ca-box">
-                <span id="ca-text">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</span>
-                <button onclick="copyCA()" id="copy-btn" data-es="COPIAR" data-en="COPY" data-fr="COPIER">COPIAR</button>
-            </div>
-        </div>
-
-        <div class="cta-buttons">
-            <a href="https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020" target="_blank" class="btn-main" data-es="💥 ¡COMPRAR $THND EN PONS!" data-en="💥 BUY $THND ON PONS!" data-fr="💥 ACHETER $THND SUR PONS!">💥 ¡COMPRAR $THND EN PONS!</a>
-            <button onclick="playSail()" class="btn-sub" data-es="🔊 SONIDO DEL MAR" data-en="🔊 SEA SOUND" data-fr="🔊 BRUIT DE LA MER">🔊 SONIDO DEL MAR</button>
-        </div>
-    </header>
-
-    <!-- CUBIERTA DE AVENTURA -->
-    <main id="adventure-deck" class="app-section">
-        <h2 data-es="🦜 Tu Ave Regional de Bienvenida" data-en="🦜 Your Regional Welcome Bird" data-fr="🦜 Votre Oiseau de Bienvenue Régional">🦜 Tu Ave Regional de Bienvenida</h2>
-        <p data-es="El Capitán ha tirado el ancla en tus costas. ¡Mira quién se acerca a saludarte!" data-en="The Captain has dropped anchor on your shores. Look who's coming to greet you!" data-fr="Le capitaine a jeté l'ancre sur vos côtes. Regardez qui vient vous saluer!">El Capitán ha tirado el ancla en tus costas. ¡Mira quién se acerca a saludarte!</p>
-
-        <div class="card-container">
-            <div class="card">
-                <div class="card-image" id="bird-bg">
-                    <div class="card-badge" id="region-badge">📍 COORDENADAS...</div>
-                    <div class="card-info">
-                        <h3 id="bird-name">...</h3>
-                        <p id="bird-bio">...</p>
-                        <div class="tags" id="bird-tags"></div>
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <button class="action-btn sail" onclick="nextPort()" data-es="⚓ ¡Zarpar a Otro Puerto!" data-en="⚓ Sail to Another Port!" data-fr="⚓ Naviguer vers un Autre Port!">⚓ ¡Zarpar a Otro Puerto!</button>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- SECCIÓN TOKENOMICS (100% PÚBLICO) -->
-    <section class="tokenomics">
-        <h2 data-es="📊 TOKENOMICS DE LA TRIPULACIÓN" data-en="📊 CREW TOKENOMICS" data-fr="📊 TOKENOMICS DE L'ÉQUIPAGE">📊 TOKENOMICS DE LA TRIPULACIÓN</h2>
-        <p data-es="Aquí no hay trampas de piratas. ¡Transparencia absoluta en el océano cripto!" data-en="No pirate traps here. Absolute transparency in the crypto ocean!" data-fr="Pas de pièges de pirates ici. Transparence absolue dans l'océan crypto!">Aquí no hay trampas de piratas. ¡Transparencia absoluta en el océano cripto!</p>
-        <div class="token-grid">
-            <div class="token-box highlight">
-                <h3>100%</h3>
-                <p data-es="Lanzamiento al Público" data-en="Public Launch" data-fr="Lancement Public">Lanzamiento al Público</p>
-                <span class="sub-desc" data-es="Todo el suministro añadido a la curva de vinculación. ¡0% para el equipo!" data-en="100% of supply added to the bonding curve. 0% team allocation!" data-fr="100% de l'offre ajoutée à la courbe de liaison. 0% pour l'équipe !">Todo el suministro añadido a la curva de vinculación. ¡0% para el equipo!</span>
-            </div>
-            <div class="token-box">
-                <h3>0%</h3>
-                <p data-es="Asignación del Equipo" data-en="Team Allocation" data-fr="Allocation d'Équipe">Asignación del Equipo</p>
-                <span class="sub-desc" data-es="El equipo no compró ni comprará tokens. Renuncia total." data-en="The team did not buy and will not buy tokens. Fully community owned." data-fr="L'équipe n'a pas acheté et n'achètera pas de tokens. Propriété de la communauté.">El equipo no compró ni comprará tokens. Renuncia total.</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- MAPA VISUAL -->
-    <section class="map-section">
-        <h2 data-es="🗺️ Coordenadas de Navegación" data-en="🗺️ Navigation Coordinates" data-fr="🗺️ Coordonnées de Navigation">🗺️ Coordenadas de Navegación</h2>
-        <div class="map-wrapper">
-            <iframe src="https://google.com" width="100%" height="300" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
-
-    <footer>
-        <p data-es="Creado con puro amor por las aves. $THND es un token de entretenimiento sin utilidad oficial." 
-           data-en="Created with pure love for birds. $THND is an entertainment token with no official utility." 
-           data-fr="Créé avec un pur amour pour les oiseaux. $THND est un jeton de divertissement sans utilité officielle.">
-            Creado con puro amor por las aves. $THND es un token de entretenimiento sin utilidad oficial.
-        </p>
-    </footer>
-
-    <script>
-        let currentLang = 'es';
-
-        // Base de datos políglota de aves
-        const regionalBirds = {
-            "MX": {
-                img: "https://unsplash.com",
-                es: { name: "Águila Real Azteca", region: "📍 MÉXICO", tier: "🦅 Monarca Imperial", bio: '"Protejo el tesoro de $THND en mis garras. ¡Un honor recibir tu visita norteña!"', tags: ["🦅 Emblema", "⚡ Garra Diamond"] },
-                en: { name: "Aztec Golden Eagle", region: "📍 MEXICO", tier: "🦅 Imperial Monarch", bio: '"I guard the $THND treasure in my talons. Honored by your northern visit!"', tags: ["🦅 Emblem", "⚡ Diamond Claw"] },
-                fr: { name: "Aigle Royal Aztèque", region: "📍 MEXIQUE", tier: "🦅 Monarque Impérial", bio: '"Je garde le trésor $THND dans mes serres. Honoré de votre visite du Nord !"', tags: ["🦅 Emblème", "⚡ Serre Diamond"] }
-            },
-            "CO": {
-                img: "https://unsplash.com",
-                es: { name: "Colibrí de los Andes", region: "📍 COLOMBIA", tier: "💎 Gema Veloz", bio: '"¡Parce! Bienvenido al país de las aves más rápidas del ecosistema. Mis alas baten al ritmo del pump."', tags: ["🌸 Ultra Veloz", "🇨🇴 Esmeralda Tier"] },
-                en: { name: "Andean Hummingbird", region: "📍 COLOMBIA", tier: "💎 Swift Gem", bio: '"Welcome to the land of the fastest birds. My wings beat to the rhythm of the pump!"', tags: ["🌸 Ultra Fast", "🇨🇴 Emerald Tier"] },
-                fr: { name: "Colibri des Andes", region: "📍 COLOMBIE", tier: "💎 Gemme Rapide", bio: '"Bienvenue au pays des oiseaux les plus rapides. Mes ailes battent au rythme du pump !"', tags: ["🌸 Ultra Rapide", "🇨🇴 Niveau Émeraude"] }
-            },
-            "AR": {
-                img: "https://unsplash.com",
-<!-- Sección de Comunidad y Redes Sociales -->
-<div class="comunidad-container">
-  <h3>⚓ Únete a la Tripulación</h3>
-  <div class="social-links">
-    <!-- Enlace Oficial a X -->
-    <a href="https://x.com/LinguaMemeCoin" target="_blank" rel="noopener noreferrer" class="btn-social btn-x">
-      🐦 Sigue en X
-    </a>
-    <!-- Enlace Oficial a Telegram -->
-    <a href="https://t.me/TenderParakeetOficial" target="_blank" rel="noopener noreferrer" class="btn-social btn-telegram">
-      💎 Canal de Telegram
-    </a>
-  </div>
-</div>
-
-<!-- Contador Real de Visitas -->
-<div class="contador-container">
-  <p>📡 Marineros a bordo (Visitas totales): <span id="contador-real">Cargando...</span></p>
-</div>
-<!-- Banner de Advertencia de Riesgo Cohete -->
-<div class="banner-riesgo">
-  <div class="banner-contenido">
-    <span>⚠️ <strong>ADVERTENCIA DE NAVEGACIÓN:</strong> $THND es una moneda 100% especulativa, creada exclusivamente con fines de entretenimiento y sin utilidad oficial. Las memecoins en la Robinhood Chain son altamente volátiles y conllevan el riesgo inminente de la <strong>pérdida total de tu capital</strong>. No expongas fondos que no estés dispuesto a ver hundirse en el océano cripto. ¡Navega con prudencia! 🏴‍☠️</span>
-  </div>
-</div>
-<!-- Contenedor del Saludo del Capitán Parakeet -->
-<div class="puerto-bienvenida-container">
-  <div id="cargando-puerto" class="puerto-estado">
-    <p>🧭 Calculando coordenadas de tu IP en el mapa...</p>
-  </div>
-  
-  <div id="mensaje-tripulante" class="puerto-mensaje-oculto">
-    <div class="ave-avatar-box">
-      <!-- Aquí se inyectará el emoji o imagen del ave -->
-      <span id="ave-emblema" class="ave-emoji">🦜</span>
-    </div>
-    <div class="ave-texto-box">
-      <h3 id="saludo-titulo">¡Bienvenido Tripulante!</h3>
-      <p class="discurso-capitan">
-        Te damos la bienvenida a esta aventura por América. ¿Te animas a navegar en las aguas peligrosas de la blockchain? ¿Quieres romper tus límites y descubrir a dónde puedes llegar? 🌊🏴‍☠️
-      </p>
+  <!-- ⚠️ BANNER DE ADVERTENCIA DE RIESGO DE ALTA MAR -->
+  <div class="banner-riesgo">
+    <div class="banner-contenido">
+      <span>⚠️ <strong>ADVERTENCIA DE NAVEGACIÓN:</strong> $THND es una memecoin 100% especulativa sin utilidad oficial. Navegar en la Robinhood Chain conlleva volatilidad extrema y el riesgo de pérdida total del capital. ¡Arriesga solo lo que estés dispuesto a ver hundirse en el océano! 🏴‍☠️</span>
     </div>
   </div>
-</div>
 
-                
+  <header class="header-barco">
+    <div class="header-top">
+      <h1>$THND - La Bitácora del Perico Capitán 🦜⛵</h1>
+      <div class="idiomas">🇲🇽 ES 🇺🇸 EN 🇫🇷 FR</div>
+    </div>
+    <!-- 📡 CONTADOR REAL DE VISITAS -->
+    <div class="contador-global">
+      <p>📡 Marineros en el puerto (Visitas reales): <span id="contador-real">Cargando...</span></p>
+    </div>
+  </header>
+
+  <main class="camarote-principal">
+    
+    <!-- SECCIÓN INTERACTIVA DEL PERICO -->
+    <section class="seccion-presentacion">
+      <h2># $THND PARAKEET</h2>
+      <p class="intro-lore">Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺</p>
+      
+      <!-- CONTENEDOR GEOLOCALIZADO DINÁMICO -->
+      <div id="puerto-bienvenida" class="puerto-bienvenida-container">
+        <div id="cargando-puerto" class="puerto-estado">
+          <p>🧭 Calculando coordenadas de tu IP en el mapa...</p>
+        </div>
+        <div id="mensaje-tripulante" class="puerto-mensaje-oculto">
+          <div class="ave-avatar-box">
+            <span id="ave-emblema" class="ave-emoji">🦜</span>
+          </div>
+          <div class="ave-texto-box">
+            <h3 id="saludo-titulo">¡Bienvenido Tripulante!</h3>
+            <p class="discurso-capitan">
+              Te damos la bienvenida a esta aventura por América. ¿Te animas a navegar en las aguas peligrosas de la blockchain? ¿Quieres romper tus límites y descubrir a dónde puedes llegar?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="datos-navegacion">
+        <p><strong>VELAS:</strong> <span class="resaltado-verde">100% TO THE MOON 🚀</span></p>
+        <p><strong>BLOCKCHAIN:</strong> ROBINHOOD CHAIN 🛡️</p>
+      </div>
+
+      <!-- FICHA DE CONTRATO INTELIGENTE -->
+      <div class="caja-contrato">
+        <h3>🚀 DIRECCIÓN DE CONTRATO (CA)</h3>
+        <div class="ca-wrapper">
+          <code id="contrato-ca">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</code>
+          <button id="btn-copiar-ca" class="btn-copiar">COPIAR</button>
+        </div>
+      </div>
+
+      <div class="acciones-comerciales">
+        <a href="https://ponsfamily.com" target="_blank" rel="noopener noreferrer" class="btn-comprar">
+          💥 ¡COMPRAR $THND EN PONS!
+        </a>
+        <button id="btn-sonido" class="btn-sonido">🔊 SONIDO DEL MAR</button>
+      </div>
+    </section>
+
+    <!-- REDES SOCIALES OFICIALES -->
+    <section class="seccion-comunidad">
+      <h3>⚓ Únete a la Tripulación</h3>
+      <div class="social-links">
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="btn-social btn-x">🐦 Sigue en X</a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="btn-social btn-telegram">💎 Canal de Telegram</a>
+      </div>
+    </section>
+
+    <!-- 📜 EL MAPA DEL TESORO (FAQ DESPLEGABLE) -->
+    <div class="mapa-tesoro-wrapper">
+      <button id="btn-toggle-faq" class="btn-mapa-toggle">
+        📜 Desplegar el Mapa del Puerto (FAQ) <span class="brujula-icono">🧭</span>
+      </button>
+
+      <div id="faq-contenido-desplegable" class="faq-contenido-oculto">
+        <section class="pergamino-faq">
+          
+          <div class="faq-categoria">
+            <h4>🚨 Riesgos de Alta Mar</h4>
+            <div class="faq-item">
+              <button class="faq-pregunta">🏴‍☠️ ¿Tiene riesgos comerciar con $THND?</button>
+              <div class="faq-respuesta">
+                <p>Sí, el riesgo de pérdida es absoluto. $THND es un token experimental de entretenimiento. No posee valor intrínseco ni promesas financieras. Su mercado es puramente especulativo.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-pregunta">⚓ ¿Por qué recomiendan no invertir más de $15 dólares?</button>
+              <div class="faq-respuesta">
+                <p>Para proteger a la tripulación. Es un experimento puro y volátil en una red joven, por lo que el desarrollador aconseja mantener un límite estricto y bajo tu propia responsabilidad.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-categoria">
+            <h4>📊 Mecánicas de la Tripulación (Tokenomics)</h4>
+            <div class="faq-item">
+              <button class="faq-pregunta">🦜 ¿Qué significa lanzamiento 100% justo (Fair Launch)?</button>
+              <div class="faq-respuesta">
+                <p>Significa que no hubo preventas ocultas ni asignaciones previas. El 100% se añadió de forma pública a la curva de vinculación de Pons Launchpad.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-pregunta">🛡️ ¿El equipo de desarrollo tiene tokens reservados?</button>
+              <div class="faq-respuesta">
+                <p>No, el equipo posee un 0% de asignación. Se hizo una renuncia completa y no se comprarán ni guardarán tokens para beneficio personal.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-pregunta">💰 ¿Qué es el "Creator Tax" o impuesto del 3%?</button>
+              <div class="faq-respuesta">
+                <p>Es un impuesto integrado en el contrato Pons V2 que bajará al 1% con el tiempo. Estos fondos se destinan y automatizan directo a una tesorería comunitaria pública.</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="pie-barco">
+    <p>Creado con puro amor por las aves. $THND es un token de entretenimiento sin utilidad oficial.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
