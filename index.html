@@ -3,112 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>\$TENDER - Parakeet Tinder Memecoin</title>
+    <title>\$TENDER - La Bitácora del Perico Capitán 🦜⛵</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- SECCIÓN DEL CAPITÁN (HERO) -->
     <header class="hero">
-        <div class="logo-container">
-            <span class="crypto-logo">🦜</span>
+        <div class="ship-container">
+            <span class="animated-ship">⛵🦜</span>
         </div>
-        <h1>\$TENDER PARAKEET</h1>
-        <p class="tagline">La primera memecoin donde el amor de tu periquito cotiza en la blockchain. ¡Haz match y ve a la luna! 🚀🌕</p>
+        <h1>\$TENDER: BITÁCORA DE VIAJE</h1>
+        <p class="tagline">Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺️</p>
         
-        <!-- Datos Ficticios Cripto -->
+        <!-- Tablero de Navegación Cripto -->
         <div class="crypto-stats">
-            <div class="stat-box"><strong>PRECIO:</strong> \$0.0000420</div>
-            <div class="stat-box"><strong>HODLERS:</strong> 124,500 Píos</div>
-            <div class="stat-box"><strong>MARKET CAP:</strong> \$69M</div>
+            <div class="stat-box"><strong>ISLA ACTUAL:</strong> América del Sur 🧭</div>
+            <div class="stat-box"><strong>TESORO TOTAL:</strong> \$69M MILLONES</div>
+            <div class="stat-box"><strong>VELAS ALZADAS:</strong> 100% TO THE MOON</div>
         </div>
 
         <div class="cta-buttons">
-            <a href="#tinder-app" class="btn-main">¡Buscar Pareja! ❤️</a>
-            <a href="https://github.com" target="_blank" class="btn-sub">Ver Whitepaper (Meme) 📜</a>
+            <a href="#adventure-deck" class="btn-main">¡Navegar al Siguiente Puerto! 🌊</a>
+            <a href="https://github.com" target="_blank" class="btn-sub">Ver Mapa del Tesoro 🗺️</a>
         </div>
     </header>
 
-    <!-- LA APP TINDER (ESTILO CRIPTO) -->
-    <main id="tinder-app" class="app-section">
-        <h2>🔥 Elige el Match de tu Periquito</h2>
-        <p>Cada "Like" quema 1 token \$TENDER. El amor es caro, las semillas también.</p>
+    <!-- CUBIERTA DE AVENTURA (REEMPLAZA AL TINDER) -->
+    <main id="adventure-deck" class="app-section">
+        <h2>🦜 Bitácora de Aves Regionales encontrados</h2>
+        <p>El Capitán tira el ancla. ¡Un ave local se acerca al barco trayendo un nuevo token!</p>
 
         <div class="card-container">
-            <div class="card" id="bird-card">
-                <div class="card-image">
-                    <div class="card-badge">✨ ALFA PARAKEET</div>
+            <div class="card">
+                <div class="card-image" id="bird-bg">
+                    <div class="card-badge" id="region-badge">📍 AMAZONAS (BRASIL)</div>
                     <div class="card-info">
-                        <h3>Paco Nakamoto, <span class="age">1 año</span></h3>
-                        <p>"Hago trading mientras duermo en el columpio. Busco novia que no se asuste con las fluctuaciones del mercado ni los ruidos de la licuadora."</p>
-                        <div class="tags">
-                            <span>💎 Diamond Beak</span>
-                            <span>🌾 Semillas Crudas</span>
-                            <span>🚀 To The Moon</span>
+                        <h3 id="bird-name">Tucán Tuki, <span class="crypto-tier">💎 Gema del Norte</span></h3>
+                        <p id="bird-bio">"¡Bienvenidos a mi selva! Traigo un cargamento de \$TENDER y frutas tropicales. Si sostienes mis tokens, tus alas jamás caerán."</p>
+                        <div class="tags" id="bird-tags">
+                            <span>🦜 Guacamaya Supply</span>
+                            <span>⚡ Volador Alfa</span>
+                            <span>🌴 100x Orgánico</span>
                         </div>
                     </div>
                 </div>
+                <!-- Botones de Navegación -->
                 <div class="card-actions">
-                    <button class="action-btn dislike" onclick="nextMeme('¡Rug Pull! Siguiente periquito... ❌')">❌</button>
-                    <button class="action-btn super" onclick="nextMeme('¡SUPER MATCH! 🚀 Directo a la luna')">⭐</button>
-                    <button class="action-btn like" onclick="nextMeme('¡Es un Match! Enviando tokens de amor... ❤️')">❤️</button>
+                    <button class="action-btn sail" onclick="nextPort()">⚓ ¡Zarpar a Nuevo Destino!</button>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- ROADMAP / HOJA DE RUTA GRACIOSA -->
+    <!-- EL MAPA DE RUTA DE LA TRIPULACIÓN -->
     <section class="roadmap">
-        <h2>🗺️ Roadmap (Hoja de Ruta)</h2>
+        <h2>🗺️ Diario de Navegación (Roadmap)</h2>
         <div class="timeline">
-            <div class="step"><strong>Fase 1:</strong> Lanzar la web y robarle las semillas al canario del vecino.</div>
-            <div class="step"><strong>Fase 2:</strong> Listar \$TENDER en exchanges descentralizados de aves (BirdSwap).</div>
-            <div class="step"><strong>Fase 3:</strong> Dominación global. Los humanos nos limpiarán las jaulas para siempre.</div>
+            <div class="step"><strong>Puerto 1:</strong> Reclutar marineros (Hodlers) y comprar mijo para el viaje.</div>
+            <div class="step"><strong>Puerto 2:</strong> Cruzar el Atlántico de las ballenas cripto sin que nos hunda el mercado.</div>
+            <div class="step"><strong>Puerto 3:</strong> Encontrar El Dorado de las Semillas y repartir el Airdrop con toda la tripulación.</div>
         </div>
     </section>
 
     <footer>
-        <p>Creado con 🦜 para la comunidad cripto-pío. Esto no es un consejo financiero, alimenta a tu periquito con moderación.</p>
+        <p>Navegando en la blockchain con 🦜 y mucho amor. Esto no es un consejo financiero de piratas.</p>
     </footer>
 
     <script>
-        // Lista de periquitos meme para rotar cuando el usuario hace clic
-        const parakeets = [
+        // Lista de aves regionales de América que el perico visita
+        const adventureLog = [
             {
-                name: "Paco Nakamoto", age: "1 año",
-                bio: '"Hago trading mientras duermo en el columpio. Busco novia que no se asuste con las fluctuaciones del mercado ni los ruidos de la licuadora."',
-                tags: ["💎 Diamond Beak", "🌾 Semillas Crudas", "🚀 To The Moon"],
+                name: "Tucán Tuki",
+                region: "📍 AMAZONAS (BRASIL)",
+                tier: "💎 Gema del Norte",
+                bio: '"¡Bienvenidos a mi selva! Traigo un cargamento de \$TENDER y frutas tropicales. Si sostienes mi token, tus alas jamás caerán."',
+                tags: ["🦜 Pico Gigante", "⚡ Volador Alfa", "🌴 100x Orgánico"],
                 img: "https://unsplash.com"
             },
             {
-                name: "Luna Whale", age: "2 años",
-                bio: '"Tengo acumuladas 50 toneladas de mijo en el fondo de mi jaula. Busco socio/a para gastarlas en juguetes destructibles. Cero dramas."',
-                tags: ["🐋 Ballena", "🪞 Fan de los Espejos", "💅 Diva"],
+                name: "Cóndor Andino",
+                region: "📍 CORDILLERA DE LOS ANDES",
+                tier: "🏔️ Monarca de las Alturas",
+                bio: '"Vuelo tan alto que el mercado de criptomonedas parece diminuto desde aquí. Solo apto para verdaderos Diamond Beaks."',
+                tags: ["🦅 Gigante", "❄️ Viento Helado", "🚀 Máximo Histórico"],
                 img: "https://unsplash.com"
             },
             {
-                name: "Elon Flappy", age: "6 meses",
-                bio: '"Esquivo gatos en mi tiempo libre. Si me das un Like, prometo no morderte los dedos... muy fuerte."',
-                tags: ["⚡ Eléctrico", "🧗 Aventurero", "🥜 Adicto al Maní"],
+                name: "Cardenal Rojo",
+                region: "📍 BOSQUES DE NORTEAMÉRICA",
+                tier: "🔥 Fuego del Bosque",
+                bio: '"El invierno no detiene este barco. Mi plumaje brilla tanto como el gráfico verde de \$TENDER cuando va directo a la luna."',
+                tags: ["🔴 Rojo Intenso", "🎵 Canto Veloz", "🍁 Escudo Invernal"],
                 img: "https://unsplash.com"
             }
         ];
 
-        let index = 0;
+        let currentDestination = 0;
 
-        function nextMeme(alertMessage) {
-            alert(alertMessage);
-            index = (index + 1) % parakeets.length;
-            const bird = parakeets[index];
+        function nextPort() {
+            currentDestination = (currentDestination + 1) % adventureLog.length;
+            const log = adventureLog[currentDestination];
             
-            // Actualizar la interfaz
-            document.querySelector('.card-info h3').innerHTML = `${bird.name}, <span class="age">${bird.age}</span>`;
-            document.querySelector('.card-info p').innerText = bird.bio;
-            document.querySelector('.card-image').style.backgroundImage = `url('${bird.img}')`;
+            // Efecto visual y cambio de datos
+            alert(`🌊 ¡Tormenta superada! El barco del Perico Capitán llega a: ${log.region}`);
             
-            const tagsContainer = document.querySelector('.tags');
+            document.getElementById('bird-name').innerHTML = `${log.name}, <span class="crypto-tier">${log.tier}</span>`;
+            document.getElementById('bird-bio').innerText = log.bio;
+            document.getElementById('region-badge').innerText = log.region;
+            document.getElementById('bird-bg').style.backgroundImage = `url('${log.img}')`;
+            
+            const tagsContainer = document.getElementById('bird-tags');
             tagsContainer.innerHTML = '';
-            bird.tags.forEach(tag => {
+            log.tags.forEach(tag => {
                 const span = document.createElement('span');
                 span.innerText = tag;
                 tagsContainer.appendChild(span);
