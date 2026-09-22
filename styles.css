@@ -118,3 +118,22 @@ body {
 .pie-barco { text-align: center; padding: 25px; color: #747d8c; font-size: 13px; border-top: 1px solid #1b2e3c; }
 
 @media (max-width: 480px) { .puerto-mensaje-visible { flex-direction: column; text-align: center; } }
+.idiomas {
+  display: flex;
+  gap: 15px; /* Espacio entre cada idioma */
+  justify-content: center;
+}
+
+.btn-lang {
+  background: none;
+  border: none;
+  color: white; /* Cambia al color de tu texto */
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-lang:hover {
+  transform: scale(1.1); /* Hace que crezca un poquito al pasar el mouse */
+}
+
