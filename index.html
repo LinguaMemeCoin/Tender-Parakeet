@@ -1,182 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-key="meta_title">$THND - La Bitácora del Perico Capitán 🦜⛵</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitán Perico - La Conquista del Mar Blockchain</title>
+    <style>
+        :root {
+            --primary: #FFD700; /* Oro Pirata */
+            --bg-dark: #0B132B; /* Mar Profundo */
+            --bg-light: #1C2541; /* Cubierta del Barco */
+            --text-light: #FFFFFF;
+            --accent-cute: #48CAE4; /* Azul Tierno */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(180deg, rgba(11,19,43,1) 0%, rgba(28,37,65,1) 100%);
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            color: var(--accent-cute);
+            font-size: 2rem;
+            border-bottom: 2px dashed var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .ca-box {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 2px solid var(--primary);
+            padding: 1rem;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 1.5rem 0;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .ca-text {
+            font-family: monospace;
+            color: var(--primary);
+            word-break: break-all;
+            font-size: 0.9rem;
+        }
+
+        .btn-copy {
+            background: var(--primary);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn-copy:hover {
+            transform: scale(1.05);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-main {
+            background-color: var(--primary);
+            color: var(--bg-dark);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
+        }
+
+        .btn-social {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+
+        .btn-social:hover {
+            background-color: var(--text-light);
+            color: var(--bg-dark);
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1-fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-light);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            text-align: left;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-box {
+            background-color: rgba(231, 76, 60, 0.1);
+            border: 1px solid #e74c3c;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #e74c3c;
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding: 2rem;
+            background-color: rgba(0,0,0,0.3);
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- ⚠️ BANNER DE ADVERTENCIA DE RIESGO DE ALTA MAR -->
-  <div class="banner-riesgo">
-    <div class="banner-contenido">
-      <span data-key="banner_warn">⚠️ <strong>ADVERTENCIA DE NAVEGACIÓN:</strong> $THND es una memecoin 100% especulativa sin utilidad oficial. Navegar en la Robinhood Chain conlleva volatilidad extrema y el riesgo de pérdida total del capital. ¡Arriesga solo lo que estés dispuesto a ver hundirse en el océano! 🏴‍☠️</span>
-    </div>
-  </div>
+    <header>
+        <div class="container">
+            <h1>🏴‍☠️ Capitán Perico 🦜</h1>
+            <p class="tagline">El pirata más tierno del mar cripto navega por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América para conquistar absolutamente todos los mares de la blockchain!</p>
+            
+            <div class="ca-box">
+                <span class="ca-text" id="contract">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</span>
+                <button class="btn-copy" onclick="copyCA()">Copiar</button>
+            </div>
 
-  <header class="header-barco">
-    <div class="header-top">
-      <h1 data-key="main_title">$THND - La Bitácora del Capitán 🦜⛵</h1>
-      <div class="idiomas">
-        <div class="lang-selector">
-          <button onclick="setLanguage('es')">🇲🇽 ES</button>
-          <button onclick="setLanguage('en')">🇺🇸 EN</button>
-          <button onclick="setLanguage('fr')">🇫🇷 FR</button>
+            <div class="cta-buttons">
+                <a href="https://ponsfamily.com" target="_blank" class="btn btn-main">💰 ¡ABORDAR LA VENTA ACTIVA!</a>
+                <a href="https://t.me" target="_blank" class="btn btn-social">✈️ Telegram</a>
+                <a href="https://x.com" target="_blank" class="btn btn-social">❌ Twitter / X</a>
+            </div>
         </div>
-      </div>
-      <!-- 📡 CONTADOR REAL DE VISITAS -->
-      <div class="contador-global">
-        <p><span data-key="counter_text">📡 Marineros en el puerto (Visitas reales):</span> <span id="contador-real">Cargando...</span></p>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="camarote-principal">
-    
-    <!-- SECCIÓN INTERACTIVA DEL PERICO -->
-    <section class="seccion-presentacion">
-      <h2># $THND PARAKEET</h2>
-      <p class="intro-lore" data-key="intro_lore">Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺</p>
-      
-      <!-- CONTENEDOR GEOLOCALIZADO DINÁMICO -->
-      <div id="puerto-bienvenida" class="puerto-bienvenida-container">
-        <div id="cargando-puerto" class="puerto-estado">
-          <p data-key="geo_loading">🧭 Calculando coordenadas de tu IP en el mapa...</p>
+    <main class="container">
+        
+        <h2>🪙 Manifiesto del Botín (Tokenomics)</h2>
+        <div class="grid-info">
+            <div class="card">
+                <h3>💎 100% Para la Tripulación</h3>
+                <p>Transparencia absoluta de alta mar. Los desarrolladores <strong>no compramos ninguna moneda en el lanzamiento ni compraremos ninguna en el futuro</strong>. Todo el suministro está 100% disponible para la venta pública.</p>
+            </div>
+            <div class="card">
+                <h3>⚔️ 3% de Impuesto de Abordaje</h3>
+                <p>Cada movimiento en el océano financia la conquista. Existe un <strong>3% de impuesto (tax)</strong> destinado exclusivamente al mantenimiento del barco, marketing agresivo y jugosas recompensas para los marineros leales.</p>
+            </div>
+            <div class="card">
+                <h3>🌊 Especulación Pura</h3>
+                <p>Aquí no hay falsas promesas tecnológicas ni utilidades artificiales. Esta moneda es <strong>100% especulativa</strong>. Nuestro único mapa de ruta es el hype, la comunidad y los memes tiernos.</p>
+            </div>
         </div>
-        <div id="mensaje-tripulante" class="puerto-mensaje-oculto">
-          <div class="ave-avatar-box">
-            <span id="ave-emblema" class="ave-emoji">🦜</span>
-          </div>
-          <div class="ave-texto-box">
-            <h3 id="saludo-titulo" data-key="welcome_title">¡Bienvenido Tripulante!</h3>
-            <p class="discurso-capitan" data-key="welcome_text">
-              Te damos la bienvenida a esta aventura por América. ¿Te animas a navegar en las aguas peligrosas de la blockchain? ¿Quieres romper tus límites y descubrir a dónde puedes llegar?
-            </p>
-          </div>
+
+        <h2>🗺️ La Gran Ruta de Conquista</h2>
+        <div class="grid-info">
+            <div class="card">
+                <h3>📍 Fase 1: Zarpando desde América</h3>
+                <p>La venta ya se lanzó con éxito en el launchpad. Reunimos a los primeros marineros en Telegram y X para propagar los memes del periquito pirata por todo el continente.</p>
+            </div>
+            <div class="card">
+                <h3>⛵ Fase 2: Dominación Territorial</h3>
+                <p>Con el 3% de mantenimiento impulsando los motores, expandimos la flota. Rompemos las fronteras locales de la Robinhoodchain para hacernos notar en todo el ecosistema cripto.</p>
+            </div>
+            <div class="card">
+                <h3>🔱 Fase 3: Emperador de los Mares</h3>
+                <p>El periquito tierno se apodera de cada rincón de la blockchain. No paramos hasta que el barco controle todos los mares financieros existentes.</p>
+            </div>
         </div>
-      </div>
 
-      <div class="datos-navegacion">
-        <p><strong data-key="sails_label">VELAS:</strong> <span class="resaltado-verde">100% TO THE MOON 🚀</span></p>
-        <p><strong data-key="chain_label">BLOCKCHAIN:</strong> ROBINHOOD CHAIN 🛡️</p>
-      </div>
-
-      <!-- FICHA DE CONTRATO INTELIGENTE -->
-      <div class="caja-contrato">
-        <h3 data-key="ca_title">🚀 DIRECCIÓN DE CONTRATO (CA)</h3>
-        <div class="ca-wrapper">
-          <code id="contrato-ca">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</code>
-          <button id="btn-copiar-ca" class="btn-copiar" data-key="btn_copy">COPIAR</button>
+        <div class="warning-box">
+            ⚠️ <strong>Advertencia de Navegación:</strong> Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo. ¡Asegúrate de arriesgar solo el botín que estés dispuesto a perder en la tormenta!
         </div>
-      </div>
 
-      <div class="acciones-comerciales">
-        <a href="https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020" target="_blank" rel="noopener noreferrer" class="btn-comprar" data-key="btn_buy">
-          💥 ¡COMPRAR $THND EN PONS!
-        </a>
-        <button id="btn-sonido" class="btn-sonido" data-key="btn_sound">🔊 SONIDO DEL MAR</button>
-      </div>
-    </section>
+    </main>
 
-    <!-- REDES SOCIALES OFICIALES -->
-    <section class="seccion-comunidad">
-      <h3 data-key="community_title">⚓ Únete a la Tripulación</h3>
-      <div class="social-links">
-        <a href="https://x.com/LinguaMemeCoin" target="_blank" rel="noopener noreferrer" class="btn-social btn-x" data-key="btn_x">🐦 Sigue en X</a>
-        <a href="https://t.me/TenderParakeetOficial" target="_blank" rel="noopener noreferrer" class="btn-social btn-telegram" data-key="btn_tg">💎 Canal de Telegram</a>
-      </div>
-    </section>
+    <footer>
+        <p>&copy; 2026 Capitán Perico Token. Lanzado con honor en Robinhoodchain via PONS.</p>
+    </footer>
 
-    <!-- 📜 EL MAPA DEL TESORO (FAQ DESPLEGABLE) -->
-    <div class="mapa-tesoro-wrapper">
-      <button id="btn-toggle-faq" class="btn-mapa-toggle">
-        <span data-key="faq_toggle_text">📜 Desplegar el Mapa del Puerto (FAQ)</span> <span class="brujula-icono">🧭</span>
-      </button>
+    <script>
+        function copyCA() {
+            const textToCopy = document.getElementById('contract').innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert('¡Contrato copiado al portapapeles, marinero! 🦜');
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
+        }
+    </script>
 
-      <div id="faq-contenido-desplegable" class="faq-contenido-oculto">
-        <section class="pergamino-faq">
-          
-          <div class="faq-categoria">
-            <h4 data-key="faq_cat1_title">🚨 Riesgos de Alta Mar</h4>
-            <div class="faq-item">
-              <button class="faq-pregunta" data-key="faq_q1">🏴‍☠️ ¿Tiene riesgos comerciar con $THND?</button>
-              <div class="faq-content-wrapper">
-                <p data-key="faq_a1">Sí, el riesgo de pérdida es absoluto. $THND es un token experimental de entretenimiento. No posee valor intrínseco ni promesas financieras. Su mercado es puramente especulativo.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-pregunta" data-key="faq_q2">⚓ ¿Por qué recomiendan no invertir más de $15 dólares?</button>
-              <div class="faq-content-wrapper">
-                <p data-key="faq_a2">Para proteger a la tripulación. Es un experimento puro y volátil en una red joven, por lo cual cualquier cantidad mayor es totalmente bajo tu propia responsabilidad, no te tires a altar mar si no sabes nadar.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-categoria">
-            <h4 data-key="faq_cat2_title">📊 Mecánicas de la Tripulación (Tokenomics)</h4>
-            <div class="faq-item">
-              <button class="faq-pregunta" data-key="faq_q3">🦜 ¿Qué significa lanzamiento 100% justo (Fair Launch)?</button>
-              <div class="faq-content-wrapper">
-                <p data-key="faq_a3">Significa que no hubo preventas ocultas ni asignaciones previas. El 100% se añadió de forma pública a la curva de vinculación de Pons Launchpad.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-pregunta" data-key="faq_q4">🛡️ ¿El equipo de desarrollo tiene tokens reservados?</button>
-              <div class="faq-content-wrapper">
-                <p data-key="faq_a4">No, el equipo posee un 0% de asignación. Se hizo una renuncia completa y no se comprarán ni guardarán tokens para beneficio personal.</p>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-pregunta" data-key="faq_q5">💰 ¿Qué es el "Creator Tax" o impuesto del 3%?</button>
-              <div class="faq-content-wrapper">
-                <p data-key="faq_a5">Es un fondo que se utilizara para el mantenimiento, pagos, actualizaciones y futuros listados y recompensas.</p>
-              </div>
-            </div>
-          </div>
-
-        </section>
-      </div>
-    </div>
-
-  </main>
-
-  <footer class="pie-barco">
-    <p data-key="footer_text">Creado con puro amor por las aves. $THND es un token de entretenimiento sin utilidad oficial.</p>
-  </footer>
-
-  <script src="script.js"></script>
-
-  <!-- SCRIPT DE TRADUCCIÓN OPTIMIZADO -->
-  <script>
-    const translations = {
-      es: {
-        meta_title: "$THND - La Bitácora del Perico Capitán 🦜⛵",
-        banner_warn: "⚠️ WARNING DE NAVEGACIÓN: $THND es una memecoin 100% especulativa sin utilidad oficial. Navegar en la Robinhood Chain conlleva volatilidad extrema y el riesgo de pérdida total del capital. ¡Arriesga solo lo que estés dispuesto a ver hundirse en el océano! 🏴‍☠️",
-        main_title: "$THND - La Bitácora del Capitán 🦜⛵",
-        counter_text: "📡 Marineros en el puerto (Visitas reales):",
-        intro_lore: "Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺",
-        geo_loading: "🧭 Calculando coordenadas de tu IP en el mapa...",
-        welcome_title: "¡Bienvenido Tripulante!",
-        welcome_text: "Te damos la bienvenida a esta aventura por América. ¿Te animas a navegar en las aguas peligrosas de la blockchain? ¿Quieres romper tus límites y descubrir a dónde puedes llegar?",
-        sails_label: "VELAS:",
-        chain_label: "BLOCKCHAIN:",
-        ca_title: "🚀 DIRECCIÓN DE CONTRATO (CA)",
-        btn_copy: "COPIAR",
-        btn_buy: "💥 ¡COMPRAR $THND EN PONS!",
-        btn_sound: "🔊 SONIDO DEL MAR",
-        community_title: "⚓ Únete a la Tripulación",
-        btn_x: "🐦 Sigue en X",
-        btn_tg: "💎 Canal de Telegram",
-        faq_toggle_text: "📜 Desplegar el Mapa del Puerto (FAQ)",
-        faq_cat1_title: "🚨 Riesgos de Alta Mar",
-        faq_q1: "🏴‍☠️ ¿Tiene riesgos comerciar con $THND?",
-        faq_a1: "Sí, el riesgo de pérdida es absoluto. $THND es un token experimental de entretenimiento. No posee valor intrínseco ni promesas financieras. Su mercado es puramente especulativo.",
-        faq_q2: "⚓ ¿Por qué recomiendan no invertir más de $15 dólares?",
-        faq_a2: "Para proteger a la tripulación. Es un experimento puro y volátil en una red joven, por lo cual cualquier cantidad mayor es totalmente bajo tu propia responsabilidad, no te tires a altar mar si no sabes nadar.",
-        faq_cat2_title: "📊 Mecánicas de la Tripulación (Tokenomics)",
-        faq_q3: "🦜 ¿Qué significa lanzamiento 100% justo (Fair Launch)?",
-        faq_a3: "Significa que no hubo preventas ocultas ni asignaciones previas. El 100% se añadió de forma pública a la curva de vinculación de Pons Launchpad.",
-        faq_q4: "🛡️ ¿El equipo de desarrollo tiene tokens reservados?",
-
- 
+</body>
+</html>
