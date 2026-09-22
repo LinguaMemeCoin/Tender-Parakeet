@@ -4,255 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capitán Perico - La Conquista de la Blockchain</title>
-    <!-- Bootstrap 5 para Estructura -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Google Fonts con Estilo Pirata y Cripto -->
-    <link href="https://googleapis.com" rel="stylesheet">
-    <style>
-        :root {
-            --primary-gold: #ffd700;
-            --dark-ocean: #060d13;
-            --mid-ocean: #0b1d2c;
-            --accent-red: #dc3545;
-        }
-
-        body {
-            background: linear-gradient(135deg, var(--dark-ocean) 0%, var(--mid-ocean) 100%);
-            color: #ffffff;
-            font-family: 'Share Tech Mono', monospace;
-            position: relative;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        /* Fondo Temático Integrado con CSS */
-        body::before {
-            content: "🚢";
-            position: fixed;
-            bottom: 10%;
-            right: 5%;
-            font-size: 8rem;
-            opacity: 0.15;
-            animation: sway 6s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        body::after {
-            content: "🪙 🗺️ 🪙";
-            position: fixed;
-            top: 20%;
-            left: 5%;
-            font-size: 4rem;
-            opacity: 0.05;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        @keyframes sway {
-            0%, 100% { transform: rotate(-5deg) translateY(0); }
-            50% { transform: rotate(8deg) translateY(-15px); }
-        }
-
-        h1, h2, h3, .pirate-font {
-            font-family: 'Pirata One', cursive;
-            letter-spacing: 2px;
-        }
-
-        .navbar {
-            background-color: rgba(6, 13, 19, 0.9) !important;
-            border-bottom: 2px solid var(--primary-gold);
-            backdrop-filter: blur(10px);
-        }
-
-        .network-badge {
-            background: rgba(255, 215, 0, 0.1);
-            border: 1px solid var(--primary-gold);
-            color: var(--primary-gold);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .card-pirate {
-            background: rgba(11, 29, 44, 0.85);
-            border: 2px solid #1a3a54;
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s, border-color 0.3s;
-            backdrop-filter: blur(5px);
-        }
-
-        .card-pirate:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary-gold);
-        }
-
-        .contract-box {
-            background: #03070b;
-            border: 1px dashed var(--primary-gold);
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .contract-box:hover {
-            background: rgba(255, 215, 0, 0.05);
-        }
-
-        /* Control de la Espada de Oro (Bonding Curve) */
-        .sword-container {
-            position: relative;
-            background: #112536;
-            height: 45px;
-            border-radius: 8px;
-            border: 2px solid #224461;
-            padding: 3px;
-            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
-        }
-
-        .sword-progress {
-            width: 7.6%; /* Porcentaje actual de la venta */
-            height: 100%;
-            background: linear-gradient(90deg, #b8860b 0%, var(--primary-gold) 50%, #fff799 100%);
-            border-radius: 4px;
-            box-shadow: 0 0 15px var(--primary-gold);
-            position: relative;
-            transition: width 0.5s;
-        }
-
-        .sword-progress::after {
-            content: "⚔️";
-            position: absolute;
-            right: -12px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-            text-shadow: 0 0 8px var(--primary-gold);
-        }
-
-        .btn-gold {
-            background: linear-gradient(135deg, #ffd700 0%, #cca100 100%);
-            color: #000000 !important;
-            font-weight: bold;
-            border: none;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-        }
-
-        .btn-gold:hover {
-            background: linear-gradient(135deg, #ffe240 0%, #e6b500 100%);
-            transform: scale(1.02);
-        }
-
-        /* Reproductor de Audio Flotante */
-        .audio-player-floating {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            z-index: 1000;
-            background: rgba(6, 13, 19, 0.95);
-            border: 2px solid var(--primary-gold);
-            padding: 10px 15px;
-            border-radius: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .audio-btn {
-            background: none;
-            border: none;
-            color: var(--primary-gold);
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-
-        /* Alerta de Riesgo */
-        .risk-notice {
-            background: rgba(220, 53, 69, 0.1);
-            border: 2px solid var(--accent-red);
-            border-radius: 12px;
-            padding: 20px;
-        }
-    </style>
+    <!-- Vinculación del archivo de estilos externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <header>
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <span style="font-size: 1.8rem;">🦜</span>
-                <span class="pirate-font fs-3 text-white">Capitán Perico</span>
-            </a>
+            <h1>🏴‍☠️ Capitán Perico 🦜</h1>
+            <p class="tagline">El pirata más tierno del mar cripto navega por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América para conquistar absolutamente todos los mares de la blockchain!</p>
             
-            <div class="d-flex align-items-center gap-3 ms-auto">
-                <!-- Badges de Redes e Infraestructura -->
-                <div class="d-none d-md-flex gap-2">
-                    <span class="network-badge">⚓ Robinhood Chain</span>
-                    <span class="network-badge">⚡ Pons V2</span>
-                </div>
-                
-                <!-- Selector de Idioma -->
-                <select id="lang-select" class="form-select form-select-sm bg-dark text-white border-secondary" style="width: 120px;" onchange="changeLanguage(this.value)">
-                    <option value="es">🇺🇸 ES</option>
-                    <option value="en">🇺🇸 EN</option>
-                    <option value="fr">🇫🇷 FR</option>
-                </select>
-            </div>
-        </div>
-    </nav>
-
-    <!-- SECCIÓN PRINCIPAL (HERO) -->
-    <header class="container my-5 text-center position-relative" style="z-index: 10;">
-        <div class="py-5">
-            <!-- Iconografía del Perico con Parche, Sombrero y Pata de Palo -->
-            <div class="position-relative d-inline-block mb-3">
-                <span style="font-size: 5rem; display: block; line-height: 1;">🎩</span>
-                <span style="font-size: 6rem; display: block; margin-top: -20px;">🦜🏴‍☠️</span>
-                <span style="font-size: 3rem; display: block; margin-top: -15px;">🦿</span>
-            </div>
-            
-            <h1 class="display-3 text-warning mb-3" data-translate="heroTitle">🏴‍☠️ Capitán Perico 🦜</h1>
-            
-            <div class="alert alert-warning d-inline-block bg-dark border-warning text-warning px-4 py-2 mb-4 animate-pulse">
-                <span data-translate="welcomeMessage">"¡Arrhhh! ¿Te unes a la aventura o eres un no volador?"</span>
+            <div class="ca-box">
+                <span class="ca-text" id="contract">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</span>
+                <button class="btn-copy" onclick="copyCA()">Copiar</button>
             </div>
 
-            <p class="lead mx-auto mb-4 text-light" style="max-width: 700px;" data-translate="heroDesc">
-                El pirata más tierno del mar cripto navega por la Robinhoodchain. ¡Zarpamos desde América para conquistar absolutamente todos los mares de la blockchain!
-            </p>
-
-            <!-- CAJA DEL CONTRATO INTELIGENTE -->
-            <div class="max-width-md mx-auto mb-4" style="max-width: 500px;">
-                <div class="contract-box text-center" onclick="copyContract()">
-                    <span class="text-secondary d-block small mb-1" data-translate="clickCopy">📋 CLIC PARA COPIAR CONTRATO</span>
-                    <strong class="text-warning" id="contract-address">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</strong>
-                </div>
-            </div>
-
-            <!-- ENLACES DE ACCIÓN -->
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="https://ponsfamily.com" target="_blank" class="btn btn-gold btn-lg px-4 py-3 text-uppercase" data-translate="btnActiveSale">💰 ¡Abordar la Venta Activa!</a>
-                <a href="https://t.me" target="_blank" class="btn btn-outline-info btn-lg px-4" data-translate="btnTelegram">✈️ Telegram</a>
-                <a href="https://x.com" target="_blank" class="btn btn-outline-light btn-lg px-4" data-translate="btnTwitter">❌ Twitter / X</a>
+            <div class="cta-buttons">
+                <a href="https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020" target="_blank" class="btn btn-main">💰 ¡ABORDAR LA VENTA ACTIVA!</a>
+                <a href="https://t.me/TenderParakeetOficial" target="_blank" class="btn btn-social">✈️ Telegram</a>
+                <a href="https://x.com/LinguaMemeCoin" target="_blank" class="btn btn-social">❌ Twitter / X</a>
             </div>
         </div>
     </header>
 
-    <!-- BARRA DE PROGRESO DE LA ESPADA -->
-    <section class="container my-5" style="max-width: 800px; position: relative; z-index: 10;">
-        <div class="card-pirate p-4">
-            <h3 class="text-center text-warning mb-3" data-translate="curveTitle">⚔️ Curva de Vinculación en Pons (Bonding Curve)</h3>
-            <div class="sword-container mb-2">
-                <div class="sword-progress" id="curve-progress"></div>
+    <main class="container">
+        
+        <h2>🪙 Manifiesto del Botín (Tokenomics)</h2>
+        <div class="grid-info">
+            <div class="card">
+                <h3>💎 100% Para la Tripulación</h3>
+                <p>Transparencia absoluta de alta mar. Los desarrolladores <strong>no compramos ninguna moneda en el lanzamiento ni compraremos ninguna en el futuro</strong>. Todo el suministro está 100% disponible para la venta pública.</p>
             </div>
-            <div class="d-flex justify-content-between text-secondary small px-1">
-                <span data-translate="curveStart">Lanzamiento (0%)</span>
-                <span class="text-warning font-monospace fw-bold">7.6% Sold</span>
+            <div class="card">
+                <h3>⚔️ 3% de Impuesto de Abordaje</h3>
+                <p>Cada movimiento en el océano financia la conquista. Existe un <strong>3% de impuesto (tax)</strong> destinado exclusivamente al mantenimiento del barco, marketing agresivo y jugosas recompensas para los marineros leales.</p>
+            </div>
+            <div class="card">
+                <h3>🌊 Especulación Pura</h3>
+                <p>Aquí no hay falsas promesas tecnológicas ni utilidades artificiales. Esta moneda es <strong>100% especulativa</strong>. Nuestro único mapa de ruta es el hype, la comunidad y los memes tiernos.</p>
+            </div>
+        </div>
+
+        <h2>🗺️ La Gran Ruta de Conquista</h2>
+        <div class="grid-info">
+            <div class="card">
+                <h3>📍 Fase 1: Zarpando desde América</h3>
+                <p>La venta ya se lanzó con éxito en el launchpad. Reunimos a los primeros marineros en Telegram y X para propagar los memes del periquito pirata por todo el continente.</p>
+            </div>
+            <div class="card">
+                <h3>⛵ Fase 2: Dominación Territorial</h3>
+                <p>Con el 3% de mantenimiento impulsando los motores, expandimos la flota. Rompemos las fronteras locales de la Robinhoodchain para hacernos notar en todo el ecosistema cripto.</p>
+            </div>
+            <div class="card">
+                <h3>🔱 Fase 3: Emperador de los Mares</h3>
+                <p>El periquito tierno se apodera de cada rincón de la blockchain. No paramos hasta que el barco controle todos los mares financieros existentes.</p>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            ⚠️ <strong>Advertencia de Navegación:</strong> Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo. ¡Asegúrate de arriesgar solo el botín que estés dispuesto a perder en la tormenta!
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Capitán Perico Token. Lanzado con honor en Robinhoodchain via PONS.</p>
+    </footer>
+
+    <!-- Vinculación del archivo de lógica externo -->
+    <script src="script.js"></script>
+</body>
+</html>
