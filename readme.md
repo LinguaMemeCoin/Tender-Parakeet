@@ -1,8 +1,13 @@
-# 🦜 \$TENDER PARAKEET - Landing Page Memecoin 🚀
+# 🏴‍☠️ Capitán Perico 🦜 - Sitio Web Oficial
 
-¡Bienvenido al repositorio oficial del proyecto cripto-pío definitivo! Esta es una landing page satírica estilo memecoin mezclada con una interfaz de Tinder para periquitos.
+¡Al abordaje! Este es el repositorio de la landing page oficial de **Capitán Perico**, la memecoin del pirata más tierno del mar cripto, navegando sobre la **Robinhoodchain** a través del launchpad de PONS.
 
-## 🌟 Características
-- **Interfaz estilo Cyberpunk/Meme**: Colores brillantes y temática cripto absurda.
-- **Mecánica Tinder Simulado**: Cambia dinámicamente de periquito usando JavaScript básico al presionar Like, Dislike o Super Like.
-- **Totalmente Responsivo**: Se ve genial en móviles y computadoras
+## 🌊 Filosofía del Proyecto
+* **Lanzamiento Justo:** Los desarrolladores no compraron ni comprarán ninguna moneda. El 100% está a la venta para la tripulación.
+* **100% Especulativa:** Sin falsas promesas de utilidad. Crecimiento impulsado por la comunidad y los memes.
+* **Financiamiento de Conquista:** Un 3% de impuesto (tax) automático destinado a marketing, mantenimiento y recompensas.
+
+## 📂 Estructura de Archivos
+* `index.html` - Estructura semántica de la página.
+* `styles.css` - Estilo visual pirata/tierno (adaptado para móviles).
+* `script.js` - Funcionalidad interactiva (copiar contrato al portapapeles)
