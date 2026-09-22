@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>$THND - La Bitácora del Perico Capitán 🦜⛵</title>
+  <title data-key="meta_title">$THND - La Bitácora del Perico Capitán 🦜⛵</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,22 +11,24 @@
   <!-- ⚠️ BANNER DE ADVERTENCIA DE RIESGO DE ALTA MAR -->
   <div class="banner-riesgo">
     <div class="banner-contenido">
-      <span>⚠️ <strong>ADVERTENCIA DE NAVEGACIÓN:</strong> $THND es una memecoin 100% especulativa sin utilidad oficial. Navegar en la Robinhood Chain conlleva volatilidad extrema y el riesgo de pérdida total del capital. ¡Arriesga solo lo que estés dispuesto a ver hundirse en el océano! 🏴‍☠️</span>
+      <span data-key="banner_warn">⚠️ <strong>ADVERTENCIA DE NAVEGACIÓN:</strong> $THND es una memecoin 100% especulativa sin utilidad oficial. Navegar en la Robinhood Chain conlleva volatilidad extrema y el riesgo de pérdida total del capital. ¡Arriesga solo lo que estés dispuesto a ver hundirse en el océano! 🏴‍☠️</span>
     </div>
   </div>
 
   <header class="header-barco">
     <div class="header-top">
-      <h1>$THND - La Bitácora del Capitán 🦜⛵</h1>
+      <h1 data-key="main_title">$THND - La Bitácora del Capitán 🦜⛵</h1>
       <div class="idiomas">
-  <div class="lang-selector">
-  <button onclick="setLanguage('es')">🇲🇽 ES</button>
-  <button onclick="setLanguage('en')">🇺🇸 EN</button>
-  <button onclick="setLanguage('fr')">🇫🇷 FR</button>
-</div>
-<!-- 📡 CONTADOR REAL DE VISITAS -->
-    <div class="contador-global">
-      <p>📡 Marineros en el puerto (Visitas reales): <span id="contador-real">Cargando...</span></p>
+        <div class="lang-selector">
+          <button onclick="setLanguage('es')">🇲🇽 ES</button>
+          <button onclick="setLanguage('en')">🇺🇸 EN</button>
+          <button onclick="setLanguage('fr')">🇫🇷 FR</button>
+        </div>
+      </div>
+      <!-- 📡 CONTADOR REAL DE VISITAS -->
+      <div class="contador-global">
+        <p><span data-key="counter_text">📡 Marineros en el puerto (Visitas reales):</span> <span id="contador-real">Cargando...</span></p>
+      </div>
     </div>
   </header>
 
@@ -35,20 +37,20 @@
     <!-- SECCIÓN INTERACTIVA DEL PERICO -->
     <section class="seccion-presentacion">
       <h2># $THND PARAKEET</h2>
-      <p class="intro-lore">Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺</p>
+      <p class="intro-lore" data-key="intro_lore">Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺</p>
       
       <!-- CONTENEDOR GEOLOCALIZADO DINÁMICO -->
       <div id="puerto-bienvenida" class="puerto-bienvenida-container">
         <div id="cargando-puerto" class="puerto-estado">
-          <p>🧭 Calculando coordenadas de tu IP en el mapa...</p>
+          <p data-key="geo_loading">🧭 Calculando coordenadas de tu IP en el mapa...</p>
         </div>
         <div id="mensaje-tripulante" class="puerto-mensaje-oculto">
           <div class="ave-avatar-box">
             <span id="ave-emblema" class="ave-emoji">🦜</span>
           </div>
           <div class="ave-texto-box">
-            <h3 id="saludo-titulo">¡Bienvenido Tripulante!</h3>
-            <p class="discurso-capitan">
+            <h3 id="saludo-titulo" data-key="welcome_title">¡Bienvenido Tripulante!</h3>
+            <p class="discurso-capitan" data-key="welcome_text">
               Te damos la bienvenida a esta aventura por América. ¿Te animas a navegar en las aguas peligrosas de la blockchain? ¿Quieres romper tus límites y descubrir a dónde puedes llegar?
             </p>
           </div>
@@ -56,79 +58,79 @@
       </div>
 
       <div class="datos-navegacion">
-        <p><strong>VELAS:</strong> <span class="resaltado-verde">100% TO THE MOON 🚀</span></p>
-        <p><strong>BLOCKCHAIN:</strong> ROBINHOOD CHAIN 🛡️</p>
+        <p><strong data-key="sails_label">VELAS:</strong> <span class="resaltado-verde">100% TO THE MOON 🚀</span></p>
+        <p><strong data-key="chain_label">BLOCKCHAIN:</strong> ROBINHOOD CHAIN 🛡️</p>
       </div>
 
       <!-- FICHA DE CONTRATO INTELIGENTE -->
       <div class="caja-contrato">
-        <h3>🚀 DIRECCIÓN DE CONTRATO (CA)</h3>
+        <h3 data-key="ca_title">🚀 DIRECCIÓN DE CONTRATO (CA)</h3>
         <div class="ca-wrapper">
           <code id="contrato-ca">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</code>
-          <button id="btn-copiar-ca" class="btn-copiar">COPIAR</button>
+          <button id="btn-copiar-ca" class="btn-copiar" data-key="btn_copy">COPIAR</button>
         </div>
       </div>
 
       <div class="acciones-comerciales">
-        <a href="https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020" target="_blank" rel="noopener noreferrer" class="btn-comprar">
+        <a href="https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020" target="_blank" rel="noopener noreferrer" class="btn-comprar" data-key="btn_buy">
           💥 ¡COMPRAR $THND EN PONS!
         </a>
-        <button id="btn-sonido" class="btn-sonido">🔊 SONIDO DEL MAR</button>
+        <button id="btn-sonido" class="btn-sonido" data-key="btn_sound">🔊 SONIDO DEL MAR</button>
       </div>
     </section>
 
     <!-- REDES SOCIALES OFICIALES -->
     <section class="seccion-comunidad">
-      <h3>⚓ Únete a la Tripulación</h3>
+      <h3 data-key="community_title">⚓ Únete a la Tripulación</h3>
       <div class="social-links">
-        <a href="https://x.com/LinguaMemeCoin" target="_blank" rel="noopener noreferrer" class="btn-social btn-x">🐦 Sigue en X</a>
-        <a href="https://t.me/TenderParakeetOficial" target="_blank" rel="noopener noreferrer" class="btn-social btn-telegram">💎 Canal de Telegram</a>
+        <a href="https://x.com/LinguaMemeCoin" target="_blank" rel="noopener noreferrer" class="btn-social btn-x" data-key="btn_x">🐦 Sigue en X</a>
+        <a href="https://t.me/TenderParakeetOficial" target="_blank" rel="noopener noreferrer" class="btn-social btn-telegram" data-key="btn_tg">💎 Canal de Telegram</a>
       </div>
     </section>
 
     <!-- 📜 EL MAPA DEL TESORO (FAQ DESPLEGABLE) -->
     <div class="mapa-tesoro-wrapper">
       <button id="btn-toggle-faq" class="btn-mapa-toggle">
-        📜 Desplegar el Mapa del Puerto (FAQ) <span class="brujula-icono">🧭</span>
+        <span data-key="faq_toggle_text">📜 Desplegar el Mapa del Puerto (FAQ)</span> <span class="brujula-icono">🧭</span>
       </button>
 
       <div id="faq-contenido-desplegable" class="faq-contenido-oculto">
         <section class="pergamino-faq">
           
           <div class="faq-categoria">
-            <h4>🚨 Riesgos de Alta Mar</h4>
+            <h4 data-key="faq_cat1_title">🚨 Riesgos de Alta Mar</h4>
             <div class="faq-item">
-              <button class="faq-pregunta">🏴‍☠️ ¿Tiene riesgos comerciar con $THND?</button>
-              <div class="faq-respuesta">
-                <p>Sí, el riesgo de pérdida es absoluto. $THND es un token experimental de entretenimiento. No posee valor intrínseco ni promesas financieras. Su mercado es puramente especulativo.</p>
+              <button class="faq-pregunta" data-key="faq_q1">🏴‍☠️ ¿Tiene riesgos comerciar con $THND?</button>
+              <div class="faq-content-wrapper">
+                <p data-key="faq_a1">Sí, el riesgo de pérdida es absoluto. $THND es un token experimental de entretenimiento. No posee valor intrínseco ni promesas financieras. Su mercado es puramente especulativo.</p>
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-pregunta">⚓ ¿Por qué recomiendan no invertir más de $15 dólares?</button>
-              <div class="faq-respuesta">
-                <p>Para proteger a la tripulación. Es un experimento puro y volátil en una red joven, por lo cual cualquier cantidad mayor es totalmente bajo tu propia responsabilidad, no te tires a altar mar si no sabes nadar.</p>
+              <button class="faq-pregunta" data-key="faq_q2">⚓ ¿Por qué recomiendan no invertir más de $15 dólares?</button>
+              <div class="faq-content-wrapper">
+                <p data-key="faq_a2">Para proteger a la tripulación. Es un experimento puro y volátil en una red joven, por lo cual cualquier cantidad mayor es totalmente bajo tu propia responsabilidad, no te tires a altar mar si no sabes nadar.</p>
               </div>
             </div>
           </div>
 
           <div class="faq-categoria">
-            <h4>📊 Mecánicas de la Tripulación (Tokenomics)</h4>
+            <h4 data-key="faq_cat2_title">📊 Mecánicas de la Tripulación (Tokenomics)</h4>
             <div class="faq-item">
-              <button class="faq-pregunta">🦜 ¿Qué significa lanzamiento 100% justo (Fair Launch)?</button>
-              <div class="faq-respuesta">
-                <p>Significa que no hubo preventas ocultas ni asignaciones previas. El 100% se añadió de forma pública a la curva de vinculación de Pons Launchpad.</p>
+              <button class="faq-pregunta" data-key="faq_q3">🦜 ¿Qué significa lanzamiento 100% justo (Fair Launch)?</button>
+              <div class="faq-content-wrapper">
+                <p data-key="faq_a3">Significa que no hubo preventas ocultas ni asignaciones previas. El 100% se añadió de forma pública a la curva de vinculación de Pons Launchpad.</p>
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-pregunta">🛡️ ¿El equipo de desarrollo tiene tokens reservados?</button>
-              <div class="faq-respuesta">
-                <p>No, el equipo posee un 0% de asignación. Se hizo una renuncia completa y no se comprarán ni guardarán tokens para beneficio personal.</p>
+              <button class="faq-pregunta" data-key="faq_q4">🛡️ ¿El equipo de desarrollo tiene tokens reservados?</button>
+              <div class="faq-content-wrapper">
+                <p data-key="faq_a4">No, el equipo posee un 0% de asignación. Se hizo una renuncia completa y no se comprarán ni guardarán tokens para beneficio personal.</p>
               </div>
             </div>
             <div class="faq-item">
-              <button class="faq-pregunta">💰 ¿Qué es el "Creator Tax" o impuesto del 3%?</button>
-              <div class="faq-respuesta">
-                <p>Es un fondo que se utilizara para el mantenimiento, pagos, actualizaciones y futuros listados y recompensas.</p>
+              <button class="faq-pregunta" data-key="faq_q5">💰 ¿Qué es el "Creator Tax" o impuesto del 3%?</button>
+              <div class="faq-content-wrapper">
+                <p data-key="faq_a5">Es un fondo que se utilizara para el mantenimiento, pagos, actualizaciones y futuros listados y recompensas.</p>
               </div>
             </div>
           </div>
@@ -140,47 +142,41 @@
   </main>
 
   <footer class="pie-barco">
-    <p>Creado con puro amor por las aves. $THND es un token de entretenimiento sin utilidad oficial.</p>
+    <p data-key="footer_text">Creado con puro amor por las aves. $THND es un token de entretenimiento sin utilidad oficial.</p>
   </footer>
 
   <script src="script.js"></script>
-</body>
-</html>
-<script>
-  // Diccionario con las traducciones de tu Bitácora
-  const translations = {
-    es: {
-      title: "$THND - La Bitácora del Capitán 🦜⛵",
-      welcome: "¡Bienvenido Tripulante!"
-    },
-    en: {
-      title: "$THND - The Captain's Log 🦜⛵",
-      welcome: "Welcome Crew Member!"
-    },
-    fr: {
-      title: "$THND - Le Journal du Capitaine 🦜⛵",
-      welcome: "Bienvenue Membre d'Équipage !"
-    }
-  };
 
-  function setLanguage(lang) {
-    // Busca todos los elementos que tengan el atributo data-key
-    document.querySelectorAll('[data-key]').forEach(element => {
-      const key = element.getAttribute('data-key');
-      if (translations[lang] && translations[lang][key]) {
-        element.innerText = translations[lang][key];
-      }
-    });
-    
-    // Opcional: Guarda la preferencia del usuario en el navegador
-    localStorage.setItem('preferredLang', lang);
-  }
-
-  // Cargar el idioma guardado al abrir la página (por defecto español)
-  document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.get('preferredLang') || 'es';
-    setLanguage(savedLang);
-  });
-</script>
+  <!-- SCRIPT DE TRADUCCIÓN OPTIMIZADO -->
+  <script>
+    const translations = {
+      es: {
+        meta_title: "$THND - La Bitácora del Perico Capitán 🦜⛵",
+        banner_warn: "⚠️ WARNING DE NAVEGACIÓN: $THND es una memecoin 100% especulativa sin utilidad oficial. Navegar en la Robinhood Chain conlleva volatilidad extrema y el riesgo de pérdida total del capital. ¡Arriesga solo lo que estés dispuesto a ver hundirse en el océano! 🏴‍☠️",
+        main_title: "$THND - La Bitácora del Capitán 🦜⛵",
+        counter_text: "📡 Marineros en el puerto (Visitas reales):",
+        intro_lore: "Acompaña al Perico más tierno y audaz en su barco por las costas de América. ¡Descubriendo las aves más valiosas de la blockchain! 🌊🗺",
+        geo_loading: "🧭 Calculando coordenadas de tu IP en el mapa...",
+        welcome_title: "¡Bienvenido Tripulante!",
+        welcome_text: "Te damos la bienvenida a esta aventura por América. ¿Te animas a navegar en las aguas peligrosas de la blockchain? ¿Quieres romper tus límites y descubrir a dónde puedes llegar?",
+        sails_label: "VELAS:",
+        chain_label: "BLOCKCHAIN:",
+        ca_title: "🚀 DIRECCIÓN DE CONTRATO (CA)",
+        btn_copy: "COPIAR",
+        btn_buy: "💥 ¡COMPRAR $THND EN PONS!",
+        btn_sound: "🔊 SONIDO DEL MAR",
+        community_title: "⚓ Únete a la Tripulación",
+        btn_x: "🐦 Sigue en X",
+        btn_tg: "💎 Canal de Telegram",
+        faq_toggle_text: "📜 Desplegar el Mapa del Puerto (FAQ)",
+        faq_cat1_title: "🚨 Riesgos de Alta Mar",
+        faq_q1: "🏴‍☠️ ¿Tiene riesgos comerciar con $THND?",
+        faq_a1: "Sí, el riesgo de pérdida es absoluto. $THND es un token experimental de entretenimiento. No posee valor intrínseco ni promesas financieras. Su mercado es puramente especulativo.",
+        faq_q2: "⚓ ¿Por qué recomiendan no invertir más de $15 dólares?",
+        faq_a2: "Para proteger a la tripulación. Es un experimento puro y volátil en una red joven, por lo cual cualquier cantidad mayor es totalmente bajo tu propia responsabilidad, no te tires a altar mar si no sabes nadar.",
+        faq_cat2_title: "📊 Mecánicas de la Tripulación (Tokenomics)",
+        faq_q3: "🦜 ¿Qué significa lanzamiento 100% justo (Fair Launch)?",
+        faq_a3: "Significa que no hubo preventas ocultas ni asignaciones previas. El 100% se añadió de forma pública a la curva de vinculación de Pons Launchpad.",
+        faq_q4: "🛡️ ¿El equipo de desarrollo tiene tokens reservados?",
 
  
