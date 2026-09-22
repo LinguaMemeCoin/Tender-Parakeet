@@ -145,3 +145,41 @@
   <script src="script.js"></script>
 </body>
 </html>
+<script>
+  // Diccionario con las traducciones de tu Bitácora
+  const translations = {
+    es: {
+      title: "$THND - La Bitácora del Capitán 🦜⛵",
+      welcome: "¡Bienvenido Tripulante!"
+    },
+    en: {
+      title: "$THND - The Captain's Log 🦜⛵",
+      welcome: "Welcome Crew Member!"
+    },
+    fr: {
+      title: "$THND - Le Journal du Capitaine 🦜⛵",
+      welcome: "Bienvenue Membre d'Équipage !"
+    }
+  };
+
+  function setLanguage(lang) {
+    // Busca todos los elementos que tengan el atributo data-key
+    document.querySelectorAll('[data-key]').forEach(element => {
+      const key = element.getAttribute('data-key');
+      if (translations[lang] && translations[lang][key]) {
+        element.innerText = translations[lang][key];
+      }
+    });
+    
+    // Opcional: Guarda la preferencia del usuario en el navegador
+    localStorage.setItem('preferredLang', lang);
+  }
+
+  // Cargar el idioma guardado al abrir la página (por defecto español)
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.get('preferredLang') || 'es';
+    setLanguage(savedLang);
+  });
+</script>
+
+ 
