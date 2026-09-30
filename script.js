@@ -1,152 +1,108 @@
 const translations = {
     es: {
         hero_title: "🏴‍☠️ Capitán Perico ($THND) 🦜",
-        hero_tagline: "El pirata más tierno del mar cripto navega con sus alas bien abiertas por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América en una red de bloques para conquistar el botín de la blockchain con el token <strong>$THND</strong>! [0x1.1, 0x1.3]",
+        hero_tagline: "El pirata más tierno del mar cripto navega con sus alas bien abiertas por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América en una red de bloques para conquistar el botín de la blockchain con el token <strong>$THND</strong>!",
         btn_copy: "Copiar CA ($THND)",
-        btn_buy: "💰 ¡COMPRAR $THND EN PONS! [0x1.1]",
+        btn_buy: "💰 ¡COMPRAR $THND EN PONS!",
         progress_title: "📈 Progreso del Botín (Curva de Vinculación)",
         progress_desc: "Meta para la graduación y listado automático en Uniswap:",
         progress_loading: "Conectando con el radar de Pons...",
         progress_meta: "Meta: Completar la Curva 🚀",
         manifesto_phrase_title: "👑 El Decreto del Nuevo Rey",
-        manifesto_phrase_text: '"El tiempo de los no voladores está terminando... ¡Un nuevo rey prepara su nido para conquistar absolutamente toda la blockchain!" [0x1.3]',
+        manifesto_phrase_text: '"El tiempo de los no voladores está terminando... ¡Un nuevo rey prepara su nido para conquistar absolutamente toda la blockchain!"',
         rivals_title: "🦅 El Vuelo frente a los Caminantes de Tierra",
-        rivals_intro: "Mientras el resto del mercado cripto se arrastra en la lentitud de los suelos tradicionales, el Capitán Perico despliega sus alas directas al cofre dorado [0x1.3].",
+        rivals_intro: "Mientras el resto del mercado cripto se arrastra en la lentitud de los suelos tradicionales, el Capitán Perico despliega sus alas directas al cofre dorado.",
         rival_1_title: "🐸 Saltarines Terrestres",
-        rival_1_desc: "Anfibios atrapados en charcos antiguos. Intentan saltar alto usando el viejo meta, pero operan en cámara lenta comparados con nuestro vuelo [0x1.3].",
+        rival_1_desc: "Anfibios atrapados en charcos antiguos. Intentan saltar alto usando el viejo meta, pero operan en cámara lenta comparados con nuestro vuelo.",
         rival_2_title: "🐶 Cachorros del Suelo",
-        rival_2_desc: "Caninos que ladran en la tierra firme esperando una recompensa que nunca llega. Tienen el piso dominado, pero carecen de cielo [0x1.3].",
+        rival_2_desc: "Caninos que ladran en la tierra firme esperando una recompensa que nunca llega. Tienen el piso dominado, pero carecen de la perspectiva que otorga el cielo.",
         rival_3_title: "🐧 Aves sin Alas",
-        rival_3_desc: "Observan desde sus islas de hielo cómo se escapa el verdadero botín digital. Tienen plumas, pero olvidaron el arte de volar alto [0x1.3].",
+        rival_3_desc: "Observan desde sus islas de hielo cómo se escapa el verdadero botín digital. Tienen plumas, pero olvidaron el arte de volar alto hacia la descentralización.",
         tok_title: "🪙 Manifiesto del Botín (Tokenomics)",
         tok_1_title: "💎 100% Para la Tripulación",
-        tok_1_desc: "Transparencia absoluta. Los desarrolladores no tenemos tokens asignados [0x1.1, 0x1.2, 0x1.3]. El 100% se añade a la curva al lanzar [0x1.1].",
+        tok_1_desc: "Transparencia absoluta de alta mar. Los desarrolladores no tenemos tokens asignados. El 100% del suministro se añade a la curva desde el lanzamiento.",
         tok_2_title_text: "3% de Impuesto de Abordaje",
-        tok_2_desc: "Cada movimiento financia la conquista. Un 3% de impuesto (creator tax) va directo al marketing y mantenimiento [0x1.1, 0x1.3].",
+        tok_2_desc: "Cada movimiento en el océano financia la conquista. Existe un 3% de impuesto (creator tax) destinado exclusivamente al marketing y mantenimiento de la flota.",
         tok_3_title: "🌊 Especulación Pura",
-        tok_3_desc: "Sin falsas promesas ni utilidades artificiales [0x1.1, 0x1.3]. Esta moneda es 100% comunitaria y de entretenimiento [0x1.1].",
-        warning_text: "⚠️ Advertencia de Navegación: Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo [0x1.1]. ¡Arriesga solo lo que estés dispuesto a perder en la tormenta (máximo sugerido: $15 USD) [0x1.1, 0x1.3]!"
+        tok_3_desc: "Aquí no hay falsas promesas ni utilidades artificiales. Esta moneda es 100% comunitaria y de entretenimiento. Cero hojas de ruta complicadas.",
+        warning_text: "⚠️ Advertencia de Navegación: Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo. ¡Asegúrate de arriesgar solo el botín que estés dispuesto a perder en la tormenta (máximo sugerido por la comunidad: $15 USD)!"
     },
     en: {
         hero_title: "🏴‍☠️ Captain Parakeet ($THND) 🦜",
-        hero_tagline: "The cutest pirate in the crypto sea sails with wide-open wings through the <strong>Robinhoodchain</strong>. We set sail from America on a block network to conquer the final blockchain bounty with the <strong>$THND</strong> token! [0x1.1, 0x1.3]",
+        hero_tagline: "The cutest pirate in the crypto sea sails with wide-open wings through the <strong>Robinhoodchain</strong>. We set sail from America on a block network to conquer the final blockchain bounty with the <strong>$THND</strong> token!",
         btn_copy: "Copy CA ($THND)",
-        btn_buy: "💰 BUY $THND ON PONS! [0x1.1]",
+        btn_buy: "💰 BUY $THND ON PONS!",
         progress_title: "📈 Bounty Progress (Bonding Curve)",
         progress_desc: "Target for graduation and automatic listing on Uniswap:",
         progress_loading: "Connecting to Pons radar...",
         progress_meta: "Goal: Complete the Curve 🚀",
         manifesto_phrase_title: "👑 The Decree of the New King",
-        manifesto_phrase_text: '"The time of the non-flyers is coming to an end... A new king prepares his nest to completely conquer the blockchain!" [0x1.3]',
+        manifesto_phrase_text: '"The time of the non-flyers is coming to an end... A new king prepares his nest to completely conquer the blockchain!"',
         rivals_title: "🦅 The Flight vs. The Ground Walkers",
-        rivals_intro: "While the rest of the crypto market crawls on traditional ground levels, Captain Parakeet spreads his wings straight toward the golden chest [0x1.3].",
+        rivals_intro: "While the rest of the crypto market crawls on traditional ground levels, Captain Parakeet spreads his wings straight toward the golden chest.",
         rival_1_title: "🐸 The Earth Leapers",
-        rival_1_desc: "Amphibians trapped in old puddles. Trying to jump high using the old meta, but operating in slow motion compared to our flight [0x1.3].",
+        rival_1_desc: "Amphibians trapped in old puddles. Trying to jump high using the old meta, but operating in slow motion compared to our flight.",
         rival_2_title: "🐶 Ground Puppies",
-        rival_2_desc: "Canines barking on solid ground waiting for a reward that never comes. They rule the floor but lack the sky [0x1.3].",
+        rival_2_desc: "Canines barking on solid ground waiting for a reward that never comes. They rule the floor but lack the sky.",
         rival_3_title: "🐧 Wingless Birds",
-        rival_3_desc: "Watching from ice islands as the real digital treasure slips away. They have feathers but forgot how to fly high [0x1.3].",
+        rival_3_desc: "Watching from ice islands as the real digital treasure slips away. They have feathers but forgot how to fly high.",
         tok_title: "🪙 Bounty Manifesto (Tokenomics)",
         tok_1_title: "💎 100% For the Crew",
-        tok_1_desc: "Absolute transparency. Developers hold zero team tokens [0x1.1, 0x1.2, 0x1.3]. 100% of supply goes straight to the curve at launch [0x1.1].",
+        tok_1_desc: "Absolute transparency. Developers hold zero team tokens. 100% of supply goes straight to the curve at launch.",
         tok_2_title_text: "3% Boarding Tax",
-        tok_2_desc: "Every single move funds the conquest. A 3% creator tax is entirely allocated to aggressive marketing and ship maintenance [0x1.1, 0x1.3].",
+        tok_2_desc: "Every single move funds the conquest. A 3% creator tax is entirely allocated to aggressive marketing and ship maintenance.",
         tok_3_title: "🌊 Pure Speculation",
-        tok_3_desc: "No false promises or fake utilities [0x1.1, 0x1.3]. This token is 100% community-driven and for entertainment purposes only [0x1.1].",
-        warning_text: "⚠️ Navigation Warning: As a purely speculative token with no utility, you sail at your own risk [0x1.1]. Only risk what you are willing to lose in the storm (community suggested max: $15 USD) [0x1.1, 0x1.3]!"
+        tok_3_desc: "No false promises or fake utilities. This token is 100% community-driven and for entertainment purposes only.",
+        warning_text: "⚠️ Navigation Warning: As a purely speculative token with no utility, you sail at your own risk. Only risk what you are willing to lose in the storm (community suggested max: $15 USD)!"
     },
     pt: {
         hero_title: "🏴‍☠️ Capitão Periquito ($THND) 🦜",
-        hero_tagline: "O pirata mais fofo dos mares cripto navega de asas abertas pela <strong>Robinhoodchain</strong>. Partimos da América em uma rede de blocos para conquistar o saque final da blockchain com o token <strong>$THND</strong>! [0x1.1, 0x1.3]",
+        hero_tagline: "O pirata mais fofo dos mares cripto navega de asas abertas pela <strong>Robinhoodchain</strong>. Partimos da América em uma rede de blocos para conquistar o saque final da blockchain com o token <strong>$THND</strong>!",
         btn_copy: "Copiar CA ($THND)",
-        btn_buy: "💰 COMPRAR $THND NO PONS! [0x1.1]",
+        btn_buy: "💰 COMPRAR $THND NO PONS!",
         progress_title: "📈 Progresso do Saque (Curva de Vinculação)",
         progress_desc: "Meta para graduação e listagem automática na Uniswap:",
         progress_loading: "Conectando ao radar do Pons...",
         progress_meta: "Meta: Completar a Curva 🚀",
         manifesto_phrase_title: "👑 O Decreto do Novo Rei",
-        manifesto_phrase_text: '"O tempo dos não-voadores está chegando ao fim... Um novo rei prepara seu ninho para conquistar absolutamente toda a blockchain!" [0x1.3]',
+        manifesto_phrase_text: '"O tempo dos não-voadores está chegando ao fim... Um novo rei prepara seu ninho para conquistar absolutamente toda a blockchain!"',
         rivals_title: "🦅 O Voo contra os Caminhantes da Terra",
-        rivals_intro: "Enquanto o resto do mercado cripto se arrasta nos solos tradicionais, o Capitão Periquito abre suas asas rumo ao baú de ouro [0x1.3].",
+        rivals_intro: "Enquanto o resto do mercado cripto se arrasta nos solos tradicionais, o Capitão Periquito abre suas asas rumo ao baú de ouro.",
         rival_1_title: "🐸 Os Saltadores Terrestres",
-        rival_1_desc: "Anfíbios presos em lagoas antigas. Tentam pular alto usando o meta antigo, mas operam em câmera lenta comparados ao nosso voo [0x1.3].",
+        rival_1_desc: "Anfíbios presos em lagoas antigas. Tentam pular alto usando o meta antigo, mas operam em câmera lenta comparados ao nosso voo.",
         rival_2_title: "🐶 Filhotes do Chão",
-        rival_2_desc: "Caninos latindo na terra firme esperando uma recompensa que nunca chega. Dominam o piso, mas não conhecem o céu [0x1.3].",
+        rival_2_desc: "Caninos latindo na terra firme esperando uma recompensa que nunca chega. Dominam o piso, mas não conhecem o céu.",
         rival_3_title: "🐧 Aves Sem Asas",
-        rival_3_desc: "Observam de suas ilhas de gelo o verdadeiro tesouro digital escapar. Têm penas, mas esqueceram como voar alto [0x1.3].",
+        rival_3_desc: "Observam de suas ilhas de gelo o verdadeiro tesouro digital escapar. Têm penas, mas esqueceram como voar alto.",
         tok_title: "🪙 Manifesto do Saque (Tokenomics)",
         tok_1_title: "💎 100% Para a Tripulação",
-        tok_1_desc: "Transparência total. Desenvolvedores têm zero tokens alocados [0x1.1, 0x1.2, 0x1.3]. 100% do suprimento vai para a curva no lançamento [0x1.1].",
-        tok_2_title_text: "Taxa de Abordaje de 3%",
-        tok_2_desc: "Cada movimento financia a conquista. Uma taxa de criador de 3% é destinada ao marketing e manutenção da frota [0x1.1, 0x1.3].",
+        tok_1_desc: "Transparência total. Desenvolvedores têm zero tokens alocados. 100% do suprimento vai para a curva no lançamento.",
+        tok_2_title_text: "Taxa de Abordagem de 3%",
+        tok_2_desc: "Cada movimento financia a conquista. Uma taxa de criador de 3% é destinada ao marketing e manutenção da frota.",
         tok_3_title: "🌊 Pura Especulação",
-        tok_3_desc: "Sem falsas promessas ou utilidades artificiais [0x1.1, 0x1.3]. Moeda 100% comunitária e de entretenimento [0x1.1].",
-        warning_text: "⚠️ Aviso de Navegação: Sendo um token puramente especulativo e sem utilidade, você navega por sua conta e risco [0x1.1]. Arrisque apenas o que aceita perder na tempestade (máximo sugerido: $15 USD) [0x1.1, 0x1.3]!"
+        tok_3_desc: "Sem falsas promessas ou utilidades artificiais. Moeda 100% comunitária e de entretenimento.",
+        warning_text: "⚠️ Aviso de Navegação: Sendo um token puramente especulativo e sem utilidade, você navega por sua conta e risco. Arrisque apenas o que aceita perder na tempestade (máximo sugerido: $15 USD)!"
     },
     fr: {
         hero_title: "🏴‍☠️ Capitaine Perruche ($THND) 🦜",
-        hero_tagline: "Le pirate le plus mignon de la crypto navigue ailes déployées sur la <strong>Robinhoodchain</strong>. Nous levons l'ancre depuis l'Amérique pour conquérir le butin de la blockchain avec le token <strong>$THND</strong> ! [0x1.1, 0x1.3]",
+        hero_tagline: "Le pirate le plus mignon de la crypto navigue ailes déployées sur la <strong>Robinhoodchain</strong>. Nous levons l'ancre depuis l'Amérique pour conquérir le butin de la blockchain avec le token <strong>$THND</strong> !",
         btn_copy: "Copier CA ($THND)",
-        btn_buy: "💰 ACHETER $THND SUR PONS! [0x1.1]",
+        btn_buy: "💰 ACHETER $THND SUR PONS!",
         progress_title: "📈 Progression du Butin (Courbe de Liaison)",
         progress_desc: "Objectif pour la graduation et la cotation automatique sur Uniswap :",
         progress_loading: "Connexion au radar de Pons...",
         progress_meta: "Objectif : Compléter la courbe 🚀",
         manifesto_phrase_title: "👑 Le Décret du Nouveau Roi",
-        manifesto_phrase_text: '"Le temps des non-volants touche à sa fin... Un nouveau roi prépare son nid pour conquérir absolument toute la blockchain!" [0x1.3]',
+        manifesto_phrase_text: '"Le temps des non-volants touche à sa fin... Un nouveau roi prépare son nid pour conquérir absolument toute la blockchain!"',
         rivals_title: "🦅 Le Vol contre les Marcheurs de Terre",
-        rivals_intro: "Alors que le reste du marché crypto rampe sur les sols traditionnels, le Capitaine Perruche déploie ses ailes vers le coffre doré [0x1.3].",
+        rivals_intro: "Alors que le reste du marché crypto rampe sur les sols traditionnels, le Capitaine Perruche déploie ses ailes vers le coffre doré.",
         rival_1_title: "🐸 Les Sauteurs Terrestres",
-        rival_1_desc: "Amphibiens piégés dans de vieilles mares. Ils tentent de sauter haut avec l'ancien méta, mais opèrent au ralenti face à notre vol [0x1.3].",
+        rival_1_desc: "Amphibiens piégés dans de vieilles mares. Ils tentent de sauter haut avec l'ancien méta, mais opèrent au ralenti face à notre vol.",
         rival_2_title: "🐶 Les Chiots du Sol",
-        rival_2_desc: "Des canidés qui aboient sur la terre ferme en attendant une récompense invisible. Ils dominent le sol mais n'ont pas le ciel [0x1.3].",
+        rival_2_desc: "Des canidés qui aboient sur la terre ferme en attendant une recompense invisible. Ils dominent le sol mais n'ont pas le ciel.",
         rival_3_title: "🐧 Les Oiseaux sans Ailes",
-        rival_3_desc: "Ils regardent depuis leurs îles de glace le vrai trésor numérique s'échapper. Ils ont des plumes, mais ont oublié l'art de voler haut [0x1.3].",
+        rival_3_desc: "Ils regardent depuis leurs îles de glace le vrai trésor numérique s'échapper. Ils ont des plumes, mais ont oublié l'art de voler haut.",
         tok_title: "🪙 Manifeste du Butin (Tokenomics)",
-        tok_1_title: "💎 100% Pour l'Équipage", 
-        async function updateCurveProgress() {
-    const RPC_URL = "https://robinhoodchain.com"; 
-    const TOKEN_CONTRACT = "0x54BF9EcF6b09E86DE19688E636a0368cc8844020";
-    const minABI = [{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"type":"function"}];
-
-    try {
-        const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
-        const contract = new ethers.Contract(TOKEN_CONTRACT, minABI, provider);
-        const totalCurveSupply = 1000000000; 
-
-        const remainingTokensBigNet = await contract.balanceOf(TOKEN_CONTRACT);
-        const remainingTokens = parseFloat(ethers.utils.formatUnits(remainingTokensBigNet, 18));
-        
-        const tokensSold = totalCurveSupply - remainingTokens;
-        let percentage = (tokensSold / totalCurveSupply) * 100;
-        if(percentage > 100) percentage = 100;
-        if(percentage < 0) percentage = 0;
-
-        if(percentage === 0) percentage = 42.5; // Progreso estético si la blockchain devuelve cero inicial
-
-        updateProgressBarUI(percentage);
-    } catch (e) {
-        console.log("Usando radar alternativo optimizado para GitHub Pages...");
-        let marketCapProgress = 42.5; // Fallback automático para evitar bloqueos CORS
-        updateProgressBarUI(marketCapProgress);
-    }
-}
-
-function updateProgressBarUI(percentage) {
-    const progressBar = document.getElementById("bondingCurveProgress");
-    if(progressBar) {
-        progressBar.style.width = percentage.toFixed(1) + "%";
-        progressBar.innerText = percentage.toFixed(1) + "%";
-    }
-    
-    const ethRaisedSpan = document.getElementById("ethRaised");
-    if(ethRaisedSpan) {
-        ethRaisedSpan.innerText = `Progreso Actual: ${percentage.toFixed(1)}% del mapa cubierto`;
-    }
-}
-// Activa el radar de progreso en cuanto carga la página y la actualiza cada 30 segundos
-window.addEventListener('DOMContentLoaded', () => {
-    updateCurveProgress();
-    setInterval(updateCurveProgress, 30000);
-});
-
+        tok_1_title: "💎 100% Pour l'Équipage",
+        tok_1_desc: "Transparence absolue. Les développeurs n'ont aucun token alloué. 100% de l'offre est injectée dans la courbe au lancement.",
+        tok_2_title_text: "Taxe d'Abordage de 3%",
