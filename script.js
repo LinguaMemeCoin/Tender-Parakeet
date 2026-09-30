@@ -1,9 +1,9 @@
 const translations = {
     es: {
-        hero_title: "🏴‍☠️ Capitán Perico ($THND) 🦜",
-        hero_tagline: "El pirata más tierno del mar cripto navega con sus alas bien abiertas por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América en una red de bloques para conquistar el botín de la blockchain con el token <strong>$THND</strong>!",
-        btn_copy: "Copiar CA ($THND)",
-        btn_buy: "💰 ¡COMPRAR $THND EN PONS!",
+        hero_title: "Perico Tierno ($THND) 🦜",
+        hero_tagline: "El perico más tierno del mar cripto navega con sus alas abiertas por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América en una red de bloques para conquistar el botín de la blockchain con el token <strong>$THND</strong>!",
+        lbl_copy: 0x54BF9EcF6b09E86DE19688E636a0368cc8844020,
+        lbl_buy: "https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020,
         progress_title: "📈 Progreso del Botín (Curva de Vinculación)",
         progress_desc: "Meta para la graduación y listado automático en Uniswap:",
         progress_loading: "Conectando con el radar de Pons...",
@@ -25,13 +25,15 @@ const translations = {
         tok_2_desc: "Cada movimiento en el océano financia la conquista. Existe un 3% de impuesto (creator tax) destinado exclusivamente al marketing y mantenimiento de la flota.",
         tok_3_title: "🌊 Especulación Pura",
         tok_3_desc: "Aquí no hay falsas promesas ni utilidades artificiales. Esta moneda es 100% comunitaria y de entretenimiento. Cero hojas de ruta complicadas.",
-        warning_text: "⚠️ Advertencia de Navegación: Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo. ¡Asegúrate de arriesgar solo el botín que estés dispuesto a perder en la tormenta (máximo sugerido por la comunidad: $15 USD)!"
+        warning_text: "⚠️ Advertencia de Navegación: Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo. ¡Asegúrate de arriesgar solo el botín que estés dispuesto a perder en la tormenta (máximo sugerido por la comunidad: $15 USD)!",
+        social_x: https://x.com/LinguaMemeCoin,
+        social_tg: https://t.me/TenderParakeetOficial
     },
     en: {
         hero_title: "🏴‍☠️ Captain Parakeet ($THND) 🦜",
         hero_tagline: "The cutest pirate in the crypto sea sails with wide-open wings through the <strong>Robinhoodchain</strong>. We set sail from America on a block network to conquer the final blockchain bounty with the <strong>$THND</strong> token!",
-        btn_copy: "Copy CA ($THND)",
-        btn_buy: "💰 BUY $THND ON PONS!",
+        lbl_copy: "Copy CA ($THND)",
+        lbl_buy: "💰 BUY $THND ON PONS!",
         progress_title: "📈 Bounty Progress (Bonding Curve)",
         progress_desc: "Target for graduation and automatic listing on Uniswap:",
         progress_loading: "Connecting to Pons radar...",
@@ -53,13 +55,15 @@ const translations = {
         tok_2_desc: "Every single move funds the conquest. A 3% creator tax is entirely allocated to aggressive marketing and ship maintenance.",
         tok_3_title: "🌊 Pure Speculation",
         tok_3_desc: "No false promises or fake utilities. This token is 100% community-driven and for entertainment purposes only.",
-        warning_text: "⚠️ Navigation Warning: As a purely speculative token with no utility, you sail at your own risk. Only risk what you are willing to lose in the storm (community suggested max: $15 USD)!"
+        warning_text: "⚠️ Navigation Warning: As a purely speculative token with no utility, you sail at your own risk. Only risk what you are willing to lose in the storm (community suggested max: $15 USD)!",
+        social_x: "Follow us on X",
+        social_tg: "Join Telegram"
     },
     pt: {
         hero_title: "🏴‍☠️ Capitão Periquito ($THND) 🦜",
         hero_tagline: "O pirata mais fofo dos mares cripto navega de asas abertas pela <strong>Robinhoodchain</strong>. Partimos da América em uma rede de blocos para conquistar o saque final da blockchain com o token <strong>$THND</strong>!",
-        btn_copy: "Copiar CA ($THND)",
-        btn_buy: "💰 COMPRAR $THND NO PONS!",
+        lbl_copy: "Copiar CA ($THND)",
+        lbl_buy: "💰 COMPRAR $THND NO PONS!",
         progress_title: "📈 Progresso do Saque (Curva de Vinculação)",
         progress_desc: "Meta para graduação e listagem automática na Uniswap:",
         progress_loading: "Conectando ao radar do Pons...",
@@ -81,13 +85,15 @@ const translations = {
         tok_2_desc: "Cada movimento financia a conquista. Uma taxa de criador de 3% é destinada ao marketing e manutenção da frota.",
         tok_3_title: "🌊 Pura Especulação",
         tok_3_desc: "Sem falsas promessas ou utilidades artificiais. Moeda 100% comunitária e de entretenimento.",
-        warning_text: "⚠️ Aviso de Navegação: Sendo um token puramente especulativo e sem utilidade, você navega por sua conta e risco. Arrisque apenas o que aceita perder na tempestade (máximo sugerido: $15 USD)!"
+        warning_text: "⚠️ Aviso de Navegação: Sendo um token puramente especulativo e sem utilidade, você navega por sua conta e risco. Arrisque apenas o que aceita perder na tempestade (máximo sugerido: $15 USD)!",
+        social_x: "Siga-nos no X",
+        social_tg: "Entre no Telegram"
     },
     fr: {
         hero_title: "🏴‍☠️ Capitaine Perruche ($THND) 🦜",
         hero_tagline: "Le pirate le plus mignon de la crypto navigue ailes déployées sur la <strong>Robinhoodchain</strong>. Nous levons l'ancre depuis l'Amérique pour conquérir le butin de la blockchain avec le token <strong>$THND</strong> !",
-        btn_copy: "Copier CA ($THND)",
-        btn_buy: "💰 ACHETER $THND SUR PONS!",
+        lbl_copy: "Copier CA ($THND)",
+        lbl_buy: "💰 ACHETER $THND SUR PONS!",
         progress_title: "📈 Progression du Butin (Courbe de Liaison)",
         progress_desc: "Objectif pour la graduation et la cotation automatique sur Uniswap :",
         progress_loading: "Connexion au radar de Pons...",
@@ -99,10 +105,8 @@ const translations = {
         rival_1_title: "🐸 Les Sauteurs Terrestres",
         rival_1_desc: "Amphibiens piégés dans de vieilles mares. Ils tentent de sauter haut avec l'ancien méta, mais opèrent au ralenti face à notre vol.",
         rival_2_title: "🐶 Les Chiots du Sol",
-        rival_2_desc: "Des canidés qui aboient sur la terre ferme en attendant une recompense invisible. Ils dominent le sol mais n'ont pas le ciel.",
+        rival_2_desc: "Des canidés qui aboient sur la terre ferme en attendant une récompense invisible. Ils dominent le sol mais n'ont pas le ciel.",
         rival_3_title: "🐧 Les Oiseaux sans Ailes",
         rival_3_desc: "Ils regardent depuis leurs îles de glace le vrai trésor numérique s'échapper. Ils ont des plumes, mais ont oublié l'art de voler haut.",
         tok_title: "🪙 Manifeste du Butin (Tokenomics)",
         tok_1_title: "💎 100% Pour l'Équipage",
-        tok_1_desc: "Transparence absolue. Les développeurs n'ont aucun token alloué. 100% de l'offre est injectée dans la courbe au lancement.",
-        tok_2_title_text: "Taxe d'Abordage de 3%",
