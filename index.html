@@ -3,75 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capitán Perico - La Conquista de la Blockchain</title>
-    <!-- Vinculación del archivo de estilos externo -->
+    <title>Capitán Perico ($THND) - La Conquista de la Blockchain</title>
+    
+    <!-- Metatags SEO para X/Twitter y Telegram -->
+    <meta name="description" content="El pirata más tierno de la Robinhoodchain despliega sus alas. ¡Zarpamos desde América para conquistar la blockchain!">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Capitán Perico ($THND) - La Conquista de la Blockchain">
+    <meta property="og:description" content="El tiempo de los no voladores está terminando... ¡Compra $THND en la curva de Pons!">
+    <meta property="og:image" content="perico-rivales.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Capitán Perico ($THND) - Robinhoodchain">
+    <meta name="twitter:description" content="Un nuevo rey prepara su nido para conquistar absolutamente toda la blockchain.">
+    <meta name="twitter:image" content="perico-rivales.png">
+
     <link rel="stylesheet" href="styles.css">
+    <!-- Proveedor Web3 Ethers.js para la curva en vivo -->
+    <script src="https://cloudflare.com"></script>
 </head>
 <body>
 
+    <!-- Selector de Idiomas Flotante -->
+    <div class="lang-selector">
+        <button onclick="changeLanguage('es')">🇪🇸 ES</button>
+        <button onclick="changeLanguage('en')">🇺🇸 EN</button>
+        <button onclick="changeLanguage('pt')">🇧🇷 PT</button>
+        <button onclick="changeLanguage('fr')">🇫🇷 FR</button>
+    </div>
+
     <header>
-        <div class="container">
-            <h1>🏴‍☠️ Capitán Perico 🦜</h1>
-            <p class="tagline">El pirata más tierno del mar cripto navega por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América para conquistar absolutamente todos los mares de la blockchain!</p>
-            
-            <div class="ca-box">
-                <span class="ca-text" id="contract">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</span>
-                <button class="btn-copy" onclick="copyCA()">Copiar</button>
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1 data-i18n="hero_title">🏴‍☠️ Capitán Perico ($THND) 🦜</h1>
+                <p class="tagline" data-i18n="hero_tagline">El pirata más tierno del mar cripto navega con sus alas bien abiertas por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América en una red de bloques para conquistar el botín de la blockchain con el token <strong>$THND</strong>!</p>
+                
+                <div class="ca-box">
+                    <span class="ca-text" id="contract">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</span>
+                    <button class="btn-copy" onclick="copyCA()" data-i18n="btn_copy">Copiar CA ($THND)</button>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://ponsfamily.com" target="_blank" class="btn btn-main" data-i18n="btn_buy">💰 ¡COMPRAR $THND EN PONS!</a>
+                    <a href="https://t.me" target="_blank" class="btn btn-social">✈️ Telegram: Tender Parakket Oficial</a>
+                    <a href="https://x.com" target="_blank" class="btn btn-social">❌ Twitter / X: Lingua MemeCoin</a>
+                </div>
             </div>
 
-            <div class="cta-buttons">
-                <a href="https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020" target="_blank" class="btn btn-main">💰 ¡ABORDAR LA VENTA ACTIVA!</a>
-                <a href="https://t.me/TenderParakeetOficial" target="_blank" class="btn btn-social">✈️ Telegram</a>
-                <a href="https://x.com/LinguaMemeCoin" target="_blank" class="btn btn-social">❌ Twitter / X</a>
+            <div class="hero-visual">
+                <img src="perico-rivales.png" alt="Capitán Perico $THND" class="responsive-img">
             </div>
         </div>
     </header>
 
     <main class="container">
         
-        <h2>🪙 Manifiesto del Botín (Tokenomics)</h2>
+        <!-- Barra de progreso en tiempo real de la curva -->
+        <section class="card progress-section">
+            <h3 data-i18n="progress_title">📈 Progreso del Botín (Curva de Vinculación)</h3>
+            <p data-i18n="progress_desc">Meta para la graduación y listado automático en Uniswap:</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="bondingCurveProgress" style="width: 0%;">0%</div>
+            </div>
+            <div class="progress-status">
+                <span id="ethRaised" data-i18n="progress_loading">Conectando con el radar de Pons...</span>
+                <span id="targetStatus" data-i18n="progress_meta">Meta: Completar la Curva 🚀</span>
+            </div>
+        </section>
+
+        <!-- Frase del Rey Perico -->
+        <section class="card manifesto-banner">
+            <h2 data-i18n="manifesto_phrase_title">👑 El Decreto del Nuevo Rey</h2>
+            <blockquote class="pirate-quote">
+                <p data-i18n="manifesto_phrase_text">"El tiempo de los no voladores está terminando... ¡Un nuevo rey prepara su nido para conquistar absolutamente toda la blockchain!"</p>
+            </blockquote>
+        </section>
+
+        <h2 data-i18n="rivals_title">🦅 El Vuelo frente a los Caminantes de Tierra</h2>
+        <p class="section-intro" data-i18n="rivals_intro">Mientras el resto del mercado cripto se arrastra en la lentitud de los suelos tradicionales, el Capitán Perico despliega sus alas directas al cofre dorado.</p>
+        
+        <div class="grid-info behavior-grid">
+            <div class="card">
+                <h3 data-i18n="rival_1_title">🐸 Saltarines Terrestres</h3>
+                <p data-i18n="rival_1_desc">Anfibios atrapados en charcos antiguos. Intentan saltar alto usando el viejo meta, pero operan en cámara lenta comparados con nuestro vuelo.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="rival_2_title">🐶 Cachorros del Suelo</h3>
+                <p data-i18n="rival_2_desc">Caninos que ladran en la tierra firme esperando una recompensa que nunca llega. Tienen el piso dominado, pero carecen de la perspectiva que otorga el cielo.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="rival_3_title">🐧 Aves sin Alas</h3>
+                <p data-i18n="rival_3_desc">Observan desde sus islas de hielo cómo se escapa el verdadero botín digital. Tienen plumas, pero olvidaron el arte de volar alto hacia la descentralización.</p>
+            </div>
+        </div>
+
+        <h2 data-i18n="tok_title">🪙 Manifiesto del Botín (Tokenomics)</h2>
         <div class="grid-info">
             <div class="card">
-                <h3>💎 100% Para la Tripulación</h3>
-                <p>Transparencia absoluta de alta mar. Los desarrolladores <strong>no compramos ninguna moneda en el lanzamiento ni compraremos ninguna en el futuro</strong>. Todo el suministro está 100% disponible para la venta pública.</p>
+                <h3 data-i18n="tok_1_title">💎 100% Para la Tripulación</h3>
+                <p data-i18n="tok_1_desc">Transparencia absoluta de alta mar. Los desarrolladores no tenemos tokens asignados. El 100% del suministro se añade a la curva desde el lanzamiento.</p>
             </div>
             <div class="card">
-                <h3>⚔️ 3% de Impuesto de Abordaje</h3>
-                <p>Cada movimiento en el océano financia la conquista. Existe un <strong>3% de impuesto (tax)</strong> destinado exclusivamente al mantenimiento del barco, marketing agresivo y jugosas recompensas para los marineros leales.</p>
+                <h3>⚔️ <span data-i18n="tok_2_title_text">3% de Impuesto</span></h3>
+                <p data-i18n="tok_2_desc">Cada movimiento en el océano financia la conquista. Existe un 3% de impuesto (creator tax) destinado exclusivamente al marketing y mantenimiento de la flota.</p>
             </div>
             <div class="card">
-                <h3>🌊 Especulación Pura</h3>
-                <p>Aquí no hay falsas promesas tecnológicas ni utilidades artificiales. Esta moneda es <strong>100% especulativa</strong>. Nuestro único mapa de ruta es el hype, la comunidad y los memes tiernos.</p>
+                <h3 data-i18n="tok_3_title">🌊 Especulación Pura</h3>
+                <p data-i18n="tok_3_desc">Aquí no hay falsas promesas ni utilidades artificiales. Esta moneda es 100% comunitaria y de entretenimiento. Cero hojas de ruta complicadas.</p>
             </div>
         </div>
 
-        <h2>🗺️ La Gran Ruta de Conquista</h2>
-        <div class="grid-info">
-            <div class="card">
-                <h3>📍 Fase 1: Zarpando desde América</h3>
-                <p>La venta ya se lanzó con éxito en el launchpad. Reunimos a los primeros marineros en Telegram y X para propagar los memes del periquito pirata por todo el continente.</p>
-            </div>
-            <div class="card">
-                <h3>⛵ Fase 2: Dominación Territorial</h3>
-                <p>Con el 3% de mantenimiento impulsando los motores, expandimos la flota. Rompemos las fronteras locales de la Robinhoodchain para hacernos notar en todo el ecosistema cripto.</p>
-            </div>
-            <div class="card">
-                <h3>🔱 Fase 3: Emperador de los Mares</h3>
-                <p>El periquito tierno se apodera de cada rincón de la blockchain. No paramos hasta que el barco controle todos los mares financieros existentes.</p>
-            </div>
+        <div class="warning-box" data-i18n="warning_text">
+            ⚠️ Advertencia de Navegación: Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo. ¡Asegúrate de arriesgar solo el botín que estés dispuesto a perder en la tormenta (máximo sugerido por la comunidad: $15 USD)!
         </div>
-
-        <div class="warning-box">
-            ⚠️ <strong>Advertencia de Navegación:</strong> Al ser un token puramente especulativo y sin utilidad, navegas bajo tu propio riesgo. ¡Asegúrate de arriesgar solo el botín que estés dispuesto a perder en la tormenta!
-        </div>
-
     </main>
 
     <footer>
         <p>&copy; 2026 Capitán Perico Token. Lanzado con honor en Robinhoodchain via PONS.</p>
     </footer>
 
-    <!-- Vinculación del archivo de lógica externo -->
     <script src="script.js"></script>
 </body>
 </html>
