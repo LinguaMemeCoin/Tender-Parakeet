@@ -9,7 +9,7 @@ const TOKEN_DATA = {
 // --- DICCIONARIO DE TRADUCCIONES COMPLETO ---
 const translations = {
     es: {
-        hero_title: "🏴‍☠️ Capitán Perico ($THND) 🦜",
+        hero_title: "🏴‍☠️ Perico Tierno ($THND) 🦜",
         hero_tagline: "El perico más tierno del mar cripto navega con sus alas abiertas por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América en una red de bloques para conquistar el botín de la blockchain con el token <strong>$THND</strong>!",
         btn_copy: "Copiar CA ($THND)",
         btn_buy: "¡ABORDAR EL BOTÍN!",
