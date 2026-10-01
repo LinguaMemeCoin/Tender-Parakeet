@@ -4,8 +4,6 @@ const TOKEN_DATA = {
     ponsUrl: "https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020",
     twitterUrl: "https://x.com/LinguaMemeCoin",
     telegramUrl: "https://t.me/TenderParakeetOficial"
-};
-
 // --- DICCIONARIO DE TRADUCCIONES COMPLETO ---
 const translations = {
     es: {
