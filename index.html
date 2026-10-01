@@ -17,7 +17,8 @@
     <meta name="twitter:image" content="perico-rivales.png">
 
     <link rel="stylesheet" href="styles.css">
-    <!-- Proveedor Web3 Ethers.js para la curva en vivo -->
+    
+    <!-- Proveedor Web3 Ethers.js (v6) vía CDN de confianza -->
     <script src="https://cloudflare.com"></script>
 </head>
 <body>
@@ -42,9 +43,18 @@
                 </div>
 
                 <div class="cta-buttons">
-                    <a href="https://ponsfamily.com" target="_blank" class="btn btn-main" data-i18n="btn_buy">💰 ¡COMPRAR $THND EN PONS!</a>
-                    <a href="https://t.me" target="_blank" class="btn btn-social">✈️ Telegram: Tender Parakket Oficial</a>
-                    <a href="https://x.com" target="_blank" class="btn btn-social">❌ Twitter / X: Lingua MemeCoin</a>
+                    <!-- El Botín -->
+                    <a href="#" target="_blank" class="btn btn-loot" id="link-loot">
+                        <span class="btn-icon">🪙</span> <span data-i18n="btn_buy">¡ABORDAR EL BOTÍN!</span>
+                    </a>
+                    <!-- El Mar -->
+                    <a href="#" target="_blank" class="btn btn-sea" id="link-sea">
+                        <span class="btn-icon">🌊</span> <span data-i18n="btn_tg_text">SURCAR EL MAR DIGITAL</span>
+                    </a>
+                    <!-- La Rama -->
+                    <a href="#" target="_blank" class="btn btn-branch" id="link-branch">
+                        <span class="btn-icon">🌿</span> <span data-i18n="btn_x_text">NIDO DEL REY PERICO</span>
+                    </a>
                 </div>
             </div>
 
@@ -69,13 +79,50 @@
             </div>
         </section>
 
-        <!-- Frase del Rey Perico -->
+        <!-- Frase del Rey Perico + Teatro de la Conquista -->
         <section class="card manifesto-banner">
             <h2 data-i18n="manifesto_phrase_title">👑 El Decreto del Nuevo Rey</h2>
             <blockquote class="pirate-quote">
                 <p data-i18n="manifesto_phrase_text">"El tiempo de los no voladores está terminando... ¡Un nuevo rey prepara su nido para conquistar absolutamente toda la blockchain!"</p>
             </blockquote>
+
+            <!-- Teatro Animado -->
+            <div class="theater-conquest">
+                <div class="sky-layer">
+                    <div class="nest-destination">🪹✨💰</div>
+                    <div class="perico-monarch">
+                        🦜<span class="crown-mini">👑</span>
+                        <div class="loot-trail">💎✨💎</div>
+                    </div>
+                </div>
+                <div class="ground-layer">
+                    <div class="ground-rival frog-sad">🐸💤</div>
+                    <div class="ground-rival dog-lost">🐶💢</div>
+                    <div class="ground-rival penguin-frozen">🐧❄️</div>
+                    <div class="ground-rival niu-lai-old">📉📉</div>
+                </div>
+            </div>
         </section>
+
+        <!-- Mapa de Abordaje (¿Cómo Comprar?) -->
+        <h2 data-i18n="buy_steps_title">🗺️ Mapa de Abordaje (¿Cómo Comprar?)</h2>
+        <div class="grid-info steps-grid">
+            <div class="card step-card">
+                <div class="step-number">1</div>
+                <h3 data-i18n="step_1_title">⚓ Prepara tu Billetera</h3>
+                <p data-i18n="step_1_desc">Descarga una billetera compatible con Web3 (como MetaMask o Rabby) y conéctala a la red <strong>Robinhood Chain</strong>.</p>
+            </div>
+            <div class="card step-card">
+                <div class="step-number">2</div>
+                <h3 data-i18n="step_2_title">🪙 Consigue Munición ($ETH)</h3>
+                <p data-i18n="step_2_desc">Asegúrate de tener Ethereum ($ETH) en la Robinhood Chain en tu billetera para poder intercambiarlo por el botín.</p>
+            </div>
+            <div class="card step-card">
+                <div class="step-number">3</div>
+                <h3 data-i18n="step_3_title">🦜 Reclama tus $THND</h3>
+                <p data-i18n="step_3_desc">Haz clic en el botón de compra para ir a la plataforma oficial de <strong>Pons</strong>. Conecta tu billetera e intercambia tu ETH.</p>
+            </div>
+        </div>
 
         <h2 data-i18n="rivals_title">🦅 El Vuelo frente a los Caminantes de Tierra</h2>
         <p class="section-intro" data-i18n="rivals_intro">Mientras el resto del mercado cripto se arrastra en la lentitud de los suelos tradicionales, el Capitán Perico despliega sus alas directas al cofre dorado.</p>
