@@ -1,9 +1,9 @@
 // --- CONFIGURACIÓN GLOBAL DE LA MEMECOIN ---
 const TOKEN_DATA = {
     contractAddress: "0x54BF9EcF6b09E86DE19688E636a0368cc8844020",
-    ponsUrl: "https://ponsfamily.com",
-    twitterUrl: "https://x.com",
-    telegramUrl: "https://t.me"
+    ponsUrl: "https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020",
+    twitterUrl: "https://x.com/LinguaMemeCoin",
+    telegramUrl: "https://t.me/TenderParakeetOficial"
 };
 
 // --- DICCIONARIO DE TRADUCCIONES COMPLETO ---
