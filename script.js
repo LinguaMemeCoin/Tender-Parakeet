@@ -3,7 +3,7 @@ const translations = {
         hero_title: "Perico Tierno ($THND) 🦜",
         hero_tagline: "El perico más tierno del mar cripto navega con sus alas abiertas por la <strong>Robinhoodchain</strong>. ¡Zarpamos desde América en una red de bloques para conquistar el botín de la blockchain con el token <strong>$THND</strong>!",
         lbl_copy: 0x54BF9EcF6b09E86DE19688E636a0368cc8844020,
-        lbl_buy: "https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020,
+        lbl_buy: "https://www.pons.family.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020,
         progress_title: "📈 Progreso del Botín (Curva de Vinculación)",
         progress_desc: "Meta para la graduación y listado automático en Uniswap:",
         progress_loading: "Conectando con el radar de Pons...",
