@@ -1,4 +1,6 @@
-/* --- ESTILOS GENERALES Y BASE --- */
+/* ==========================================================================
+   1. VARIABLES, RESET Y ESTILOS BASE
+   ========================================================================== */
 body {
     position: relative;
     color: #e2e8f0;
@@ -21,7 +23,8 @@ body::before {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    filter: brightness(0.12) contrast(1.15) saturate(0.8);
+    filter: none; 
+    opacity: 0.28; /* Equilibrio perfecto para lucir el fondo sin opacar las letras */
     z-index: -1;
 }
 
@@ -29,116 +32,250 @@ body::before {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 h1, h2, h3, p, span, button, a, blockquote {
     transition: color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
 }
 
-/* --- SELECTOR DE IDIOMAS FLOTANTE --- */
-.lang-selector {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 100;
-    background: rgba(11, 19, 23, 0.95);
-    padding: 8px;
-    border-radius: 8px;
-    border: 1px solid #00ffcc;
-    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
-    backdrop-filter: blur(5px);
+h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.lang-selector button {
+.text-center {
+    text-align: center;
+}
+
+/* ==========================================================================
+   2. NAVEGACIÓN Y SELECTOR DE IDIOMAS
+   ========================================================================== */
+.nav-idiomas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background: rgba(11, 19, 23, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.selector-idoma, .selector-idioma {
+    display: flex;
+    gap: 12px;
+    background: #16242c;
+    padding: 6px 14px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 255, 204, 0.2);
+}
+
+.btn-idioma {
     background: none;
     border: none;
-    color: #fff;
+    color: #94a3b8;
     cursor: pointer;
-    font-weight: bold;
-    margin: 0 5px;
+    font-weight: 600;
     font-size: 0.9rem;
-    transition: color 0.2s ease, transform 0.2s ease;
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
 }
 
-.lang-selector button:hover {
+.btn-idioma:hover {
     color: #00ffcc;
-    transform: scale(1.1);
 }
 
-/* --- SECCIÓN HERO --- */
+.btn-idioma.active {
+    color: #0b1317;
+    background: #00ffcc;
+    box-shadow: 0 0 12px rgba(0, 255, 204, 0.5);
+}
+
+/* ==========================================================================
+   3. BLOQUES DE TARJETAS Y CONTENEDORES (CONTRASTE OPTIMIZADO)
+   ========================================================================== */
+.card {
+    background: rgba(11, 19, 23, 0.75); /* Capa translúcida oscura para lectura nítida */
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.section-intro {
+    font-size: 1.15rem;
+    color: #94a3b8;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   4. CABECERA SECCIÓN HERO & MASCOTA ANIMADA
+   ========================================================================== */
 .hero-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
-    padding-top: 70px;
+    padding: 60px 20px;
 }
 
-.hero-text { flex: 1.2; min-width: 300px; }
-.hero-visual { flex: 0.8; min-width: 300px; }
+.hero-text {
+    flex: 1.2;
+    min-width: 300px;
+}
 
-.responsive-img { 
-    width: 100%; 
-    border-radius: 15px; 
-    box-shadow: 0 0 25px rgba(0, 255, 204, 0.25);
+.hero-visual {
+    flex: 0.8;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+h1.glow-text {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+}
+
+.pons-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 255, 204, 0.07);
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+}
+
+.pons-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #00ffcc;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ffcc;
+    animation: statusPulse 1.5s infinite ease-in-out;
+}
+
+.pons-badge-text {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #cbd5e1;
+}
+
+.pons-badge-text a {
+    color: #00ffcc;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(0, 255, 204, 0.5);
+}
+
+.pons-badge-text a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.responsive-img {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 24px;
+    box-shadow: 0 0 35px rgba(0, 255, 204, 0.3);
     animation: floatingPerico 4s ease-in-out infinite;
 }
 
-h1 { 
-    font-size: 2.5rem; 
-    margin-bottom: 10px; 
-    color: #fff; 
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.tagline { font-size: 1.1rem; line-height: 1.6; color: #cbd5e1; }
-
-/* --- CONTENEDOR DEL CONTRATO (CA BOX) --- */
+/* ==========================================================================
+   5. CAJA DE CONTRATO INTELIGENTE (CA) INTERACTIVA
+   ========================================================================== */
 .ca-box {
-    background: #16242c;
-    padding: 14px;
-    border-radius: 6px;
+    background: rgba(22, 36, 44, 0.9);
+    padding: 14px 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px dashed #ffcc00;
-    margin: 20px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffcc00;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+    gap: 15px;
 }
 
-.ca-text { 
-    font-family: 'Courier New', Courier, monospace; 
-    font-weight: bold; 
-    color: #ffcc00; 
-    font-size: 0.95rem; 
-    overflow-x: auto; 
-    white-space: nowrap; 
-    max-width: 70%; 
+.ca-wrapper {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow: hidden;
 }
 
-.ca-text::-webkit-scrollbar { height: 3px; }
-.ca-text::-webkit-scrollbar-thumb { background: #ffcc00; border-radius: 10px; }
-
-.btn-copy { 
-    background: #ffcc00; 
-    border: none; 
-    color: #111; 
-    padding: 8px 14px; 
-    border-radius: 4px; 
-    font-weight: bold; 
-    cursor: pointer; 
-    transition: background-color 0.2s, transform 0.1s;
+.ca-label {
+    color: #94a3b8;
+    font-weight: bold;
+    font-size: 0.85rem;
 }
 
-.btn-copy:hover { background: #ffe066; }
-.btn-copy:active { transform: scale(0.95); }
+.ca-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #ffcc00;
+    font-size: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
-/* --- BOTONES DE ACCIÓN TEMATIZADOS --- */
+.ca-text::-webkit-scrollbar {
+    height: 3px;
+}
+
+.ca-text::-webkit-scrollbar-thumb {
+    background: #ffcc00;
+    border-radius: 10px;
+}
+
+.btn-copy {
+    background: #ffcc00;
+    border: none;
+    color: #111;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-copy:hover {
+    background: #ffe066;
+    transform: scale(1.03);
+}
+
+.btn-copy:active {
+    transform: scale(0.97);
+}
+
+/* ==========================================================================
+   6. BOTONES DE ACCIÓN DEGEN (CON CARGA PIRATA)
+   ========================================================================== */
 .cta-buttons {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 15px;
+    gap: 16px;
+    margin-top: 25px;
 }
 
 .btn {
@@ -147,136 +284,118 @@ h1 {
     justify-content: center;
     gap: 12px;
     padding: 16px 22px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     letter-spacing: 0.5px;
-    border: none;
     transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s ease, filter 0.2s ease;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .btn:hover {
-    transform: translateY(-2px) scale(1.01);
+    transform: translateY(-3px);
     filter: brightness(1.15);
 }
 
-.btn:active { transform: translateY(0) scale(0.98); }
-.btn-icon { font-size: 1.3rem; }
+.btn-crypto-icon {
+    font-size: 1.6rem;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover .btn-crypto-icon {
+    transform: scale(1.2) rotate(-8deg);
+}
 
 .btn-loot {
-    background: linear-gradient(135deg, #ffcc00 0%, #d4af37 100%);
+    background: linear-gradient(90deg, #ffcc00, #ff3300, #ffcc00);
+    background-size: 200% auto;
     color: #0b1317;
     border: 1px solid #ffe066;
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.3);
+    animation: degenGlow 1.5s linear infinite, ctaPulse 2s infinite;
 }
-.btn-loot:hover { box-shadow: 0 0 25px rgba(255, 204, 0, 0.5); }
 
 .btn-sea {
     background: linear-gradient(135deg, #0055ff 0%, #00aaff 100%);
     color: #ffffff;
     border: 1px solid #33ccff;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
 }
-.btn-sea:hover { box-shadow: 0 0 25px rgba(0, 170, 255, 0.5); }
 
 .btn-branch {
     background: linear-gradient(135deg, #1b4d3e 0%, #2e8b57 100%);
     color: #ffffff;
     border: 1px solid #3cb371;
-    box-shadow: 0 0 15px rgba(46, 139, 87, 0.3);
-}
-.btn-branch:hover { box-shadow: 0 0 25px rgba(46, 139, 87, 0.5); }
-
-/* --- SECCIÓN PROGRESO (PONS) --- */
-.progress-section { 
-    background: #111e25; 
-    border: 2px solid #00ffcc !important; 
-    padding: 25px; 
-    margin: 30px 0; 
-    border-radius: 12px; 
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
 }
 
-.progress-container { 
-    width: 100%; 
-    background: #1a2f3b; 
-    border-radius: 20px; 
-    overflow: hidden; 
-    margin: 15px 0; 
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.6); 
+/* ==========================================================================
+   7. FUSIÓN: DECRETO DEL REY Y PLANCHA DE ABORDAJE
+   ========================================================================== */
+.progress-section {
+    border: 2px solid #00ffcc !important;
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.15) !important;
 }
 
-.progress-bar { 
-    width: 0%; 
-    height: 25px; 
-    background: linear-gradient(90deg, #00ffcc, #ffcc00, #00ffcc); 
-    background-size: 200% 100%;
-    color: #111; 
-    text-align: center; 
-    font-weight: bold; 
-    line-height: 25px; 
-    transition: width 1s ease-in-out; 
-    animation: waveMotion 2s linear infinite;
+.pirate-quote p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+    color: #ffcc00;
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.3);
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
 }
 
-.progress-status { display: flex; justify-content: space-between; font-size: 0.9rem; color: #94a3b8; }
-
-/* --- MANIFIESTO Y TEATRO ANIMADO --- */
-.manifesto-banner { 
-    background: linear-gradient(135deg, #121f26 0%, #1b322a 100%); 
-    border: 2px solid #ffcc00 !important; 
-    text-align: center; 
-    padding: 25px; 
-    margin: 30px 0; 
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.15); 
+.interactive-progress-title {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.pirate-quote p { 
-    font-size: 1.3rem; 
-    font-weight: bold; 
-    font-style: italic; 
-    color: #ffcc00; 
-    text-shadow: 0 0 8px rgba(255, 204, 0, 0.3); 
-    margin: 0; 
-    line-height: 1.5; 
-}
-
-.theater-conquest {
+.boarding-plank-theater {
     position: relative;
     width: 100%;
-    height: 180px;
-    background: linear-gradient(180deg, #091318 0%, #16242c 80%, #221202 100%);
-    border-radius: 8px;
-    margin-top: 25px;
+    height: 220px;
+    background: linear-gradient(180deg, #091318 0%, #111e25 60%, #1c3d31 100%);
+    border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(255, 204, 0, 0.3);
+    border: 2px solid #00ffcc;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
-.sky-layer { position: relative; width: 100%; height: 120px; }
+.sky-layer {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
 
 .nest-destination {
     position: absolute;
     top: 15px;
     right: 20px;
     font-size: 2.2rem;
-    text-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
     animation: goldGlow 2s ease-in-out infinite alternate;
 }
 
-.perico-monarch {
+.dynamic-flyer {
     position: absolute;
+    left: 12%; /* JS controlará este rango de forma dinámica */
+    top: 50px;
     font-size: 2.5rem;
-    left: -50px;
-    top: 30px;
     display: inline-block;
-    animation: flightToNest 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    z-index: 10;
+    transition: left 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    animation: floatingPerico 2s ease-in-out infinite !important;
 }
 
-.crown-mini { position: absolute; font-size: 1rem; top: -12px; left: 12px; transform: rotate(15deg); }
+.crown-mini {
+    position: absolute;
+    font-size: 1rem;
+    top: -12px;
+    left: 12px;
+    transform: rotate(15deg);
+}
 
 .loot-trail {
     position: absolute;
@@ -288,112 +407,32 @@ h1 {
     animation: trailSparkle 0.5s linear infinite alternate;
 }
 
-.ground-layer {
+.plank-layer {
+    position: absolute;
+    bottom: 55px;
+    left: 10%;
+    width: 75%;
+    height: 12px;
+    z-index: 5;
+}
+
+.wooden-plank {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #5c3a21 0%, #8b5a2b 50%, #a0522d 100%);
+    border-radius: 4px;
+    border-bottom: 2px solid #2e190a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.plank-base {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 45px;
-    background: #110901;
-    border-top: 2px solid #3c1e03;
+    height: 50px;
+    background: #091115;
+    border-top: 1px solid rgba(0, 255, 204, 0.2);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-.ground-rival { font-size: 1.4rem; filter: grayscale(0.4) brightness(0.7); }
-.frog-sad { animation: groundShake 3s ease-in-out infinite; }
-.dog-lost { animation: groundShake 4s ease-in-out infinite 0.5s; }
-.penguin-frozen { animation: groundShake 5s ease-in-out infinite 1s; }
-.niu-lai-old { animation: groundShake 2.5s ease-in-out infinite; font-size: 1.1rem; }
-
-/* --- MAPA DE ABORDAJE (PASOS DE COMPRA) --- */
-.step-card {
-    position: relative;
-    padding-top: 40px !important;
-    border-left: 4px solid #ffcc00 !important;
-}
-
-.step-number {
-    position: absolute;
-    top: -15px;
-    left: 20px;
-    background: #ffcc00;
-    color: #0b1317;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 0 12px rgba(255, 204, 0, 0.4);
-}
-
-/* --- GRID DE INFORMACIÓN --- */
-.grid-info { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 20px; 
-    margin: 30px 0; 
-}
-
-.card { 
-    background: #121f26; 
-    padding: 22px; 
-    border-radius: 8px; 
-    border-left: 4px solid #00ffcc; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0, 255, 204, 0.1); }
-.card h3 { margin-top: 0; color: #fff; }
-
-.warning-box { 
-    background: rgba(255, 204, 0, 0.05); 
-    border: 1px solid #ffcc00; 
-    padding: 18px; 
-    border-radius: 6px; 
-    color: #ffcc00; 
-    line-height: 1.5; 
-    font-size: 0.95rem; 
-}
-
-footer { 
-    text-align: center; 
-    padding: 40px; 
-    color: #64748b; 
-    font-size: 0.9rem; 
-    border-top: 1px solid #1e293b; 
-    margin-top: 40px; 
-}
-
-/* --- ANIMACIONES KEYFRAMES --- */
-@keyframes floatingPerico {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes waveMotion {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-}
-
-@keyframes flightToNest {
-    0% { left: -10%; top: 60px; transform: scaleX(1); }
-    45% { top: 20px; }
-    70% { left: 78%; top: 15px; transform: scaleX(1) scale(1); opacity: 1; }
-    80% { left: 78%; top: 15px; transform: scaleX(1) scale(1.1); opacity: 0.2; }
-    85% { left: 78%; top: 15px; transform: scaleX(-1) scale(0.6); opacity: 0; }
-    100% { left: -10%; top: 60px; transform: scaleX(1); opacity: 0; }
-}
-
-@keyframes goldGlow {
-    0% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(255,204,0,0.5)); }
-    100% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(255,204,0,0.9)); }
-}
-
