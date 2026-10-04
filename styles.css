@@ -903,3 +903,20 @@ h1.glow-text {
     }
 }
 
+/* ==========================================================================
+   ESTADOS DE LOS BOTONES DE IDIOMA (ACTIVO Y HOVER)
+   ========================================================================== */
+
+/* Cuando pasas el mouse por encima de cualquier idioma */
+.btn-idioma:hover {
+    color: #00ffcc;
+    background: rgba(0, 255, 204, 0.08);
+}
+
+/* El botón iluminado del idioma seleccionado en el motor JavaScript */
+.btn-idioma.active {
+    color: #0b1317 !important; /* Mantiene tu color de fondo oscuro para la letra */
+    background: #00ffcc !important; /* Tu color verde neón característico */
+    box-shadow: 0 0 12px rgba(0, 255, 204, 0.6); /* Destello brillante */
+}
+
