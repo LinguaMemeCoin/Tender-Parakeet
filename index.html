@@ -29,41 +29,62 @@
 
     <!-- Navegación Superior Maximizada con Ruta DeFi Completa (Sticky) -->
     <nav class="nav-idiomas">
-        <div class="container nav-wrapper">
-            
-            <!-- Nombre Completo + Ruta de Liquidez (ETH -> Uniswap) -->
-            <div class="nav-brand">
-                <span class="nav-avatar">🦜</span>
-                <span class="nav-project-name">Tender Parakeet ($THND)</span>
-                
-                <div class="defi-route-badges">
-                    <div class="eth-ammo-badge">
-                        <i class="fa-brands fa-ethereum eth-icon"></i>
-                        <span>BUY WITH ETH</span>
-                    </div>
-                    <div class="uniswap-destination-badge">
-                        <i class="fa-solid fa-unicorn uniswap-icon">🦄</i>
-                        <span>LISTING ON UNISWAP</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sello Oficial Pons Family -->
-            <div class="pons-badge nav-pons-badge">
-                <span class="pons-dot"></span>
-                <span class="pons-badge-text">LAUNCH ON <a href="https://ponsfamily.com" target="_blank">PONS FAMILY</a></span>
-            </div>
-
-            <!-- Selector de Idiomas Flotante (Inglés Activo por defecto) -->
-            <div class="selector-idioma">
-    <button class="btn-idioma active" id="btn-es" onclick="cambiarIdioma('es')">ES</button>
-    <button class="btn-idioma" id="btn-en" onclick="cambiarIdioma('en')">EN</button>
-    <button class="btn-idioma" id="btn-fr" onclick="cambiarIdioma('fr')">FR</button>
-    <button class="btn-idioma" id="btn-pt" onclick="cambiarIdioma('pt')">PT</button>
-</div>
+    <div class="container nav-wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; box-sizing: border-box;">
         
+        <!-- Bloque DeFi Izquierdo: Logos y Nombres Reales alineados en bloque compacto -->
+        <div class="nav-brand" style="display: flex; align-items: center;">
+            <div class="defi-route-badges" style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                
+                <!-- COINGABBAR -->
+                <div style="display: flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.5); padding: 4px 12px; border-radius: 20px; box-shadow: 0 0 10px rgba(34, 197, 94, 0.15);">
+                    <img src="https://amazonaws.com" style="width: 16px; height: 16px; display: block;" alt="CoinGabbar">
+                    <span style="color: #4def83; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.8px; font-family: 'Segoe UI', sans-serif;">COINGABBAR</span>
+                </div>
+
+                <!-- Separador Náutico -->
+                <span style="color: rgba(0, 255, 204, 0.2); font-weight: bold; font-family: monospace; user-select: none;">│</span>
+
+                <!-- ETHEREUM (ETH) -->
+                <div class="eth-ammo-badge" style="display: flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px;">
+                    <img src="https://cryptologos.cc" style="width: 14px; height: 14px; display: block;" alt="Ethereum">
+                    <span>ETH</span>
+                </div>
+                
+                <!-- ROBINHOOD CHAIN -->
+                <div style="display: flex; align-items: center; gap: 6px; background: rgba(34, 197, 94, 0.1); border: 1px solid #22c55e; padding: 4px 12px; border-radius: 20px; box-shadow: 0 0 10px rgba(34, 197, 94, 0.15);">
+                    <img src="https://cryptologos.cc" style="width: 16px; height: 16px; display: block;" alt="Robinhood Chain">
+                    <span style="color: #22c55e; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.8px; font-family: 'Segoe UI', sans-serif;">ROBINHOOD CHAIN</span>
+                </div>
+                
+                <!-- UNISWAP -->
+                <div class="uniswap-destination-badge" style="display: flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 20px;">
+                    <img src="https://cryptologos.cc" style="width: 14px; height: 14px; display: block;" alt="Uniswap">
+                    <span>UNISWAP</span>
+                </div>
+
+                <!-- Separador Náutico -->
+                <span style="color: rgba(0, 255, 204, 0.2); font-weight: bold; font-family: monospace; user-select: none;">│</span>
+
+                <!-- PONS FAMILY -->
+                <a href="https://pons.family" target="_blank" style="text-decoration: none; display: block; line-height: 0;">
+                    <div style="display: flex; align-items: center; gap: 6px; background: rgba(0, 255, 204, 0.05); border: 1px solid #00ffcc; padding: 4px 12px; border-radius: 20px; box-shadow: 0 0 10px rgba(0, 255, 204, 0.2); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        <img src="https://pons.family" style="width: 16px; height: 16px; display: block; border-radius: 50%;" alt="Pons Family">
+                        <span style="color: #00ffcc; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.8px; font-family: 'Segoe UI', sans-serif;">PONS FAMILY</span>
+                    </div>
+                </a>
+
+            </div>
         </div>
-    </nav>
+
+        <!-- Bloque Derecho: Selector Inteligente del Traductor -->
+        <div class="selector-idioma" style="display: flex; align-items: center; background: #16242c; padding: 4px 12px; border-radius: 30px; border: 1px solid rgba(0, 255, 204, 0.25); gap: 6px; flex-shrink: 0;">
+            <i class="fa-solid fa-language" style="color: #00ffcc; font-size: 1.1rem; display: block; text-shadow: 0 0 6px rgba(0,255,204,0.4);"></i>
+            <div id="google_translate_element" style="display: block; line-height: 0;"></div>
+        </div>
+    
+    </div>
+</nav>
+
 
     <header>
         <div class="container hero-container">
