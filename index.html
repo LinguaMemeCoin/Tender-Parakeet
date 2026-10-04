@@ -713,5 +713,28 @@
         <!-- Contenedor invisible para alertas flotantes de Telegram -->
     <div id="beachMessageContainer"></div>
 
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es', // El código base de tu página está nativo en español
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+        
+        // Detección invisible del idioma del visitante
+        setTimeout(function() {
+            var lang = (navigator.language || navigator.userLanguage).toLowerCase();
+            var select = document.querySelector('.goog-te-combo');
+            // Si el inversor no tiene el navegador en español, Google traduce todo en un segundo
+            if (select && !lang.startsWith('es')) {
+                select.value = lang.split('-');
+                select.dispatchEvent(new Event('change'));
+            }
+        }, 1200);
+    }
+</script>
+<script type="text/javascript" src="//://google.com"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
