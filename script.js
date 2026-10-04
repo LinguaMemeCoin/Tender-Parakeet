@@ -181,26 +181,31 @@ function triggerStormClick(event) {
     }, 600);
 }
 
+// ==========================================================================
 // 3. Botellas de la Comunidad de Telegram (Mensajes de Alta Mar)
+// ==========================================================================
 const COMMUNITY_COMMENTS = {
     es: [
-        "🍾 ¡Sin preventas eternas ni tokens para el equipo! 🔥",
-        "🍾 ¡Alas abiertas, de una para Uniswap al graduarnos! 🦜",
-        "🍾 ¡Transparencia total en Pons Family! ¡Zarpamos! 🏴‍☠️"
+        "¡Sin preventas eternas ni tokens para el equipo! 🔥",
+        "¡Alas abiertas, de una para Uniswap al graduarnos! 🦜",
+        "¡Transparencia total en Pons Family! ¡Zarpamos! 🏴‍☠️"
     ],
     en: [
-        "🍾 No team tokens, 100% fair launch! Let's go! 🔥",
-        "🍾 Wings wide open, straight to Uniswap graduation! 🦜",
-        "🍾 Absolute transparency on Pons Family. We sail! 🏴‍☠️"
+        "No team tokens, 100% fair launch! Let's go! 🔥",
+        "Wings wide open, straight to Uniswap graduation! 🦜",
+        "Absolute transparency on Pons Family. We sail! 🏴‍橙"
     ]
 };
 
 function triggerTelegramClick(event) {
     event.preventDefault();
+    
     const container = document.getElementById('beachMessageContainer');
     if (!container) return;
 
     container.innerHTML = "";
+    
+    // Obtiene los mensajes en base al idioma actual activo de tu web
     const messages = COMMUNITY_COMMENTS[currentLang] || COMMUNITY_COMMENTS['es'];
 
     messages.forEach((text, index) => {
@@ -213,7 +218,7 @@ function triggerTelegramClick(event) {
     });
 
     setTimeout(() => {
-        window.open("https://t.me", "_blank");
+        window.open("https://t.me", "_blank"); // Recuerda añadir aquí tu enlace real
         setTimeout(() => { container.innerHTML = ""; }, 1000);
     }, 1800);
 }
