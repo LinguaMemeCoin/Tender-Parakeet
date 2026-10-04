@@ -832,3 +832,74 @@ h1.glow-text {
     .deck-badge { display: none; }
     .security-rule-item { flex-direction: column; gap: 8px; }
 }
+
+/* ... [Tus estilos anteriores que se cortaron en tu mensaje anterior] ... */
+
+.deck-card-glow {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 70%);
+    pointer-events: none;
+}
+
+/* AQUÍ TERMINABA TU ARCHIVO ORIGINAL. DEJA ESTE ESPACIO Y PEGA ABAJO: */
+
+
+/* ==========================================================================
+   CONTENEDOR Y COMPONENTES DE MENSAJES FLOTANTES (TELEGRAM TOASTS)
+   ========================================================================== */
+#beachMessageContainer {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    pointer-events: none;
+}
+
+.community-bottle-toast {
+    background: rgba(11, 19, 23, 0.95);
+    color: #e2e8f0;
+    border: 1px solid rgba(0, 255, 204, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 255, 204, 0.15);
+    padding: 14px 22px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: bottleFadeInUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, 
+              bottleFadeOut 0.4s ease 2.7s forwards;
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.toast-bottle-emoji {
+    font-size: 1.3rem;
+    animation: floatingPerico 2s ease-in-out infinite;
+}
+
+.toast-msg-text {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+@keyframes bottleFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottleFadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+}
+
