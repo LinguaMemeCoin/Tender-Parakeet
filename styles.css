@@ -920,3 +920,14 @@ h1.glow-text {
     box-shadow: 0 0 12px rgba(0, 255, 204, 0.6); /* Destello brillante */
 }
 
+/* ==========================================================================
+   Efecto Pintura Antigua y Marco sobre tu Imagen Original Real
+   ========================================================================== */
+.image-glow-effect img.responsive-img {
+    border: 12px solid #3d2511 !important; /* Marco de Madera Noble */
+    outline: 3px double #c5a059 !important; /* Ribete Dorado */
+    border-radius: 4px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.6) !important;
+    filter: sepia(15%) contrast(105%) saturate(95%) !important; /* Efecto óleo dibujado */
+    animation: none !important; /* Estabilidad absoluta para móviles */
+}
