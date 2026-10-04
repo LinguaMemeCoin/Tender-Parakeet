@@ -264,25 +264,40 @@ function openAndCopyChest() {
     }).catch(err => console.error('Error al abrir el cofre:', err));
 }
 
+// ==========================================================================
 // 2. Tormenta Marina de Pons (Frenado y Compra)
+// ==========================================================================
 function triggerStormClick(event) {
     event.preventDefault();
     const btn = document.getElementById('stormBtn');
-    if (btn.classList.contains('storm-calmed')) return;
+    if (!btn || btn.classList.contains('storm-calmed')) return;
 
     btn.classList.add('storm-calmed');
     const textSpan = btn.querySelector('.storm-btn-text');
     const originalText = textSpan.innerHTML;
-    textSpan.innerHTML = currentLang === 'es' ? "¡TORMENTA DOMADA! MAR CALMO 🌊" : "STORM TAMED! CALM SEAS 🌊";
+
+    // Mensajes adaptados perfectamente para tus 4 idiomas integrados
+    const stormTexts = {
+        es: "¡TORMENTA DOMADA! MAR CALMO 🌊",
+        en: "STORM TAMED! CALM SEAS 🌊",
+        fr: "TEMPÊTE DOMPTÉE! MER CALME 🌊",
+        pt: "TEMPESTADE DOMADA! MAR CALMO 🌊"
+    };
+
+    // Aplica el texto correspondiente o español por defecto si falla
+    textSpan.innerHTML = stormTexts[currentLang] || stormTexts['es'];
 
     setTimeout(() => {
-        window.open("https://ponsfamily.com", "_blank");
+        // Tu dirección real exacta inyectada de forma segura
+        window.open("https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020", "_blank");
+        
         setTimeout(() => {
             btn.classList.remove('storm-calmed');
             textSpan.innerHTML = originalText;
         }, 1000);
     }, 600);
 }
+
 
 // ==========================================================================
 // 3. Botellas de la Comunidad de Telegram (Mensajes de Alta Mar)
@@ -320,11 +335,13 @@ function triggerTelegramClick(event) {
         }, index * 250);
     });
 
+        // Abre tu Telegram Real después de lanzar los mensajes
     setTimeout(() => {
-        window.open("https://t.me", "_blank"); // Recuerda añadir aquí tu enlace real
+        window.open("https://t.me/TenderParakeetOficial"); // <<=== COLOCA TU LINK REAL AQUÍ dentro de las comillas
         setTimeout(() => { container.innerHTML = ""; }, 1000);
     }, 1800);
 }
+
 
 // 4. Árbol de Merkle (Pulso de Bloques en X)
 function triggerXClick(event) {
@@ -338,7 +355,7 @@ function triggerXClick(event) {
     textSpan.innerHTML = currentLang === 'es' ? "¡NODO DE MERKLE VERIFICADO! 🌿" : "MERKLE NODE VERIFIED! 🌿";
 
     setTimeout(() => {
-        window.open("https://x.com", "_blank");
+        window.open("https://x.com/LinguaMemeCoin");
         setTimeout(() => {
             btn.classList.remove('tree-connected');
             textSpan.innerHTML = originalText;
