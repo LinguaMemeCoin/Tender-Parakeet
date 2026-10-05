@@ -246,3 +246,51 @@
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
     user-select: none;
 }
+
+/* REFUERZO DE DISEÑO PARA LA MEDALLA DE README */
+.readme-badge-link {
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+.readme-pirate-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #eedcb3 !important;
+    color: #3b2314 !important;
+    border: 2px double #6e473b !important;
+    padding: 4px 14px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    box-shadow: inset 0 0 6px rgba(94, 53, 32, 0.3), 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.readme-pirate-badge:hover {
+    transform: scale(1.05);
+    border-color: #801a1a !important;
+}
+
+/* REGULACIÓN DE ANIMACIÓN FLUIDA PARA LAS BOTELLAS FAQ */
+.faq-item .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.faq-item.faq-active .faq-answer {
+    max-height: 200px; /* Abre la botella con suavidad de cortina dentro de la dApp */
+}
+
+/* POSICIONAMIENTO DEL CAPITÁN EN LA PLANCHA WEB3 */
+.theater-conquest {
+    position: relative;
+    overflow: hidden;
+}
+
+.dynamic-flyer {
+    transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
