@@ -297,3 +297,7 @@ h2 { font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
     .hero-flex-layout { flex-direction: column; }
     .nav-top-row { flex-direction: column; gap: 10px; }
 }
+/* Color oficial brillante para el logo vectorizado de CoinGabbar */
+.coingabbar-badge svg {
+    fill: #00ffcc !important;
+}
