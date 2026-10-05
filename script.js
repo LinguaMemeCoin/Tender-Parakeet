@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const telegramMessages = [
         "¡Sin preventas eternas ni tokens para el equipo! 🔥",
         "¡Alas abiertas, de una para Uniswap al graduarnos! 🦜",
-        "¡Transparencia total en Pons Family! ¡Zarpamos! 🏴‍死"
+        "¡Transparencia total en Pons Family! ¡Zarpamos! 🏴‍☠️"
     ];
     const notifArea = document.getElementById("notification-area");
 
