@@ -1,320 +1,520 @@
-/* RESET GENERAL Y PALETA CRIPTO-PIRATA */
+/* VARIABLES GLOBALES Y RESETEO ULTRA-LIMPIO */
+:root {
+    --bg-arena-pergamino: #eedcb3;
+    --text-dark-charcoal: #2a2a2a;
+    --glow-cyan-web3: #00e5ff;
+    --glow-esmeralda: #00ff88;
+    --uniswap-pink: #ff007a;
+    --glass-blur-header: rgba(15, 23, 42, 0.75);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', Courier, monospace; /* Estilo rústico de bitácora */
 }
 
+/* BLINDAJE DEL FONDO GLOBAL INMUTABLE */
 body {
-    background-color: #0b1317;
+    background-image: url('rivales-pericos.png') !important;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #ffffff;
     overflow-x: hidden;
-    line-height: 1.6;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* BANNER PRINCIPAL EN DOS FILAS (NAV STICKY) */
-.nav-idiomas {
-    position: sticky;
+/* DOBLE CABECERA HORIZONTAL STICKY EN EL TECHO */
+.header-container {
+    position: fixed;
     top: 0;
-    background: rgba(11, 19, 23, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 2px solid rgba(0, 255, 204, 0.1);
-    z-index: 1000;
-    padding: 12px 0;
-}
-
-.dual-nav-container {
+    left: 0;
+    width: 100%;
+    z-index: 9999;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.nav-top-row {
+/* Fila Horizontal 1: Panel de Control 4x4 */
+.nav-control-panel {
+    background: var(--glass-blur-header);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 40px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    height: 75px;
 }
 
-.nav-brand {
+.nav-wing-left, .nav-wing-right {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.nav-wing-right { justify-content: flex-end; }
+
+.nav-btn-robust {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    padding: 10px 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 1.3rem;
-    font-weight: 800;
 }
 
-.pons-badge {
-    background: rgba(0, 255, 204, 0.1);
-    border: 1px solid #00ffcc;
-    padding: 4px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 700;
+.nav-btn-robust:hover {
+    transform: translateY(3px);
 }
 
-.pons-badge a { color: #00ffcc; text-decoration: none; }
+/* Colores e Iluminaciones Específicas del Banner */
+.cyan-glow:hover { border-color: var(--glow-cyan-web3); box-shadow: 0 0 10px var(--glow-cyan-web3); }
+.green-led .led { width: 8px; height: 8px; background: var(--glow-esmeralda); border-radius: 50%; display: inline-block; box-shadow: 0 0 8px var(--glow-esmeralda); }
+.uniswap-pink:hover { border-color: var(--uniswap-pink); box-shadow: 0 0 10px var(--uniswap-pink); }
+.gabbar-gold:hover { border-color: #ffd700; box-shadow: 0 0 10px #ffd700; }
 
-.pons-dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background-color: #00ffcc;
-    border-radius: 50%;
-    margin-right: 6px;
-    box-shadow: 0 0 8px #00ffcc;
-}
-
-.nav-bottom-row {
-    display: flex;
-    justify-content: center;
-    border-top: 1px dashed rgba(255, 255, 255, 0.1);
-    padding-top: 10px;
-}
-
-.defi-route-badges {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.eth-ammo-badge, .coingabbar-badge, .uniswap-destination-badge {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 800;
-}
-
-.eth-ammo-badge { background: #3c3c3d; border: 1px solid #627eea; }
-.coingabbar-badge { background: rgba(0, 255, 204, 0.05); border: 1px solid #00ffcc; color: #00ffcc; }
-.uniswap-destination-badge { background: #ff007a; }
-
-.readme-badge-link { text-decoration: none; }
-.readme-pirate-badge {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: #eedcb3;
-    color: #3b2314;
-    border: 2px double #6e473b;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 900;
-}
-
-/* HERO UNIFICADO: DOS COLUMNAS EDICTO */
-.pirate-edict-scroll {
-    background-color: #eedcb3;
-    color: #3b2314;
-    border: 8px double #6e473b;
-    border-radius: 4px;
-    padding: 40px;
-    box-shadow: inset 0 0 30px rgba(94, 53, 32, 0.4), 0 10px 25px rgba(0,0,0,0.5);
-    margin: 40px auto;
-}
-
-.hero-flex-layout {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-}
-
-.hero-left-text-column { flex: 1; }
-.hero-left-text-column h1 { font-size: 2.2rem; margin-bottom: 15px; color: #801a1a; }
-.edict-paragraph { font-size: 1.05rem; font-weight: 600; text-align: justify; margin-bottom: 20px; }
-
-.pirate-signature-zone { border-top: 1px dashed rgba(110, 71, 59, 0.4); padding-top: 15px; }
-.captain-handwritten { font-style: italic; font-weight: 900; color: #801a1a; }
-.crypto-seal { background: #3b2314; color: #00ffcc; padding: 2px 6px; font-size: 0.7rem; border-radius: 3px; margin-left: 5px; }
-
-.hero-right-image-column { flex: 1; display: flex; justify-content: center; }
-.static-image-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 4px double #6e473b;
-}
-
-/* PANEL DE CONTROL CRIPTOGRÁFICO */
-.crypto-deck-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin: 40px 0;
-}
-
-.deck-card {
-    background: #16242c;
-    border: 2px solid rgba(255,255,255,0.05);
-    border-radius: 12px;
-    padding: 30px 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-.deck-card:hover { transform: translateY(-5px); }
-.card-treasure { border-color: #ffd700; }
-.card-storm { border-color: #ff4500; }
-.card-sea-bottles { border-color: #00ffcc; }
-.card-merkle-tree { border-color: #1da1f2; }
-
-.deck-main-emoji { font-size: 2.5rem; margin-bottom: 10px; }
-.deck-card-title { font-size: 1.2rem; margin-bottom: 5px; }
-.deck-card-sub { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
-
-/* SECCIONES COMPACTAS DE GRILLAS (TOKENOMICS, RIVALES, ROADMAP) */
-.tokenomics-deck, .wanted-board-grid, .invasion-map-grid, .onboarding-deck {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.wanted-poster {
-    background: #eedcb3;
-    color: #3b2314;
-    border: 4px double #6e473b;
-    padding: 25px;
-    border-radius: 4px;
-    box-shadow: inset 0 0 15px rgba(94, 53, 32, 0.3);
-}
-.poster-header { font-weight: 900; color: #801a1a; text-align: center; border-bottom: 1px dashed rgba(110,71,59,0.3); padding-bottom: 5px; margin-bottom: 10px; }
-.poster-reward { text-align: center; font-weight: bold; margin-bottom: 10px; }
-.poster-name { margin-bottom: 10px; text-align: center; }
-.poster-desc { font-size: 0.9rem; font-weight: 600; text-align: justify; }
-
-.card {
-    background: #16242c;
-    border: 2px solid rgba(255,255,255,0.1);
-    padding: 25px;
-    border-radius: 8px;
-}
-
-/* BOTELLAS TRANSLÚCIDAS (SEGURIDAD Y FAQ) */
-.glass-bottle-container, .faq-bottles-wrapper {
-    background: rgba(22, 36, 44, 0.6);
-    border: 2px solid rgba(56, 189, 248, 0.2);
-    border-radius: 12px;
-    padding: 30px;
-}
-
-.security-rules-list, .faq-bottles-grid {
+.nav-brand-center {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
 }
 
-.sea-bottle-item, .faq-bottle {
-    background: rgba(11, 19, 23, 0.5);
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    border-radius: 8px;
+.brand-top, .brand-bottom {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: var(--bg-arena-pergamino);
 }
 
-.bottle-scroll-text, .faq-answer p {
-    background: #eedcb3;
-    color: #3b2314;
-    border: 2px double #6e473b;
-    padding: 15px 20px;
-    border-radius: 6px;
-    font-weight: 600;
-}
-
-.faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    color: #fff;
-    padding: 15px;
-    text-align: left;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
+/* FILA HORIZONTAL 2: NUEVO BANNER SECUNDARIO ADAPTADO */
+.nav-project-banner {
+    background: rgba(10, 15, 30, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 60px;
+    border-bottom: 3px solid var(--bg-arena-pergamino);
+    height: 85px;
 }
 
-.faq-answer {
+.banner-logo-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+}
+
+.border-esmeralda { border-color: var(--glow-esmeralda); box-shadow: 0 0 8px var(--glow-esmeralda); }
+.border-cyan { border-color: var(--glow-cyan-web3); box-shadow: 0 0 8px var(--glow-cyan-web3); }
+
+.project-logo-hd {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* Mantiene la nitidez e impide distorsiones */
+}
+
+.banner-text-center {
+    text-align: center;
+    flex: 1;
+}
+
+.banner-text-center h2 {
+    font-size: 22px;
+    letter-spacing: 5px;
+    color: var(--bg-arena-pergamino);
+}
+
+.banner-divider {
+    width: 120px;
+    height: 2px;
+    background: var(--bg-arena-pergamino);
+    margin: 3px auto;
+}
+
+.banner-text-center h3 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+/* CONTENEDOR PRINCIPAL CON ESPACIADO PARA LA CABECERA */
+.ocean-container {
+    margin-top: 180px; /* Evita que el contenido quede tapado por los banners */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+/* EL PERGAMINO DEL MANIFIESTO DE GUERRA */
+.pergamino-manifiesto-guerra {
+    background: var(--bg-arena-pergamino);
+    color: var(--text-dark-charcoal);
+    padding: 30px 40px;
+    border-radius: 4px;
+    border: 2px solid #c5b38f;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: bold;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* BARRA DE PROGRESO DE METALES (DECRETO DEL REY) */
+.liquidity-theater {
+    background: rgba(0,0,0,0.6);
+    border: 2px solid var(--bg-arena-pergamino);
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.king-avatar-track {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.king-token-avatar {
+    position: absolute;
+    font-size: 24px;
+    transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    left: 0;
+}
+
+.progress-bar-canal {
+    height: 28px;
+    background: #1e293b;
+    border-radius: 14px;
+    position: relative;
+    overflow: visible;
+    border: 2px solid #475569;
+}
+
+.marea-progress {
+    height: 100%;
+    width: 0%;
+    border-radius: 12px;
+    transition: width 0.4s ease, background 0.5s ease;
+}
+
+/* Metales del Progreso RPC */
+.bronze-metal { background: linear-gradient(90deg, #a75d00, #cd7f32); }
+.silver-metal { background: linear-gradient(90deg, #94a3b8, #cbd5e1); box-shadow: 0 0 10px #cbd5e1; }
+.gold-multicolor-metal { background: linear-gradient(45deg, #ffd700, #ff007a, #00e5ff); box-shadow: 0 0 20px #ffd700; }
+
+.rival-mark { position: absolute; top: -5px; font-size: 16px; z-index: 2; }
+.puppy-25 { left: 25%; }
+.hopper-50 { left: 50%; }
+.wingless-75 { left: 75%; }
+.unicorn-100 { right: -10px; top: -8px; font-size: 22px; }
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* LAS 4 TARJETAS INFERIORES */
+.grid-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card-pirate {
+    background: rgba(15, 23, 42, 0.65);
+    border: 2px solid var(--bg-arena-pergamino);
+    padding: 25px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-pirate:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,229,255,0.2); }
+
+.card-title { font-size: 16px; font-weight: bold; margin-top: 10px; letter-spacing: 2px; }
+.card-subtitle { font-size: 11px; opacity: 0.6; margin-top: 4px; }
+
+/* REGLAS DE EDICTOS EN PERGAMINO QUEMADO */
+.txt-centered-short { text-align: center; font-weight: bold; margin-bottom: 8px; color: var(--text-dark-charcoal); }
+.txt-desc { text-align: justify; font-size: 13px; color: #3f3f3f; line-height: 1.4; }
+
+.row-pergaminos-tokenomics, .row-edictos-wanted, .row-huevos-roadmap, .row-barriles-contrabando {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.pergamino-quemado, .wanted-poster, .huevo-container, .barril-contrabando-box {
+    background: var(--bg-arena-pergamino);
+    color: var(--text-dark-charcoal);
+    padding: 25px;
+    border-radius: 4px;
+    flex: 1;
+    border: 2px solid #c5b38f;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* MARCAS DE AGUA PARA CORSARIOS TERRESTRES */
+.wanted-poster {
+    background-size: 60px;
+    background-repeat: no-repeat;
+    background-position: bottom 15px right 15px;
+    padding-bottom: 80px;
+}
+.poster-pepe { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" viewBox="0 0 100 100"><text y="80" font-size="80">🐸</text></svg>'); }
+.poster-doge { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" viewBox="0 0 100 100"><text y="80" font-size="80">🐶</text></svg>'); }
+.poster-penguin { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" viewBox="0 0 100 100"><text y="80" font-size="80">🐧</text></svg>'); }
+.poster-niulai { background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" viewBox="0 0 100 100"><text y="80" font-size="80">🐉</text></svg>'); }
+
+.blockchain-badge { position: absolute; top: 10px; right: 10px; font-weight: bold; font-size: 18px; }
+.eth-badge { color: #627eea; }
+.doge-badge { color: #bba14c; font-family: sans-serif; }
+.bsc-badge { color: #f3ba2f; }
+/* LA CORTE CORSARIA: ACORDEONES WEB3 INTERACTIVOS */
+.corte-corsaria-pergamino {
+    background: var(--bg-arena-pergamino);
+    color: var(--text-dark-charcoal);
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.corte-corsaria-pergamino h3, .pergamino-corsarios-area h3, .nido-sagrado-area h3, .taberna-oculta-area h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    border-bottom: 2px dashed var(--text-dark-charcoal);
+    padding-bottom: 10px;
+}
+
+.grid-acordeones-30 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas perfectas en desktop */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.faq-interactive-box {
+    background: rgba(0, 0, 0, 0.04);
+    border: 2px solid rgba(0,0,0,0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-trigger-header {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.faq-indicator-icon::before {
+    content: "📁"; /* Simboliza el contenedor cerrado */
+}
+
+.faq-collapsible-body {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.3s ease-out; /* Animación elástica hacia abajo sin saltos */
 }
 
-.faq-item.faq-active .faq-answer {
-    max-height: 400px;
-    padding: 10px;
+.faq-answer-content {
+    padding: 15px;
+    font-size: 13px;
+    line-height: 1.4;
+    border-top: 1px dashed rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.3);
+    text-align: justify;
 }
 
-/* DISCLAIMER CON CUATRO CALAVERAS FIJAS */
-.pirate-skulls-corner-frame {
+/* Estado Expandido por Clic del Acordeón */
+.faq-active .faq-collapsible-body {
+    max-height: 250px; /* Margen elástico suficiente para el texto */
+}
+
+.faq-active .faq-indicator-icon::before {
+    content: "📂"; /* Se abre el contenedor de forma robótica */
+}
+
+.faq-active.wood-barrel-faq { border-color: #8b5a2b; background: rgba(139, 90, 43, 0.1); }
+.faq-active.glass-bottle-faq { border-color: #00e5ff; background: rgba(0, 229, 255, 0.1); }
+.faq-active.diamond-egg-faq { border-color: #00ff88; background: rgba(0, 255, 136, 0.1); }
+
+/* SELLO CORPORATIVO PROFESIONAL DE CIERRE */
+.escudo-altamar-sello-bloque {
+    margin-top: 40px;
+    border-top: 3px double var(--text-dark-charcoal);
+    padding-top: 30px;
+    text-align: center;
+}
+
+.escudo-altamar-sello-bloque p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1e293b;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+/* REPISTA DE BOTELLAS DE LA BODEGA */
+.pergamino-bodega-completo {
+    background: var(--bg-arena-pergamino);
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 4px;
+    color: var(--text-dark-charcoal);
+}
+
+.repisa-roble-container {
+    background: #5c4033;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 8px solid #3d2b1f;
+    margin-bottom: 20px;
+}
+
+.bottle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.bottle-item:hover { transform: scale(1.1); }
+
+.bottle-shape { width: 30px; height: 60px; background: #94a3b8; border-radius: 4px 4px 0 0; position: relative; }
+.ron-chata { background: #b45309; width: 40px; border-radius: 8px 8px 2px 2px; }
+.whisky-oscura { background: #451a03; height: 65px; }
+.tequila-ceramica { background: #d97706; width: 35px; height: 55px; border-radius: 50% 50% 4px 4px; }
+.gin-esmeralda { background: #047857; }
+.elixir-polvora { background: #1d4ed8; height: 70px; border-radius: 0 0 15px 15px; }
+
+.bodega-text-display {
+    min-height: 50px;
+    background: rgba(0,0,0,0.05);
+    padding: 15px;
+    border-left: 4px solid var(--text-dark-charcoal);
+    font-size: 13px;
+    font-weight: bold;
+    text-align: left; /* Alineado estrictamente a la izquierda del gráfico */
+}
+
+/* NOTIFICACIONES TOAST TELEGRAM */
+.notif-anchor { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 10px; z-index: 99999; }
+.floating-notif-toast { background: #1e293b; border: 2px solid var(--glow-cyan-web3); color: #ffffff; padding: 12px 20px; border-radius: 6px; font-weight: bold; font-size: 13px; box-shadow: 0 5px 15px rgba(0,229,255,0.3); animation: slideIn 0.3s ease-out; }
+
+/* ISLA DEL PENSAMIENTO (CANVAS DE RIESGO DE CIERRE) */
+.isla-pensamiento-canvas {
+    background: #090d16;
+    border: 3px solid var(--bg-arena-pergamino);
+    padding: 50px;
     position: relative;
-    background: #eedcb3 !important;
-    color: #3b2314 !important;
-    border: 8px double #6e473b !important;
-    padding: 40px !important;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
 }
 
-.pirate-skulls-corner-frame::before {
-    content: "💀       💀";
+.skull-vertex { position: absolute; font-size: 24px; z-index: 3; }
+.top-left { top: 15px; left: 15px; }
+.top-right { top: 15px; right: 15px; }
+.bottom-left { bottom: 15px; left: 15px; }
+.bottom-right { bottom: 15px; right: 15px; }
+
+.monumental-brand-title {
+    font-size: 36px;
+    letter-spacing: 8px;
+    color: var(--bg-arena-pergamino);
+    margin-bottom: 40px;
+}
+
+.background-canvas-art {
     position: absolute;
-    top: -15px;
-    left: -10px;
-    right: -10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.08; /* Efecto sutil para no interferir con las letras */
+    pointer-events: none;
     display: flex;
-    justify-content: space-between;
-    font-size: 1.8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.pirate-skulls-corner-frame::after {
-    content: "💀       💀";
-    position: absolute;
-    bottom: -15px;
-    left: -10px;
-    right: -10px;
+.horizon-island-uniswap { font-size: 120px; }
+.ocean-ethereum-blocks { font-size: 40px; letter-spacing: 20px; margin-top: 20px; }
+
+.row-objetos-riesgo-mezclados {
     display: flex;
+    gap: 30px;
     justify-content: space-between;
-    font-size: 1.8rem;
+    position: relative;
+    z-index: 2;
 }
 
-.text-center { text-align: center; }
-section { margin: 60px 0; }
-h2 { font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
+.object-box-risk {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 6px;
+    flex: 1;
+}
 
-@media (max-width: 768px) {
-    .hero-flex-layout { flex-direction: column; }
-    .nav-top-row { flex-direction: column; gap: 10px; }
+.object-box-risk span { display: block; font-weight: bold; margin-bottom: 10px; color: var(--glow-cyan-web3); }
+.object-box-risk p { font-size: 13px; line-height: 1.4; text-align: justify; }
+
+/* REGLAS DE ANIMACIÓN */
+@keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* COMPORTAMIENTO RESPONSIVO ADAPTATIVO PARA MÓVILES */
+@media (max-width: 1024px) {
+    .row-pergaminos-tokenomics, .row-edictos-wanted, .row-huevos-roadmap, .row-barriles-contrabando, .row-objetos-riesgo-mezclados, .grid-acordeones-30, .grid-cards-container {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    .header-container { position: relative; }
+    .ocean-container { margin-top: 0; }
 }
-/* Color oficial brillante para el logo vectorizado de CoinGabbar */
-.coingabbar-badge svg {
-    fill: #00ffcc !important;
-}
-/* Asegura la visualización completa del bloque del Decreto del Rey */
-.progress-section {
-    display: block !important;
-    width: 100% !important;
-    clear: both !important;
-    overflow: visible !important;
-    margin: 40px auto !important;
-}
-.dual-row-nav{padding:12px 0!important;}
-.dual-nav-container{display:flex!important;flex-direction:column!important;gap:12px!important;width:100%;}
-.nav-top-row{display:flex!important;justify-content:space-between!important;align-items:center!important;width:100%;}
-.nav-bottom-row{display:flex!important;justify-content:center!important;align-items:center!important;width:100%;border-top:1px dashed rgba(255,255,255,0.15)!important;padding-top:12px!important;}
-.defi-route-badges{display:flex!important;justify-content:center!important;align-items:center!important;gap:15px!important;flex-wrap:wrap!important;}
-.eth-ammo-badge,.uniswap-destination-badge,.coingabbar-badge,.readme-pirate-badge{display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:6px 14px!important;white-space:nowrap!important;}
-.coingabbar-badge svg{fill:#00ffcc!important;}
-@media(max-width:768px){.nav-top-row{flex-direction:column!important;gap:8px!important;text-align:center!important;}}
-body{background-image:url('perico-rivales.png')!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;background-attachment:fixed!important;}
