@@ -1,142 +1,85 @@
-# 🏴‍☠️ Tender Parakeet (\$THND) - Robinhood Chain 🦜
+# 🏴‍☠️ TENDER PARAKEET — PROYECTO DE LINGUA 🦜
 
-<p align="center">
-  <img src="https://github.io" alt="Capitán Perico Logo" width="200px" style="border-radius: 50%; box-shadow: 0 0 20px #ffd700;"/>
-</p>
+<div align="center">
 
-> [!NOTE]
-> **Ecosystem Status:** Active Incubation Phase on PONS Family. A silent ninja launch hidden deep in the undergrowth of the blockchain to protect against open-market predators.
+<!-- SELLO IMPERIAL DE LA MASCOTA REAL (ARRIBA AL CENTRO) -->
+<span>🦜</span>
+
+### 🦅 EL MONARCA ABSOLUTO DEL AIRE DE LA ROBINHOOD CHAIN 🦅
 
 ---
 
-## 📊 On-Chain Blueprint (Quick Specs)
+<!-- EL ESTANDARTE DE LA FLOTA: BARCO CON LA BANDERA DEL MURCIÉLAGO BLANCO HONDUREÑO MEMECOIN -->
+## 🚢 🦇 [ FLEET FLAG: HONDURAN WHITE BAT MEME-STYLE ] 🏴‍☠️ 🚢
 
-| Technical Parameter | On-Chain Specification |
+---
+
+<!-- CUADRO DE PERGAMINO QUEMADO CON CALAVERAS CUSTODIANDO LAS CUATRO ESQUINAS -->
+<table>
+<tr>
+<td> 💀 </td>
+<td align="center"><strong>📜 EDICTO OFICIAL DE INTELIGENCIA NAVAL CRIPTOGRÁFICA 📜</strong></td>
+<td> 💀 </td>
+</tr>
+<tr>
+<td colspan="3" align="left">
+<br>
+Las coordenadas están grabadas a fuego directo en la cadena de bloques. Este documento certifica los parámetros técnicos auditables de la preventa para la tripulación de alta mar y los registros de indexación global.
+<br><br>
+
+| Parámetro Técnico Naval | Especificación Inmutable On-Chain |
 | :--- | :--- |
 | **Smart Contract (CA)** | `0x54BF9EcF6b09E86DE19688E636a0368cc8844020` |
-| **Network Node** | **Robinhood Chain** (Requires custom RPC setup) |
-| **Team Allocation** | **0%** (Absolute Fair Launch Standards) |
-| **Ecosystem Tax** | **3% Creator Tax** (Activates *only* on Uniswap v4 post-graduation) |
-| **Asset Custody** | **100% Decentralized** via PONS Smart Contract |
+| **Red de Operación / Blockchain** | **Robinhood Chain** (Requiere configuración de RPC personalizado) |
+| **Suministro Máximo Fijo** | **1,000,000,000** \$THND (No se pueden acuñar más monedas) |
+| **Meta de Graduación de la Curva** | **4.2 ETH** acumulados estrictamente en Pons Launchpad |
+| **Asignación para el Equipo (Dev)** | **0%** (Normas estrictas de Fair Launch absoluto) |
+| **Impuesto del Código (Ecosystem Tax)** | **3% Creator Tax** (Se ejecuta únicamente al graduarse en Uniswap) |
+| **Custodia del Oro de la Preventa** | **100% Descentralizada** y resguardada por contratos inteligentes robóticos |
+
+<br>
+</td>
+</tr>
+<tr>
+<td> 💀 </td>
+<td align="center"><strong>⚓ TRANSPARENCIA TOTAL — CERO TOKENS PARA EL CAPITÁN ⚓</strong></td>
+<td> 💀 </td>
+</tr>
+</table>
+
+</div>
 
 ---
 
-## 🗺️ Liquidity Routing & RPC Setup
+## 🗺️ Enrutamiento de Liquidez y Graduación Automática
 
-> [!IMPORTANT]
-> To interact with the bonding curve seamlessly, manually input these network parameters into your Web3 wallet (MetaMask/Rabby):
+Cualquier plataforma de agregación e indexación de medios (Alerta **CoinGabbar**) debe rastrear los datos del mercado única y exclusivamente a través de la dirección oficial del contrato inteligente (CA) [4.1]. 
 
-*   **Network Name:** Robinhood Chain
-*   **RPC URL:** `https://robinhoodchain.com`
-*   **Chain ID:** `2026`
-*   **Currency Symbol:** `ETH`
-*   **Block Explorer:** `https://robinhoodchain.com`
-
-### ⚓ Crossing the Bridge (Adding Ammunition)
-1. **Withdraw \$ETH** from your exchange to your wallet via Ethereum Mainnet, Base, or Arbitrum.
-2. **Navigate** to the official community bridge at `https://ponsfamily.com`.
-3. **Route your funds** into the Robinhood Chain node. Settlement completes in under 3 minutes.
+*   **Aviso de Liquidez Inicial:** En estricto cumplimiento con la arquitectura del contrato, **\$THND mostrará un 0% de liquidez visible en los trackers de DEX públicos antes de su graduación.** Todo el capital permanece bloqueado e inaccesible de forma segura dentro del motor algorítmico de la curva de vinculación (<span class="notranslate">Bonding Curve</span>) de <span class="notranslate">Pons</span> [4.1].
+*   **El Salto Deflacionario:** Al alcanzar la meta inalterable de **4.2 ETH**, el contrato inteligente ejecuta de forma automatizada la migración hacia **Uniswap v4**, inyectando el pozo acumulado de forma permanente y destruyendo las llaves de acceso para siempre (<span class="notranslate">LP Keys Burned</span>) [4.1]. En ese mismo milisegundo, se desata el **Acelerador Deflacionario**: el 50% de todas las comisiones acumuladas del creador se enviarán a la dirección muerta de destrucción perpetua [4.1].
 
 ---
 
-## ⚠️ Local Regulatory & Jurisdictional Compliance Notice
+## 🛡️ Protocolo de Seguridad de Alta Mar (Cero Contacto)
 
-> [!WARNING]
-> **Geographical and Jurisdictional Restrictions:** Access to the Robinhood Chain network, decentralized bridging protocols, or the PONS Launchpad interface may be restricted, blocked, or completely unavailable in your region due to local financial regulations, digital asset frameworks, or geographical compliance mandates. 
+Para salvaguardar tu botín de los depredadores del mercado abierto, la tripulación de **Project Lingua** establece una política inquebrantable de cero contacto directo [4.1]:
 
-By interacting with this deployment, you acknowledge that you are doing so in compliance with your local laws. The deployment team exercises zero control over external RPC availability, network access points, or regional internet service provider blocks dictated by sovereign jurisdictions.
-
----
-
-## 📋 Official Listing & Liquidity Manifest
-
-> [!WARNING]
-> **Media & Aggregators Mandate (CoinGabbar Alert):** Any indexing platform tracking this project must strictly utilize the official landing page and quote market data exclusively via the Smart Contract Address (CA).
-
-*   **Authorized Portal:** `https://github.io`
-*   **Liquidity Notice:** In strict compliance with the architecture, **\$THND will show 0% visible liquidity on public DEX trackers prior to graduation.** All capital remains locked within the immutable PONS contract until the mathematical threshold of **4.2 ETH** is met. Once crossed, liquidity injects into Uniswap v4 and LP keys are burned forever.
-
----
-[ ORGANIC TRAFFIC / COINGABBAR ]
-│
-▼
-[ TRANSPARENT GITHUB DOCUMENTATION ]
-│
-▼
-┌─────────────────────────────────────────┐
-│       PONS LAUNCHPAD BONDING CURVE      │ <── Creator Allocations: 0%
-│   (100% Mathematical Custody On-Chain)  │
-└──────────────────┬──────────────────────┘
-│
-▼ (Upon Reaching 4.2 ETH)
-┌─────────────────────────────────────────┐
-│     AUTOMATIC UNISWAP V4 GRADUATION     │
-│    (Liquidity Burned Permanently)       │
-└──────────────────┬──────────────────────┘
-│
-┌────────────┴────────────┐
-▼                         ▼
-[ OTC REPURCHASES ]     [ FLEET MARKETING ]
-(1.5% Silent Volume Burn)    (1.5% Reinvestment)
-│
-▼
-[ DEAD ADDRESS DESTRUCTION ]
-(Wallet: 0x...dead)
-## 🗺️ Visual Ecosystem Architecture
----
-
-## 📢 OFFICIAL MANIFESTO / PRESS RELEASE
-
-### Capitán Perico (\$THND) Breaks Ecosystem Vices via PONS Launchpad, Introducing 100% Fair Speculation across the American Continent
-
-### 🌿 A Hidden Gem in the Shadows
-Like a rare species camouflaged within the dense foliage of the American rainforest to evade large predators, **\$THND** was intentionally deployed as a silent ninja launch. Born deep in the undergrowth of the blockchain to preserve its growth and ensure organic discovery, this hidden gem allows true community flyers to discover the nest naturally. No tracking algorithms, no forced hype—just pure economic survival.
-
-### 🛡️ Rooted in Reality: No Artificial Certifications
-The project explicitly rejects purchased, superficial code audits or identity seals that merely scan deployment lines to simulate legitimacy. Because \$THND is a pure entertainment vehicle with zero immediate utility promises or guaranteed financial returns, the team declines to fund deceptive marketing credentials. 
-
-Instead, structural verification remains transparent: the development team is actively preparing verified compliance protocols (KYC) exclusively tailored for its upcoming flagship utility software and major exchange integrations, focusing compliance on functional products rather than initial fundraising mechanisms.
+1.  **Cero Airdrops o Sorteos:** No realizamos ninguna actividad promocional de distribución gratuita ni sorteos ocultos. Toda adquisición legítima se ejecuta únicamente a través de la interfaz de <span class="notranslate">Pons</span> [4.1].
+2.  **Cero Solicitudes de Tarifas o Datos:** Jamás te pediremos datos de identificación personal ni cobros de comisiones extras para procesar tus retiros de tokens [4.1].
+3.  **Cero Mensajes Directos Privados (DM):** Ningún miembro oficial del equipo te escribirá jamás por privado en ninguna red social. Nunca te pediremos tus 12 palabras de recuperación ni tu frase semilla (<span class="notranslate">Seed Phrase</span>) [4.1]. Quien lo haga, es un absoluto estafador en el puerto [4.1].
+4.  **Uso Recomendado de Burner Wallet:** Como regla de oro de seguridad Web3, aconsejamos estrictamente crear una billetera secundaria aislada exclusivamente para interactuar con esta preventa, manteniendo tu bóveda principal totalmente desconectada de los riesgos de alta mar [4.1].
 
 ---
 
-### 🔒 Ecosystem Security & Anti-Fraud Protocol
+## ⚠️ Decreto de Riesgo del Capitán (High-Risk Entertainment Mandate)
 
-> [!TIP]
-> **Burner Wallet Guide:** For maximum safety, we strongly suggest creating a completely new, isolated Web3 wallet exclusively dedicated to this launch. Upon successful automatic graduation to Uniswap v4, you maintain full freedom to securely migrate your positions to your primary vault wallets.
+Este proyecto ha sido diseñado estrictamente como un vehículo de entretenimiento criptográfico y exploración especulativa de máximo riesgo basado en la fauna y el patrimonio regional del continente americano [4.1]. **\$THND no constituye una inversión financiera, no ofrece acciones comerciales de ninguna entidad ni promete rendimientos de capital preservado.** 
 
-Project Lingua establishes an absolute zero-contact safety mandate:
-*   **No Giveaways or Airdrops:** Project Lingua is not conducting any sweepstakes, airdrops, or promotional distribution activities. All acquisitions occur strictly through the PONS interface.
-*   **No Fees or Data Requests:** The team will never request personal information, identification data, or processing fees for token withdrawals. 
-*   **Zero Private Messaging:** No official member of the team will ever initiate contact via private or direct message on any platform. We will never ask for your recovery phrase, seed phrase, or private keys.
-*   **Autonomous Trading Only:** You buy, you hold, or you sell entirely at your own discretion. Users must solely rely on verified official channels and strictly avoid interacting with any individual claiming to represent Project Lingua privately.
+El equipo de desarrollo ejerce cero control sobre las restricciones geográficas de red o los bloqueos locales impuestos por las jurisdicciones soberanas de tu región [4.1]. Comercia con la cabeza despejada, arriesgando únicamente el oro degen que estés estrictamente dispuesto a perder bajo las leyes implacables de la blockchain [4.1]. ¡Vuela alto con garras de diamante, o quédate en el suelo como un no volador! [4.1]
 
 ---
 
-### ⚠️ High-Risk Entertainment Mandate
-This project does not constitute a financial investment, a security offering, or a purchase of stock shares in any entity. **\$THND is a meme coin designed purely for entertainment and speculative exploration—representing a vehicle of absolute maximum risk.** 
-
-The deployment team does not guarantee, under any circumstances, an assured financial return or capital preservation. However, the administration will make every operational effort to maintain the project infrastructure as healthy, robust, and transparent as possible. 
-
-We are together in this flight across uncharted digital waters—unless you choose to remain a non-flyer on the ground. This journey is destined for the true conquest of the blockchain, leaving infinite corporate copies behind. Different cultures, one single Lingua.
-
----
-
-## 🛠️ Micro-Detail Troubleshooting
-
-*   **Why does MetaMask throw an RPC connection fault during setup?**
-    Ensure the RPC endpoint string is copied precisely without trailing spaces: `https://robinhoodchain.com`. If latency persists, switch to the Rabby Wallet interface.
-*   **Can I participate using a Centralized Exchange address (e.g., Binance, Coinbase)?**
-    **ABSOLUTELY NOT.** Direct transfers from centralized exchange addresses to the contract pool will result in an immediate, irreversible loss of capital. You must strictly execute transactions using non-custodial Web3 extensions where you exercise absolute control over the private seed phrase.
-*   **My buy order on the PONS interface was reverted by the blockchain.**
-    This execution failure typically indicates a lack of native Ethereum (\$ETH) liquidity on the Robinhood Chain to process network gas. Always maintain a minimal reserve fraction of ETH (approximately \$0.50 USD) untouched in your wallet balance to fund block settlement fees.
-
----
-
-### 🌎 About Project Lingua
-Project Lingua is a Web3 ecosystem dedicated to uniting cultures across the American continent by highlighting regional fauna, art, and heritage through blockchain technology.
-
-*   **Official Webpage:** [linguamemecoin.github.io/Tender-Parakeet/](https://github.io)  
-*   **Official X Account:** [@LinguaMemeCoin](https://x.com)  
-*   **Launchpad Interface:** [Pons Launchpad](https://ponsfamily.com)
-
-### END OF DOCUMENT
+<div align="center">
+  <strong>DIFERENTES CULTURAS, UNA SOLA LINGUA 🌎</strong><br>
+  © 2026 Tender Parakeet (\$THND). Proyecto de Entretenimiento Meme Absoluto.
+</div>
