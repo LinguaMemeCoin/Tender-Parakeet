@@ -3,7 +3,7 @@
 // ==========================================================================
 const TOKEN_DATA = {
     contractAddress: "0x54BF9EcF6b09E86DE19688E636a0368cc8844020",
-    ponsUrl: "https://ponsfamily.com",
+    ponsUrl: "https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020",
     rpcUrl: "https://robinhoodchain.com", // Nodo público para consulta Web3
     targetEth: 4.2 // Meta inalterable de la curva de vinculación
 };
