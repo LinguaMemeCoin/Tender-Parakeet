@@ -309,3 +309,11 @@ h2 { font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
     overflow: visible !important;
     margin: 40px auto !important;
 }
+.dual-row-nav{padding:12px 0!important;}
+.dual-nav-container{display:flex!important;flex-direction:column!important;gap:12px!important;width:100%;}
+.nav-top-row{display:flex!important;justify-content:space-between!important;align-items:center!important;width:100%;}
+.nav-bottom-row{display:flex!important;justify-content:center!important;align-items:center!important;width:100%;border-top:1px dashed rgba(255,255,255,0.15)!important;padding-top:12px!important;}
+.defi-route-badges{display:flex!important;justify-content:center!important;align-items:center!important;gap:15px!important;flex-wrap:wrap!important;}
+.eth-ammo-badge,.uniswap-destination-badge,.coingabbar-badge,.readme-pirate-badge{display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:6px 14px!important;white-space:nowrap!important;}
+.coingabbar-badge svg{fill:#00ffcc!important;}
+@media(max-width:768px){.nav-top-row{flex-direction:column!important;gap:8px!important;text-align:center!important;}}
