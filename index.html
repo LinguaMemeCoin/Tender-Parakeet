@@ -186,14 +186,18 @@
         <!-- PANEL DE CONTROL CRIPTOGRÁFICO: CRYPTO DECK GRID (ENLACES REPARADOS) -->
         <div class="crypto-deck-grid">
             
-            <!-- Tarjeta 1: El Cofre del Tesoro (Copia Segura de CA en la misma página) -->
-            <div class="deck-card card-treasure" onclick="openAndCopyChest()" id="chestContainer">
-                <div class="deck-card-glow"></div>
-                <div class="deck-badge" id="chestBadge">CERRADO</div>
-                <div class="deck-main-emoji" id="chestEmoji">🔒</div>
-                <h3 class="deck-card-title" id="chestLabel">Cofre del Botín</h3>
-                <p class="deck-card-sub notranslate" id="contractAddressText">0x54BF9EcF6b09E86DE19688E636a0368cc8844020</p>
-            </div>
+            <!-- Tarjeta 1: El Cofre del Tesoro (Copia en la misma página y link transparente al explorador) -->
+<div class="deck-card card-treasure" onclick="openAndCopyChest()" id="chestContainer">
+    <div class="deck-card-glow"></div>
+    <div class="deck-badge" id="chestBadge">CERRADO</div>
+    <div class="deck-main-emoji" id="chestEmoji">🔒</div>
+    <h3 class="deck-card-title" id="chestLabel">Cofre del Botín</h3>
+    <!-- Enlace transparente que CoinGabbar exige auditar en la blockchain -->
+    <p class="deck-card-sub notranslate" id="contractAddressText">
+        <a href="https://robinhoodchain.com" target="_blank" style="color: rgba(255,255,255,0.6); text-decoration: none;" onclick="event.stopPropagation();">0x54BF...4020</a>
+    </p>
+</div>
+
 
             <!-- Tarjeta 2: Tormenta Marina en Pons (Abre Compra Real en Pestaña Nueva) -->
             <div class="deck-card card-storm" onclick="triggerStormClick(event)" id="stormBtn">
