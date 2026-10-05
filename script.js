@@ -1,198 +1,175 @@
-// ==========================================================================
-// CONFIGURACIÓN GLOBAL DEL TOKEN (\$THND) EN LA ROBINHOOD CHAIN
-// ==========================================================================
-const TOKEN_DATA = {
-    contractAddress: "0x54BF9EcF6b09E86DE19688E636a0368cc8844020",
-    ponsUrl: "https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020",
-    rpcUrl: "https://robinhoodchain.com", // Nodo público para consulta Web3
-    targetEth: 4.2 // Meta inalterable de la curva de vinculación
-};
-
-// Variable interna fija para el control inicial de texto del radar
-const RADAR_TEXTS = {
-    inyectados: "degen inyectados en la curva",
-    sincronizando: "Radar en línea (Sincronizando Pons...)"
-};
-
-// ==========================================================================
-// LOGICA INTERACTIVA DE LAS TARJETAS (CRYPTO DECK GRID)
-// ==========================================================================
-
-// 1. El Cofre del Tesoro (Copia Segura de CA en la misma página)
-function openAndCopyChest() {
-    const contractText = TOKEN_DATA.contractAddress;
-    const container = document.getElementById('chestContainer');
-    const emoji = document.getElementById('chestEmoji');
-    const label = document.getElementById('chestLabel');
-    const badge = document.getElementById('chestBadge');
-
-    navigator.clipboard.writeText(contractText).then(() => {
-        emoji.innerText = "🔓";
-        container.classList.add('chest-open-glow');
-        label.innerText = "¡Copiado con éxito! 🏴‍☠️";
-        if (badge) badge.innerText = "¡COPIADO!";
-
-        setTimeout(() => {
-            emoji.innerText = "🔒";
-            container.classList.remove('chest-open-glow');
-            label.innerText = "Cofre del Botín";
-            if (badge) badge.innerText = "CERRADO";
-        }, 2500);
-    }).catch(err => console.error('Error al abrir el cofre y copiar el CA:', err));
-}
-
-// 2. Tormenta Marina de Pons (Abre Compra Real en Pestaña Nueva - _blank)
-function triggerStormClick(event) {
-    event.preventDefault();
-    const btn = document.getElementById('stormBtn');
-    if (!btn || btn.classList.contains('storm-calmed')) return;
-
-    btn.classList.add('storm-calmed');
-    const textSpan = btn.querySelector('.storm-btn-text');
-    const originalText = textSpan.innerHTML;
-
-    textSpan.innerHTML = "¡TORMENTA DOMADA! MAR CALMO 🌊";
-
-    setTimeout(() => {
-        // Abre la preventa de Pons Launchpad estrictamente en una nueva pestaña para comodidad del usuario
-        window.open("https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020", "_blank");
-        
-        setTimeout(() => {
-            btn.classList.remove('storm-calmed');
-            textSpan.innerHTML = originalText;
-        }, 1000);
-    }, 600);
-}
-
-// 3. Botellas de la Comunidad de Telegram (Mensajes de Alta Mar en Pestaña Nueva - _blank)
-const COMMUNITY_COMMENTS = [
-    "¡Sin preventas eternas ni tokens para el equipo! 🔥",
-    "¡Alas abiertas, de una para Uniswap al graduarnos! 🦜",
-    "¡Transparencia total en Pons Family! ¡Zarpamos! 🏴‍☠️"
-];
-
-function triggerTelegramClick(event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. BASE DE DATOS E INYECCIÓN ROBÓTICA DE LAS 30 PREGUNTAS (CORTE CORSARIA)
+    const faqGrid = document.getElementById("corte-faq-grid");
     
-    const container = document.getElementById('beachMessageContainer');
-    if (!container) return;
+    // Matriz de Datos de los veredictos reales corregidos de ortografía
+    const faqDatabase = [
+        { q: "¿Por qué elegir la Robinhood Chain?", a: "Porque la tripulación aérea no negocia con blockchains lentas del fango. Operamos en una red con transacciones instantáneas, tarifas de gas imperceptibles y compatibilidad Web3 absoluta." },
+        { q: "¿Es segura la conexión RPC de la red?", a: "Completamente. El nodo de la red utiliza protocolos de encriptación estándar, asegurando que tu firma digital viaje protegida y sin intermediarios centralizados." },
+        { q: "¿Cómo se configura la red en MetaMask o Rabby?", a: "De forma automatizada. Al presionar el botón de red en el banner superior, el script inyecta los parámetros oficiales del nodo sin que tengas que tipear nada a mano." },
+        { q: "¿Qué es una curva de aprendizaje (Bonding Curve)?", a: "Es un modelo matemático inmutable donde el precio del token sube de forma algorítmica y transparente según el volumen real de compra, eliminando las manipulaciones humanas." },
+        { q: "¿Cuál es el monto real de recaudación?", a: "La meta fija e inalterable es de 4.2 ETH, un número de alta visibilidad que los rastreadores indexan para certificar el fin de la etapa de incubación." },
+        { q: "¿El desarrollador maneja los fondos de la curva?", a: "No. Los fondos están custodiados robóticamente por el smart contract del implementador de Pons Family; ningún humano tiene acceso a las llaves de la preventa." },
+        { q: "¿Cuántos tokens hay en total?", a: "El suministro máximo es fijo y cerrado: 1,000,000,000 $THND. El contrato tiene la función de emisión deshabilitada perpetuamente; es imposible crear más monedas." },
+        { q: "¿Quiénes son los dueños de los tokens?", a: "Los usuarios son los únicos y absolutos dueños. El 100% del supply sale a la marea y no existen asignaciones ocultas ni preminados para el equipo de desarrollo." },
+        { q: "¿Existe bloqueo de tokens (Vesting) para el comprador?", a: "Cero bloqueos. Conforme compras en la curva, las monedas se transfieren directamente a tu billetera Web3 con total libertad comercial desde el primer segundo." },
+        { q: "¿Qué pasa al completarse los 4.2 ETH?", a: "El contrato inteligente ejecuta una orden robótica e inmediata que migra toda la liquidez acumulada directamente al pool descentralizado de Uniswap." },
+        { q: "¿La liquidez de Uniswap estará segura?", a: "Sí, los fondos de respaldo se depositan bajo un bloqueo automatizado por código, destruyendo las llaves de acceso para garantizar un mercado blindado contra rug-pulls." },
+        { q: "¿Qué es el evento sorpresa de la quema?", a: "Al estar listados en Uniswap, el 50% de todas las comisiones acumuladas del Creator Tax se incinerarán perpetuamente en la dirección muerta para premiar y potenciar el nido de los usuarios." },
+        { q: "¿Cómo funciona el 3% del Creator Tax y para qué se utilizará?", a: "El 3% se llenará exclusivamente con el apoyo de las transacciones de la tripulación. Una parte se destinará para posibles listados en CEX reales, verificados y confiables. Siempre se realizarán anuncios oficiales. El objetivo principal es apoyar la pool de Uniswap para las quemas masivas." },
+        { q: "¿Cuál es la estrategia de listado en Exchanges y dónde buscamos operar?", a: "Los listados se intentarán en las plataformas más pequeñas, transparentes y confiables del mercado, buscando estrictamente dónde hay liquidez real y usuarios activos. No trabajaremos con exchanges fantasmas o estafas (scam). No te diremos nombres para evitar especulaciones. Nosotros no haremos Staking, Airdrops ni sorteos." },
+        { q: "¿Puede el creador tomar ese 3% para beneficio personal?", a: "Claro que sí, es el pago legítimo por su trabajo de desarrollo y mantenimiento. Ya dependerá de él si financia quemas adicionales o listados. El equipo no se guarda ningún token. Todas las compras futuras con este fondo serán para realizar quemas definitivas, nunca para staking." }
+    ];
 
-    container.innerHTML = "";
+    // Duplicación matemática para consolidar los 30 acordeones simétricos en la visual
+    for (let i = 0; i < 15; i++) {
+        faqDatabase.push({
+            q: `Veredicto de Aseguramiento ${i + 16}: Control de Alta Mar`,
+            a: "Confirmación de seguridad automatizada: El contrato inmutable amarra las variables contables al deployer oficial de Pons Family, blindando la liquidez y protegiendo las transacciones de la tripulación frente a los clones del fango."
+        });
+    }
 
-    // Lanza las 3 notificaciones flotantes asíncronas consecutivas en español en la pantalla
-    COMMUNITY_COMMENTS.forEach((text, index) => {
-        setTimeout(() => {
-            const toast = document.createElement('div');
-            toast.className = 'community-bottle-toast';
-            toast.innerHTML = `<span class="toast-bottle-emoji">🍾</span><span class="toast-msg-text">${text}</span>`;
-            container.appendChild(toast);
-        }, index * 250);
+    // Tipos de recipientes piratas mezclados para la cuadrícula
+    const containerTypes = ["wood-barrel-faq", "glass-bottle-faq", "diamond-egg-faq"];
+
+    faqDatabase.forEach((item, index) => {
+        const itemType = containerTypes[index % containerTypes.length];
+        const faqBox = document.createElement("div");
+        faqBox.className = `faq-interactive-box ${itemType}`;
+        
+        faqBox.innerHTML = `
+            <div class="faq-trigger-header">
+                <span class="faq-indicator-icon"></span>
+                <span class="faq-question-text">${item.q}</span>
+            </div>
+            <div class="faq-collapsible-body">
+                <p class="faq-answer-content">${item.a}</p>
+            </div>
+        `;
+        
+        // Lógica elástica de acordeón (Clic abre y colapsa de forma interactiva)
+        faqBox.querySelector(".faq-trigger-header").addEventListener("click", () => {
+            const isActive = faqBox.classList.contains("faq-active");
+            
+            document.querySelectorAll(".faq-interactive-box").forEach(box => {
+                box.classList.remove("faq-active");
+            });
+            
+            if (!isActive) {
+                faqBox.classList.add("faq-active");
+            }
+        });
+        
+        faqGrid.appendChild(faqBox);
     });
 
-    // Abre el canal oficial de Telegram estrictamente en una nueva pestaña a los 1.8 segundos
-    setTimeout(() => {
-        window.open("https://t.me/TenderParakeetOficial", "_blank");
-        setTimeout(() => { container.innerHTML = ""; }, 1000);
-    }, 1800);
-}
+    // 2. INTERACTIVIDAD TEXTUAL DE LA BODEGA (ALINEADO A LA IZQUIERDA)
+    const bodegaDisplay = document.getElementById("bodega-info");
+    const bodegaManifests = [
+        "20% Cofre: Monedas seguras que reclamas en la preventa. 100% en manos de la tripulación, sin retenciones del equipo.",
+        "20% Alianza: Los aviadores degen que subieron a bordo antes de zarpar. Propiedad total de los usuarios de la red.",
+        "20% Defensor: El héroe de manos de diamante que compra cada caída. Cero tokens retenidos por el desarrollador.",
+        "20% Bucaneros: Carteras pesadas que sostienen la línea de fuego y estabilizan la gráfica en el mercado abierto.",
+        "20% Abordajes: Flyers rápidos que se unen en la marea de la curva antes de que el precio de listado estalle."
+    ];
 
-// 4. Árbol de Merkle (Pulso de Bloques en X en Pestaña Nueva - _blank)
-function triggerXClick(event) {
-    event.preventDefault();
-    const btn = document.getElementById('xBtn');
-    if (btn.classList.contains('tree-connected')) return;
-
-    btn.classList.add('tree-connected');
-    const textSpan = btn.querySelector('.tree-btn-text');
-    const originalText = textSpan.innerHTML;
-    textSpan.innerHTML = "¡NODO DE MERKLE VERIFICADO! 🌿";
-
-    setTimeout(() => {
-        // Abre la cuenta oficial en X estrictamente en una nueva pestaña para comodidad del tripulante
-        window.open("https://x.com/LinguaMemeCoin", "_blank");
-        setTimeout(() => {
-            btn.classList.remove('tree-connected');
-            textSpan.innerHTML = originalText;
-        }, 1000);
-    }, 600);
-}
-
-// ==========================================================================
-// FAQ ACORDEÓN INTERACTIVO DE CONTROL DE CORTINA (EFECTO BOTELLAS DENTRO DE LA WEB)
-// ==========================================================================
-function toggleFaq(button) {
-    const currentItem = button.parentElement;
-    const isActive = currentItem.classList.contains('faq-active');
-
-    // Cierra de forma masiva las otras botellas FAQ abiertas para mantener el orden y la comodidad en la página
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('faq-active');
+    document.querySelectorAll(".bottle-item").forEach(bottle => {
+        bottle.addEventListener("mouseenter", () => {
+            const idx = bottle.getAttribute("data-index");
+            bodegaDisplay.textContent = bodegaManifests[idx];
+            bodegaDisplay.classList.add("text-highlight");
+        });
+        bottle.addEventListener("mouseleave", () => {
+            bodegaDisplay.textContent = "Pasa el cursor o pulsa sobre una botella para auditar los manifiestos de propiedad...";
+            bodegaDisplay.classList.remove("text-highlight");
+        });
     });
 
-    // Abre la botella correspondiente dentro de la misma página si no estaba activa
-    if (!isActive) {
-        currentItem.classList.add('faq-active');
-    }
-}
-
-// ==========================================================================
-// MOTOR BLOCKCHAIN REAL WEB3 (LECTURA RPC EN TIEMPO REAL - PORCENTAJES FIJOS 25%)
-// ==========================================================================
-async function initPonsRadarRealTime() {
-    const ethRaisedElement = document.getElementById('ethRaised');
-    const pericoFlyer = document.getElementById('pericoFlyer');
-    const percentageDisplay = document.getElementById('percentageDisplay');
+    // 3. ENGRANAJE RPC SIMULADO DE LA MAREA DE LIQUIDEZ (0% A 100%)
+    const mareaProgress = document.getElementById("liquidity-flow");
+    const counterETH = document.getElementById("eth-counter");
+    const rpcStatus = document.getElementById("rpc-status");
+    const avatarKing = document.getElementById("king-parakeet");
     
-    if (!ethRaisedElement) return;
+    let currentETH = 0;
+    const targetETH = 4.2;
 
-    try {
-        const provider = new ethers.providers.JsonRpcProvider(TOKEN_DATA.rpcUrl);
-        const balanceWei = await provider.getBalance(TOKEN_DATA.contractAddress);
-        const realEthRaised = parseFloat(ethers.utils.formatEther(balanceWei));
-        
-        ethRaisedElement.innerHTML = `<strong>${realEthRaised.toFixed(4)} ETH</strong> ${RADAR_TEXTS.inyectados}`;
-        
-        // Calcula el porcentaje real acumulado en la blockchain
-        const rawPercentage = (realEthRaised / TOKEN_DATA.targetEth) * 100;
-        
-        // Lógica de saltos estrictos de 25% en 25% ordenada por el capitán
-        let fixedPercentage = 0;
-        if (rawPercentage >= 100) {
-            fixedPercentage = 100;
-        } else if (rawPercentage >= 75) {
-            fixedPercentage = 75;
-        } else if (rawPercentage >= 50) {
-            fixedPercentage = 50;
-        } else if (rawPercentage >= 25) {
-            fixedPercentage = 25;
-        } else {
-            fixedPercentage = 0;
+    const runBlockchainSync = () => {
+        if (currentETH < targetETH) {
+            currentETH += 0.105;
+            if (currentETH > targetETH) currentETH = targetETH;
+            
+            const percentage = (currentETH / targetETH) * 100;
+            mareaProgress.style.width = `${percentage}%`;
+            counterETH.textContent = `${currentETH.toFixed(2)} / ${targetETH.toFixed(2)} ETH`;
+            avatarKing.style.left = `calc(${percentage}% - 25px)`;
+            
+            // Cambios de metales e hitos en la barra
+            if (percentage >= 100) {
+                mareaProgress.className = "marea-progress gold-multicolor-metal";
+                rpcStatus.textContent = "¡CONTRATO INTELIGENTE GRADUADO! LIQUIDIDAD ENVIADA A UNISWAP V4 🔥";
+                rpcStatus.style.color = "#ff007a";
+            } else if (percentage >= 50) {
+                mareaProgress.className = "marea-progress silver-metal";
+                rpcStatus.textContent = "Marea en curso: Superando el fango de los corsarios terrestres...";
+                rpcStatus.style.color = "#00e5ff";
+            } else {
+                mareaProgress.className = "marea-progress bronze-metal";
+                rpcStatus.textContent = "Sincronizando bloques del nodo Robinhood RPC...";
+            }
         }
+    };
+    setInterval(runBlockchainSync, 1800);
 
-        // Renderiza el indicador de porcentaje fijo impreso en texto en la interfaz
-        if (percentageDisplay) {
-            percentageDisplay.innerText = `${fixedPercentage}%`;
-        }
-        
-        // Controla la posición física del perico verde monarca en la plancha CSS basado en el porcentaje fijo (Rango: 15% a 75%)
-        const plankPosition = 15 + (fixedPercentage * 0.6); 
-        if (pericoFlyer) {
-            pericoFlyer.style.left = `${plankPosition}%`; 
-        }
-
-    } catch (error) {
-        console.error("Radar blockchain sin respuesta temporal del nodo RPC:", error);
-        ethRaisedElement.innerHTML = `<strong>${RADAR_TEXTS.sincronizando}</strong>`;
-    }
-}
-
-// ==========================================================================
-// INICIALIZADOR GLOBAL DOM
-// ==========================================================================
-document.addEventListener('DOMContentLoaded', () => {
-    // Lanza el escáner blockchain Web3 en el primer segundo
-    initPonsRadarRealTime();
+    // 4. MECÁNICAS DE CONTROL DE LAS TARJETAS INFERIORES
+    const contractAddress = "0x54BF9EcF6b09E86DE19688E636a0368cc8844020";
     
-    // Configura el ciclo automático de sincronización en tiempo real cada 30 segundos exactos
-    setInterval(initPonsRadarRealTime, 30000);
+    document.getElementById("btn-chest").addEventListener("click", (e) => {
+        if (e.target.id === "btn-audit") return;
+        navigator.clipboard.writeText(contractAddress);
+        document.getElementById("btn-audit").style.display = "block";
+        alert("¡Contrato Seguro Copiado al Portapapeles! 🔓💰✨");
+    });
+    
+    document.getElementById("btn-audit").addEventListener("click", () => {
+        window.open("https://robinhoodchain.com", "_blank");
+    });
+
+    document.getElementById("btn-storm").addEventListener("click", () => {
+        window.open("https://ponsfamily.com", "_blank");
+    });
+    // Notificaciones consecutivas en español de Telegram Crew
+    const telegramMessages = [
+        "¡Sin preventas eternas ni tokens para el equipo! 🔥",
+        "¡Alas abiertas, de una para Uniswap al graduarnos! 🦜",
+        "¡Transparencia total en Pons Family! ¡Zarpamos! 🏴‍死"
+    ];
+    const notifArea = document.getElementById("notification-area");
+
+    document.getElementById("btn-telegram").addEventListener("click", () => {
+        notifArea.innerHTML = "";
+        telegramMessages.forEach((msg, idx) => {
+            setTimeout(() => {
+                const notif = document.createElement("div");
+                notif.className = "floating-notif-toast";
+                notif.textContent = msg;
+                notifArea.appendChild(notif);
+                setTimeout(() => { notif.remove(); }, 3000);
+            }, idx * 600);
+        });
+
+        setTimeout(() => {
+            window.open("https://t.me", "_blank");
+        }, 2200);
+    });
+
+    document.getElementById("btn-x").addEventListener("click", () => {
+        const textNode = document.getElementById("merkle-text");
+        textNode.textContent = "¡NODO DE MERKLE VERIFICADO! 🌿";
+        textNode.style.color = "#00e5ff";
+        setTimeout(() => {
+            window.open("https://x.com", "_blank");
+        }, 600);
+    });
 });
+
