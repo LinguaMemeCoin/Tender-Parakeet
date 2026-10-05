@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("btn-storm").addEventListener("click", () => {
-        window.open("https://ponsfamily.com", "_blank");
+        window.open("https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020", "_blank");
     });
     // Notificaciones consecutivas en español de Telegram Crew
     const telegramMessages = [
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         setTimeout(() => {
-            window.open("https://t.me", "_blank");
+            window.open("https://t.me/TenderParakeetOficial", "_blank");
         }, 2200);
     });
 
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         textNode.textContent = "¡NODO DE MERKLE VERIFICADO! 🌿";
         textNode.style.color = "#00e5ff";
         setTimeout(() => {
-            window.open("https://x.com", "_blank");
+            window.open("https://x.com/LinguaMemeCoin", "_blank");
         }, 600);
     });
 });
