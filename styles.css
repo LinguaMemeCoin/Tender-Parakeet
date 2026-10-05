@@ -301,3 +301,11 @@ h2 { font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
 .coingabbar-badge svg {
     fill: #00ffcc !important;
 }
+/* Asegura la visualización completa del bloque del Decreto del Rey */
+.progress-section {
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+    overflow: visible !important;
+    margin: 40px auto !important;
+}
