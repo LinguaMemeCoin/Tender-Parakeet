@@ -119,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     };
-    // setInterval(runBlockchainSync, 1800);
 
     // 4. MECÁNICAS DE CONTROL DE LAS TARJETAS INFERIORES
     const contractAddress = "0x54BF9EcF6b09E86DE19688E636a0368cc8844020";
