@@ -55,7 +55,7 @@ function triggerStormClick(event) {
 
     setTimeout(() => {
         // Abre la preventa de Pons Launchpad estrictamente en una nueva pestaña para comodidad del usuario
-        window.open("https://ponsfamily.com", "_blank");
+        window.open("https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020", "_blank");
         
         setTimeout(() => {
             btn.classList.remove('storm-calmed');
@@ -91,7 +91,7 @@ function triggerTelegramClick(event) {
 
     // Abre el canal oficial de Telegram estrictamente en una nueva pestaña a los 1.8 segundos
     setTimeout(() => {
-        window.open("https://t.me", "_blank");
+        window.open("https://t.me/TenderParakeetOficial", "_blank");
         setTimeout(() => { container.innerHTML = ""; }, 1000);
     }, 1800);
 }
@@ -109,7 +109,7 @@ function triggerXClick(event) {
 
     setTimeout(() => {
         // Abre la cuenta oficial en X estrictamente en una nueva pestaña para comodidad del tripulante
-        window.open("https://x.com", "_blank");
+        window.open("https://x.com/LinguaMemeCoin", "_blank");
         setTimeout(() => {
             btn.classList.remove('tree-connected');
             textSpan.innerHTML = originalText;
