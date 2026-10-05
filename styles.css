@@ -317,3 +317,4 @@ h2 { font-size: 1.8rem; margin-bottom: 20px; text-align: center; }
 .eth-ammo-badge,.uniswap-destination-badge,.coingabbar-badge,.readme-pirate-badge{display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:6px 14px!important;white-space:nowrap!important;}
 .coingabbar-badge svg{fill:#00ffcc!important;}
 @media(max-width:768px){.nav-top-row{flex-direction:column!important;gap:8px!important;text-align:center!important;}}
+body{background-image:url('perico-rivales.png')!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;background-attachment:fixed!important;}
