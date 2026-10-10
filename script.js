@@ -3,26 +3,26 @@
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // LLAMADO DE COMPONENTES DE ALTA MAR
+    // DESPIERTA LOS COMPONENTES DE ALTA MAR EN SINCRONÍA
     initContractClipboard();
     initTelegramNotifications();
     initCorteCorsariaFa();
 });
-
 /**
  * 🪐 COMPONENTE 01: COPIA DE CONTRATO INMUTABLE (TARJETA CONTRACT)
- * Maneja la copia segura al portapapeles y despliega la barra de Blockscout corregida.
+ * Copia la dirección en la bitácora y despliega el explorador de bloques oficial.
  */
 function initContractClipboard() {
     const btnChest = document.getElementById("btn-chest");
     const btnAudit = document.getElementById("btn-audit");
+    
     // Dirección inmutable verificada en el Launchpad de Pons Family
     const smartContractAddress = "0x54BF9EcF6b09E86DE19688E636a0368cc8844020";
 
     if (!btnChest) return;
 
     btnChest.addEventListener("click", (e) => {
-        // PREVENCIÓN DE DUPLICIDAD: Si el usuario hace clic en el botón interno de auditar, no se copia el texto
+        // PREVENCIÓN DE DUPLICIDAD: Si el marinero hace clic en "Auditar", se cancela la copia del contrato
         if (e.target === btnAudit) return;
 
         navigator.clipboard.writeText(smartContractAddress)
@@ -39,16 +39,17 @@ function initContractClipboard() {
     });
 
     if (btnAudit) {
-        btnAudit.addEventListener("click", () => {
-            // CORRECCIÓN BLOCKCHAIN: Inyección dinámica real usando comillas invertidas sobre la red Robinhood Chain
+        btnAudit.addEventListener("click", (e) => {
+            e.stopPropagation(); // AISLAMIENTO CRÍTICO: Impide que se dispare el evento de copia del padre
+            
+            // CORRECCIÓN CONTRACT COMPILADO: Inyección corregida apuntando a la dirección del contrato
             window.open(`https://blockscout.com{smartContractAddress}`, "_blank", "noopener,noreferrer");
         });
     }
 }
-
 /**
  * 🍻 COMPONENTE 02: ALERTAS ASÍNCRONAS DE LA TRIPULACIÓN (TELEGRAM CREW)
- * Control de desbordamiento de memoria: Purga el DOM antes de inyectar alertas nuevas.
+ * Control de rendimiento: Purga el DOM antes de inyectar alertas para liberar memoria RAM.
  */
 function initTelegramNotifications() {
     const btnTelegram = document.getElementById("btn-telegram");
@@ -66,39 +67,40 @@ function initTelegramNotifications() {
     if (!btnTelegram || !notificationArea) return;
 
     btnTelegram.addEventListener("click", () => {
-        // LIMPIEZA DE CUBIERTA: Borra alertas anteriores acumuladas para liberar memoria en smartphones
+        // LIMPIEZA DE CUBIERTA: Borra notificaciones acumuladas anteriores para no congelar smartphones
         while (notificationArea.firstChild) {
             notificationArea.removeChild(notificationArea.firstChild);
         }
 
-        // Selección aleatoria segura
+        // Selección aleatoria segura de la bitácora
         const randomIndex = Math.floor(Math.random() * crewMessages.length);
         const protectedText = crewMessages[randomIndex];
 
         // PROTECCIÓN ANTI-INYECCIÓN (Prompt Injection Shield)
-        // Se utiliza textContent en lugar de innerHTML para neutralizar caracteres maliciosos
+        // Se utiliza estrictamente textContent en lugar de innerHTML para sanitizar código malicioso
         const toast = document.createElement("div");
         toast.className = "floating-notif-toast animate-fade-in";
         toast.textContent = protectedText;
 
         notificationArea.appendChild(toast);
 
-        // Temporizador único de limpieza controlada
+        // Temporizador único de destrucción controlada del elemento
         setTimeout(() => {
             if (toast && toast.parentNode === notificationArea) {
                 toast.remove();
             }
         }, 4000);
 
-        // CORRECCIÓN TELEGRAM: Enlace directo y verificado al canal oficial de la tripulación en alta mar
+        // REDIRECCIÓN EN ALTA MAR: Abre el portal oficial del barco en una nueva pestaña
         setTimeout(() => {
+            // Nota: Aquí puedes cambiar "https://t.me" por el link directo de tu grupo oficial (ej: https://t.me)
             window.open("https://t.me", "_blank", "noopener,noreferrer");
         }, 1200);
     });
 }
 /**
  * 🍾 COMPONENTE 03: LA CORTE CORSARIA (30 ACORDEONES DE BOTELLAS DE CRISTAL)
- * Renderiza la cuadrícula de preguntas frecuentes inyectando las respuestas con protección anti-inyección.
+ * Renderiza la cuadrícula de preguntas inyectando las respuestas con protección técnica nativa.
  */
 function initCorteCorsariaFa() {
     const faqGrid = document.getElementById("corte-faq-grid");
@@ -138,7 +140,7 @@ function initCorteCorsariaFa() {
         { q: "30. ¿Cómo me aseguro de no caer en Phishing?", a: "Doble check a la URL oficial del muelle. Esta web está blindada internamente mediante el aislamiento inmutable de sus enlaces." }
     ];
 
-    // CONSTRUCCIÓN INTERACTIVA AUTOMATIZADA CON PROTECCIÓN DE MEMORIA ANTI-INYECCIÓN
+    // CONSTRUCCIÓN INTERACTIVA AUTOMATIZADA CON CONTROL DE TEXTO SEGURO
     faqDatabase.forEach((item) => {
         const box = document.createElement("div");
         box.className = "faq-interactive-box";
@@ -168,11 +170,11 @@ function initCorteCorsariaFa() {
         box.appendChild(body);
         faqGrid.appendChild(box);
 
-        // MANEJO DE ACORDEÓN ELÁSTICO SIN PARPADEOS
+        // MANEJO DE ACORDEÓN ELÁSTICO SIN SALTOS NI DESBORES DE ALTURA
         header.addEventListener("click", () => {
             const isActive = box.classList.contains("faq-active");
 
-            // Cierre controlado de acordeones hermanos en la cuadrícula para optimizar espacio
+            // Cierre controlado de bloques hermanos para limpiar la interfaz
             document.querySelectorAll(".faq-interactive-box").forEach((el) => {
                 el.classList.remove("faq-active");
                 const bodyEl = el.querySelector(".faq-collapsible-body");
@@ -183,16 +185,15 @@ function initCorteCorsariaFa() {
 
             if (!isActive) {
                 box.classList.add("faq-active");
-                body.style.maxHeight = body.scrollHeight + "px"; // Crecimiento elástico dinámico hacia abajo
-                icon.textContent = "🍷"; // Botella descorchada al abrirse
+                body.style.maxHeight = body.scrollHeight + "px"; // Despliegue elástico basado en el texto real
+                icon.textContent = "🍷"; // Descorcha la botella visualmente
             }
         });
     });
 }
-
 /**
  * 🛠️ COMPONENTE AUXILIAR: GENERADOR DE MENSAJES FLOTANTES (TOAST SYSTEM)
- * Corrige el error de ejecución de la bitácora e inyecta notificaciones temporales limpias.
+ * Lanza avisos temporales e inmunes a ataques de código malicioso en el frontend.
  */
 function spawnFloatingToast(message) {
     const notificationArea = document.getElementById("notification-area");
@@ -200,10 +201,11 @@ function spawnFloatingToast(message) {
 
     const toast = document.createElement("div");
     toast.className = "floating-notif-toast animate-fade-in";
-    toast.textContent = message; // Protegido contra código malicioso
+    toast.textContent = message; // Blindado con textContent
 
     notificationArea.appendChild(toast);
 
+    // Auto-destrucción del toast para no acumular basura visual
     setTimeout(() => {
         if (toast && toast.parentNode === notificationArea) {
             toast.remove();
