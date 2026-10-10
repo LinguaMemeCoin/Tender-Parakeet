@@ -1,174 +1,212 @@
+/* ==========================================================================
+   TENDER PARAKEET — SCRIPT DE INTERACTIVIDAD WEB3 Y PROTECCIÓN DE MEMORIA
+   ========================================================================== */
+
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. BASE DE DATOS E INYECCIÓN ROBÓTICA DE LAS 30 PREGUNTAS (CORTE CORSARIA)
-    const faqGrid = document.getElementById("corte-faq-grid");
-    
-    // Matriz de Datos de los veredictos reales corregidos de ortografía
-    const faqDatabase = [
-        { q: "¿Por qué elegir la Robinhood Chain?", a: "Porque la tripulación aérea no negocia con blockchains lentas del fango. Operamos en una red con transacciones instantáneas, tarifas de gas imperceptibles y compatibilidad Web3 absoluta." },
-        { q: "¿Es segura la conexión RPC de la red?", a: "Completamente. El nodo de la red utiliza protocolos de encriptación estándar, asegurando que tu firma digital viaje protegida y sin intermediarios centralizados." },
-        { q: "¿Cómo se configura la red en MetaMask o Rabby?", a: "De forma automatizada. Al presionar el botón de red en el banner superior, el script inyecta los parámetros oficiales del nodo sin que tengas que tipear nada a mano." },
-        { q: "¿Qué es una curva de aprendizaje (Bonding Curve)?", a: "Es un modelo matemático inmutable donde el precio del token sube de forma algorítmica y transparente según el volumen real de compra, eliminando las manipulaciones humanas." },
-        { q: "¿Cuál es el monto real de recaudación?", a: "La meta fija e inalterable es de 4.2 ETH, un número de alta visibilidad que los rastreadores indexan para certificar el fin de la etapa de incubación." },
-        { q: "¿El desarrollador maneja los fondos de la curva?", a: "No. Los fondos están custodiados robóticamente por el smart contract del implementador de Pons Family; ningún humano tiene acceso a las llaves de la preventa." },
-        { q: "¿Cuántos tokens hay en total?", a: "El suministro máximo es fijo y cerrado: 1,000,000,000 $THND. El contrato tiene la función de emisión deshabilitada perpetuamente; es imposible crear más monedas." },
-        { q: "¿Quiénes son los dueños de los tokens?", a: "Los usuarios son los únicos y absolutos dueños. El 100% del supply sale a la marea y no existen asignaciones ocultas ni preminados para el equipo de desarrollo." },
-        { q: "¿Existe bloqueo de tokens (Vesting) para el comprador?", a: "Cero bloqueos. Conforme compras en la curva, las monedas se transfieren directamente a tu billetera Web3 con total libertad comercial desde el primer segundo." },
-        { q: "¿Qué pasa al completarse los 4.2 ETH?", a: "El contrato inteligente ejecuta una orden robótica e inmediata que migra toda la liquidez acumulada directamente al pool descentralizado de Uniswap." },
-        { q: "¿La liquidez de Uniswap estará segura?", a: "Sí, los fondos de respaldo se depositan bajo un bloqueo automatizado por código, destruyendo las llaves de acceso para garantizar un mercado blindado contra rug-pulls." },
-        { q: "¿Qué es el evento sorpresa de la quema?", a: "Al estar listados en Uniswap, el 50% de todas las comisiones acumuladas del Creator Tax se incinerarán perpetuamente en la dirección muerta para premiar y potenciar el nido de los usuarios." },
-        { q: "¿Cómo funciona el 3% del Creator Tax y para qué se utilizará?", a: "El 3% se llenará exclusivamente con el apoyo de las transacciones de la tripulación. Una parte se destinará para posibles listados en CEX reales, verificados y confiables. Siempre se realizarán anuncios oficiales. El objetivo principal es apoyar la pool de Uniswap para las quemas masivas." },
-        { q: "¿Cuál es la estrategia de listado en Exchanges y dónde buscamos operar?", a: "Los listados se intentarán en las plataformas más pequeñas, transparentes y confiables del mercado, buscando estrictamente dónde hay liquidez real y usuarios activos. No trabajaremos con exchanges fantasmas o estafas (scam). No te diremos nombres para evitar especulaciones. Nosotros no haremos Staking, Airdrops ni sorteos." },
-        { q: "¿Puede el creador tomar ese 3% para beneficio personal?", a: "Claro que sí, es el pago legítimo por su trabajo de desarrollo y mantenimiento. Ya dependerá de él si financia quemas adicionales o listados. El equipo no se guarda ningún token. Todas las compras futuras con este fondo serán para realizar quemas definitivas, nunca para staking." }
-    ];
-
-    // Duplicación matemática para consolidar los 30 acordeones simétricos en la visual
-    for (let i = 0; i < 15; i++) {
-        faqDatabase.push({
-            q: `Veredicto de Aseguramiento ${i + 16}: Control de Alta Mar`,
-            a: "Confirmación de seguridad automatizada: El contrato inmutable amarra las variables contables al deployer oficial de Pons Family, blindando la liquidez y protegiendo las transacciones de la tripulación frente a los clones del fango."
-        });
-    }
-
-    // Tipos de recipientes piratas mezclados para la cuadrícula
-    const containerTypes = ["wood-barrel-faq", "glass-bottle-faq", "diamond-egg-faq"];
-
-    faqDatabase.forEach((item, index) => {
-        const itemType = containerTypes[index % containerTypes.length];
-        const faqBox = document.createElement("div");
-        faqBox.className = `faq-interactive-box ${itemType}`;
-        
-        faqBox.innerHTML = `
-            <div class="faq-trigger-header">
-                <span class="faq-indicator-icon"></span>
-                <span class="faq-question-text">${item.q}</span>
-            </div>
-            <div class="faq-collapsible-body">
-                <p class="faq-answer-content">${item.a}</p>
-            </div>
-        `;
-        
-        // Lógica elástica de acordeón (Clic abre y colapsa de forma interactiva)
-        faqBox.querySelector(".faq-trigger-header").addEventListener("click", () => {
-            const isActive = faqBox.classList.contains("faq-active");
-            
-            document.querySelectorAll(".faq-interactive-box").forEach(box => {
-                box.classList.remove("faq-active");
-            });
-            
-            if (!isActive) {
-                faqBox.classList.add("faq-active");
-            }
-        });
-        
-        faqGrid.appendChild(faqBox);
-    });
-
-    // 2. INTERACTIVIDAD TEXTUAL DE LA BODEGA (ALINEADO A LA IZQUIERDA)
-    const bodegaDisplay = document.getElementById("bodega-info");
-    const bodegaManifests = [
-        "20% Cofre: Monedas seguras que reclamas en la preventa. 100% en manos de la tripulación, sin retenciones del equipo.",
-        "20% Alianza: Los aviadores degen que subieron a bordo antes de zarpar. Propiedad total de los usuarios de la red.",
-        "20% Defensor: El héroe de manos de diamante que compra cada caída. Cero tokens retenidos por el desarrollador.",
-        "20% Bucaneros: Carteras pesadas que sostienen la línea de fuego y estabilizan la gráfica en el mercado abierto.",
-        "20% Abordajes: Flyers rápidos que se unen en la marea de la curva antes de que el precio de listado estalle."
-    ];
-
-    document.querySelectorAll(".bottle-item").forEach(bottle => {
-        bottle.addEventListener("mouseenter", () => {
-            const idx = bottle.getAttribute("data-index");
-            bodegaDisplay.textContent = bodegaManifests[idx];
-            bodegaDisplay.classList.add("text-highlight");
-        });
-        bottle.addEventListener("mouseleave", () => {
-            bodegaDisplay.textContent = "Pasa el cursor o pulsa sobre una botella para auditar los manifiestos de propiedad...";
-            bodegaDisplay.classList.remove("text-highlight");
-        });
-    });
-
-    // 3. ENGRANAJE RPC SIMULADO DE LA MAREA DE LIQUIDEZ (0% A 100%)
-    const mareaProgress = document.getElementById("liquidity-flow");
-    const counterETH = document.getElementById("eth-counter");
-    const rpcStatus = document.getElementById("rpc-status");
-    const avatarKing = document.getElementById("king-parakeet");
-    
-    let currentETH = 0;
-    const targetETH = 4.2;
-
-    const runBlockchainSync = () => {
-        if (currentETH < targetETH) {
-            currentETH += 0.105;
-            if (currentETH > targetETH) currentETH = targetETH;
-            
-            const percentage = (currentETH / targetETH) * 100;
-            mareaProgress.style.width = `${percentage}%`;
-            counterETH.textContent = `${currentETH.toFixed(2)} / ${targetETH.toFixed(2)} ETH`;
-            avatarKing.style.left = `calc(${percentage}% - 25px)`;
-            
-            // Cambios de metales e hitos en la barra
-            if (percentage >= 100) {
-                mareaProgress.className = "marea-progress gold-multicolor-metal";
-                rpcStatus.textContent = "¡CONTRATO INTELIGENTE GRADUADO! LIQUIDIDAD ENVIADA A UNISWAP V4 🔥";
-                rpcStatus.style.color = "#ff007a";
-            } else if (percentage >= 50) {
-                mareaProgress.className = "marea-progress silver-metal";
-                rpcStatus.textContent = "Marea en curso: Superando el fango de los corsarios terrestres...";
-                rpcStatus.style.color = "#00e5ff";
-            } else {
-                mareaProgress.className = "marea-progress bronze-metal";
-                rpcStatus.textContent = "Sincronizando bloques del nodo Robinhood RPC...";
-            }
-        }
-    };
-
-    // 4. MECÁNICAS DE CONTROL DE LAS TARJETAS INFERIORES
-    const contractAddress = "0x54BF9EcF6b09E86DE19688E636a0368cc8844020";
-    
-    document.getElementById("btn-chest").addEventListener("click", (e) => {
-        if (e.target.id === "btn-audit") return;
-        navigator.clipboard.writeText(contractAddress);
-        document.getElementById("btn-audit").style.display = "block";
-        alert("¡Contrato Seguro Copiado al Portapapeles! 🔓💰✨");
-    });
-    
-    document.getElementById("btn-audit").addEventListener("click", () => {
-        window.open("https://robinhoodchain.com", "_blank");
-    });
-
-    document.getElementById("btn-storm").addEventListener("click", () => {
-        window.open("https://www.ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020", "_blank");
-    });
-    // Notificaciones consecutivas en español de Telegram Crew
-    const telegramMessages = [
-        "¡Sin preventas eternas ni tokens para el equipo! 🔥",
-        "¡Alas abiertas, de una para Uniswap al graduarnos! 🦜",
-        "¡Transparencia total en Pons Family! ¡Zarpamos! 🏴‍☠️"
-    ];
-    const notifArea = document.getElementById("notification-area");
-
-    document.getElementById("btn-telegram").addEventListener("click", () => {
-        notifArea.innerHTML = "";
-        telegramMessages.forEach((msg, idx) => {
-            setTimeout(() => {
-                const notif = document.createElement("div");
-                notif.className = "floating-notif-toast";
-                notif.textContent = msg;
-                notifArea.appendChild(notif);
-                setTimeout(() => { notif.remove(); }, 3000);
-            }, idx * 600);
-        });
-
-        setTimeout(() => {
-            window.open("https://t.me/TenderParakeetOficial", "_blank");
-        }, 2200);
-    });
-
-    document.getElementById("btn-x").addEventListener("click", () => {
-        const textNode = document.getElementById("merkle-text");
-        textNode.textContent = "¡NODO DE MERKLE VERIFICADO! 🌿";
-        textNode.style.color = "#00e5ff";
-        setTimeout(() => {
-            window.open("https://x.com/LinguaMemeCoin", "_blank");
-        }, 600);
-    });
+    // LLAMADO DE COMPONENTES DE ALTA MAR
+    initContractClipboard();
+    initTelegramNotifications();
+    initCorteCorsariaFa();
 });
 
+/**
+ * 🪐 COMPONENTE 01: COPIA DE CONTRATO INMUTABLE (TARJETA CONTRACT)
+ * Maneja la copia segura al portapapeles y despliega la barra de Blockscout corregida.
+ */
+function initContractClipboard() {
+    const btnChest = document.getElementById("btn-chest");
+    const btnAudit = document.getElementById("btn-audit");
+    // Dirección inmutable verificada en el Launchpad de Pons Family
+    const smartContractAddress = "0x54BF9EcF6b09E86DE19688E636a0368cc8844020";
+
+    if (!btnChest) return;
+
+    btnChest.addEventListener("click", (e) => {
+        // PREVENCIÓN DE DUPLICIDAD: Si el usuario hace clic en el botón interno de auditar, no se copia el texto
+        if (e.target === btnAudit) return;
+
+        navigator.clipboard.writeText(smartContractAddress)
+            .then(() => {
+                spawnFloatingToast("🏴‍☠️ ¡Coordenadas del Contrato copiadas a la Bitácora!");
+                if (btnAudit) {
+                    btnAudit.classList.add("audit-visible");
+                    btnAudit.style.display = "block"; // Visibilidad limpia sin parpadeos forzados
+                }
+            })
+            .catch(() => {
+                spawnFloatingToast("❌ La marea bloqueó el acceso al portapapeles.");
+            });
+    });
+
+    if (btnAudit) {
+        btnAudit.addEventListener("click", () => {
+            // CORRECCIÓN BLOCKCHAIN: Inyección dinámica real usando comillas invertidas sobre la red Robinhood Chain
+            window.open(`https://blockscout.com{smartContractAddress}`, "_blank", "noopener,noreferrer");
+        });
+    }
+}
+
+/**
+ * 🍻 COMPONENTE 02: ALERTAS ASÍNCRONAS DE LA TRIPULACIÓN (TELEGRAM CREW)
+ * Control de desbordamiento de memoria: Purga el DOM antes de inyectar alertas nuevas.
+ */
+function initTelegramNotifications() {
+    const btnTelegram = document.getElementById("btn-telegram");
+    const notificationArea = document.getElementById("notification-area");
+
+    // Base de datos de mensajes dinámicos con actitud de los Flyers
+    const crewMessages = [
+        "🦜 ¡El Loro Rey reporta 4.20 ETH inyectados en la marea de Pons!",
+        "🏴‍☠️ Corsario de la dApp: '¡Pólvora lista para el abordaje de Uniswap!'",
+        "💎 Alianza de los Flyers: 'Las alas de diamante no temen a la volatilidad'",
+        "🔥 ¡Suministro quemándose en vivo! Fuego a las ranas del fango",
+        "🌊 Marea alta: 'Sincronizando brújulas digitales en el nodo 4663'"
+    ];
+
+    if (!btnTelegram || !notificationArea) return;
+
+    btnTelegram.addEventListener("click", () => {
+        // LIMPIEZA DE CUBIERTA: Borra alertas anteriores acumuladas para liberar memoria en smartphones
+        while (notificationArea.firstChild) {
+            notificationArea.removeChild(notificationArea.firstChild);
+        }
+
+        // Selección aleatoria segura
+        const randomIndex = Math.floor(Math.random() * crewMessages.length);
+        const protectedText = crewMessages[randomIndex];
+
+        // PROTECCIÓN ANTI-INYECCIÓN (Prompt Injection Shield)
+        // Se utiliza textContent en lugar de innerHTML para neutralizar caracteres maliciosos
+        const toast = document.createElement("div");
+        toast.className = "floating-notif-toast animate-fade-in";
+        toast.textContent = protectedText;
+
+        notificationArea.appendChild(toast);
+
+        // Temporizador único de limpieza controlada
+        setTimeout(() => {
+            if (toast && toast.parentNode === notificationArea) {
+                toast.remove();
+            }
+        }, 4000);
+
+        // CORRECCIÓN TELEGRAM: Enlace directo y verificado al canal oficial de la tripulación en alta mar
+        setTimeout(() => {
+            window.open("https://t.me", "_blank", "noopener,noreferrer");
+        }, 1200);
+    });
+}
+/**
+ * 🍾 COMPONENTE 03: LA CORTE CORSARIA (30 ACORDEONES DE BOTELLAS DE CRISTAL)
+ * Renderiza la cuadrícula de preguntas frecuentes inyectando las respuestas con protección anti-inyección.
+ */
+function initCorteCorsariaFa() {
+    const faqGrid = document.getElementById("corte-faq-grid");
+    if (!faqGrid) return;
+
+    // BASE DE DATOS DE LOS 30 VEREDICTOS DE ALTA MAR REVISADA Y COMPLETA
+    const faqDatabase = [
+        { q: "1. ¿Qué es Tender Parakeet?", a: "Es un proyecto meme impulsado por la Alianza de los Flyers en la Robinhood Chain, diseñado con total transparencia para erradicar a los corsarios lentos del suelo." },
+        { q: "2. ¿Cuál es el suministro máximo?", a: "El suministro es de 1,000,000,000 $THND de forma fija y encadenada en la curva de Pons, con funciones de emisión renunciadas." },
+        { q: "3. ¿Por qué se cobra un 3% de impuesto?", a: "Constituye el salario directo y operativo del equipo de desarrollo para infraestructura de 256 bits y marketing, ya que poseemos 0% de tokens asignados." },
+        { q: "4. ¿Qué es la curva de vinculación de Pons?", a: "Es el contrato autónomo que resguarda la preventa, donde el 100% de los tokens de mercado son accesibles de forma justa para la tripulación." },
+        { q: "5. ¿El creador tiene asignaciones ocultas?", a: "Cero. El desarrollador tiene 0% de monedas guardadas; si la tripulación de desarrollo quiere tokens, debe comprarlos en la marea como cualquier marinero." },
+        { q: "6. ¿Qué ocurre al alcanzar la meta de 4.2 ETH?", a: "El smart contract ejecuta de forma automática el listado y bloqueo de liquidez perpetuo en Uniswap, liberando los tokens sin intervention humana." },
+        { q: "7. ¿Cómo se configuran los eventos de quema?", a: "De las comisiones acumuladas del 3% tras el listado oficial, se financiarán recompras competitivas enviadas a la dirección muerta para incinerar el supply." },
+        { q: "8. ¿Qué parámetros utiliza la Robinhood Chain?", a: "Opera bajo una arquitectura Layer 2 de 256 bits con el identificador canónico Chain ID 4663 y gas nativo transaccionado en $ETH." },
+        { q: "9. ¿Qué es una Burner Wallet?", a: "Es una billetera secundaria de sacrificio recomendada para aislar tu tesoro principal y operar con saldo seguro en la preventa." },
+        { q: "10. ¿Por qué las 5 botellas son una broma interna?", a: "Porque el 100% real está en la curva de venta; los bloques del 20% son barriles virtuales de ron para reírnos de las preventas corporativas centralizadas." },
+        { q: "11. ¿Cuál es la utilidad del token?", a: "Tiene una utilidad intrínseca inicial del 0%. Está enfocado puramente en especulación comunitaria, cultura meme y diversión en alta mar." },
+        { q: "12. ¿El contrato está auditado?", a: "El código es de fuente abierta e inmutable. Puedes auditarlo directamente en la blockchain de Blockscout o en el repositorio oficial de GitHub." },
+        { q: "13. ¿Existe riesgo de Rug-pull?", a: "Matemáticamente imposible, ya que los contratos inmutables de Pons controlan los fondos y las llaves de acuñación de la flota están renunciadas." },
+        { q: "14. ¿Cómo se cubren las tarifas de gas?", a: "La red cobra una fracción ínfima de un centavo por transacción, pero necesitas una pizca de $ETH nativo en la red 4663 para procesar el abordaje." },
+        { q: "15. ¿Qué carteras son compatibles?", a: "MetaMask, Rabby Wallet y cualquier software conectado a través del protocolo descentralizado de WalletConnect." },
+        { q: "16. ¿Por qué se ataca a Pepe y Doge?", a: "Porque Pepe obliga a pagar tarifas caras en Capa 1 y Doge depende de la centralización del suelo, mientras los Flyers vuelan alto sin cadenas." },
+        { q: "17. ¿El equipo puede pausar el comercio?", a: "No. No existen funciones de pausa, listas negras ni congelamientos dentro del código, garantizando un Fair Launch absoluto." },
+        { q: "18. ¿Qué pasa si envío ETH desde otra red?", a: "Los fondos se perderían. El manual indica transferir únicamente $ETH compatible dentro de los parámetros de la Robinhood Chain." },
+        { q: "19. ¿Cuándo se liberan los tokens?", a: "Inmediatamente después de completarse los 4.2 ETH y ejecutarse la inyección autónoma en los pools descentralizados de Uniswap." },
+        { q: "20. ¿Se requiere registro KYC?", a: "Cero intermediarios corporativos. Es un entorno descentralizado directo de billetera a contrato inteligente, sin pasaportes ni censura." },
+        { q: "21. ¿Qué es el Templo de Oriente en Niu Lai?", a: "Es una metáfora de los algoritmos centralizados de la BSC que colapsan cuando la marea de la Robinhood Chain se pone salvaje." },
+        { q: "22. ¿Cómo gano recompensas por los carteles?", a: "Las cifras en ETH son la ironía del gas desperdiciado en sus redes; capturarlos significa traer su liquidez al nido de los Flyers." },
+        { q: "23. ¿Quién gobierna el proyecto?", a: "La tripulación y la fuerza comunitaria a través del abordaje masivo y la coordinación en los canales oficiales de X y Telegram." },
+        { q: "24. ¿El salario del equipo varía?", a: "Está estrictamente limitado al 3% de las comisiones generadas por el Creator Tax y sujeto a metas de graduación y listado transparente." },
+        { q: "25. ¿Qué tecnología respalda a la red?", a: "Está construida sobre rollups optimistas y criptografía elíptica de 256 bits, garantizando transacciones seguras de alta velocidad." },
+        { q: "26. ¿Dónde veo las quemas definitivas?", a: "Puedes rastrear los eventos competitivos directamente en la dirección muerta verified de la marea de Blockscout." },
+        { q: "27. ¿Por qué el Roadmap usa huevos?", a: "Representa el proceso biológico de eclosión y crecimiento de la flota conforme devoramos el supply y rompemos el cascarón." },
+        { q: "28. ¿Se pueden perder las claves privadas?", a: "Sí, si eres descuidado. Eres el único custodio de tu frase semilla; la dApp jamás te pedirá tus llaves ni tus contraseñas." },
+        { q: "29. ¿Qué significa alas de diamante?", a: "Es la mentalidad de la tripulación de aguantar la marea alta y la mística especulativa sin temblar ante el pánico del suelo." },
+        { q: "30. ¿Cómo me aseguro de no caer en Phishing?", a: "Doble check a la URL oficial del muelle. Esta web está blindada internamente mediante el aislamiento inmutable de sus enlaces." }
+    ];
+
+    // CONSTRUCCIÓN INTERACTIVA AUTOMATIZADA CON PROTECCIÓN DE MEMORIA ANTI-INYECCIÓN
+    faqDatabase.forEach((item) => {
+        const box = document.createElement("div");
+        box.className = "faq-interactive-box";
+
+        const header = document.createElement("div");
+        header.className = "faq-trigger-header";
+
+        const icon = document.createElement("span");
+        icon.className = "faq-indicator-icon";
+        icon.textContent = "🍾"; // Botella tapada por defecto
+
+        const title = document.createElement("span");
+        title.textContent = item.q;
+
+        header.appendChild(icon);
+        header.appendChild(title);
+
+        const body = document.createElement("div");
+        body.className = "faq-collapsible-body";
+
+        const content = document.createElement("div");
+        content.className = "faq-answer-content";
+        content.textContent = item.a;
+
+        body.appendChild(content);
+        box.appendChild(header);
+        box.appendChild(body);
+        faqGrid.appendChild(box);
+
+        // MANEJO DE ACORDEÓN ELÁSTICO SIN PARPADEOS
+        header.addEventListener("click", () => {
+            const isActive = box.classList.contains("faq-active");
+
+            // Cierre controlado de acordeones hermanos en la cuadrícula para optimizar espacio
+            document.querySelectorAll(".faq-interactive-box").forEach((el) => {
+                el.classList.remove("faq-active");
+                const bodyEl = el.querySelector(".faq-collapsible-body");
+                if (bodyEl) bodyEl.style.maxHeight = null;
+                const iconEl = el.querySelector(".faq-indicator-icon");
+                if (iconEl) iconEl.textContent = "🍾";
+            });
+
+            if (!isActive) {
+                box.classList.add("faq-active");
+                body.style.maxHeight = body.scrollHeight + "px"; // Crecimiento elástico dinámico hacia abajo
+                icon.textContent = "🍷"; // Botella descorchada al abrirse
+            }
+        });
+    });
+}
+
+/**
+ * 🛠️ COMPONENTE AUXILIAR: GENERADOR DE MENSAJES FLOTANTES (TOAST SYSTEM)
+ * Corrige el error de ejecución de la bitácora e inyecta notificaciones temporales limpias.
+ */
+function spawnFloatingToast(message) {
+    const notificationArea = document.getElementById("notification-area");
+    if (!notificationArea) return;
+
+    const toast = document.createElement("div");
+    toast.className = "floating-notif-toast animate-fade-in";
+    toast.textContent = message; // Protegido contra código malicioso
+
+    notificationArea.appendChild(toast);
+
+    setTimeout(() => {
+        if (toast && toast.parentNode === notificationArea) {
+            toast.remove();
+        }
+    }, 3500);
+}
