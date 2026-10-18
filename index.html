@@ -1,64 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tender Parakeet — Project Lingua</title>
     
-    <!-- FUENTES OFICIALES DE ALTA MAR: CINZEL, SPECIAL ELITE E INTER -->
+    <!-- FUENTES OFICIALES DE ALTA MAR DESDE EL CDN REAL DE GOOGLE -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@700;900&family=Inter:wght@400;500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
     
-    <!-- CERCADO DE SEGURIDAD: KIT DE ICONOS VECTORIALES DE FONTAWESOME -->
+    <!-- CDN VECTORIAL DE ICONOS COMPLETAMENTE REPARADO Y ACTIVO -->
     <link rel="stylesheet" href="https://cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer">
     
-    <!-- CONEXIÓN DE LA FLOTA DE ESTILOS Y SCRIPTS -->
+    <!-- CONEXIÓN DE ESTILOS Y MOTOR DE INTERACTIVIDAD BILINGÜE NATIVA -->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
+
     <!-- ==========================================================================
-         PARTE 2: CABECERA STICKY UNIFICADA (LÍNEAS 1 Y 2)
+         CABECERA STICKY UNIFICADA: PANEL DE CONTROL WEB3 Y COMANDO DE LA FLOTA
          ========================================================================== -->
     <header class="header-container">
-        <!-- Fila Horizontal 1: Panel de Control Web3 -->
+        
+        <!-- Fila Horizontal 1: Panel de Control Web3 Simétrico (4 - Centro - 4) -->
         <nav class="nav-control-panel">
+            
+            <!-- Ala Izquierda: Infraestructura, Requisitos de Gas y Seguridad (4 Botones) -->
             <div class="nav-wing-left">
-                <button class="nav-btn-robust cyan-glow">
+                <a href="https://robinhood.com" target="_blank" rel="noopener noreferrer" class="nav-btn-robust cyan-glow" data-translate data-en="ROBINHOOD" data-es="ROBINHOOD">
                     <i class="fa-solid fa-shield-halved"></i> ROBINHOOD
-                </button>
-                <a href="https://ponsfamily.com/launchpad/0x54BF9EcF6b09E86DE19688E636a0368cc8844020" target="_blank" rel="noopener noreferrer" class="nav-btn-robust green-led">
-                    <i class="fa-solid fa-satellite-dish"></i> PONS PREVENTA <span class="led"></span>
                 </a>
-                <button class="nav-btn-robust ethereum-purple">
-                    <i class="fa-brands fa-ethereum"></i> COMPRA ETH
-                </button>
-                <a href="https://coingabbar.com" target="_blank" rel="noopener noreferrer" class="nav-btn-robust gabbar-gold">
-                    <i class="fa-solid fa-coins"></i> COIN GABBAR
+                <a href="https://ponsfamily.com" target="_blank" rel="noopener noreferrer" class="nav-btn-robust green-led" data-translate data-en="PONS PRESALE" data-es="PREVENTA PONS">
+                    <i class="fa-solid fa-satellite-dish"></i> PONS PRESALE <span class="led"></span>
+                </a>
+                <div class="nav-btn-robust ethereum-purple" id="btn-eth-info" data-translate data-en="ETH REQUIRED" data-es="ETH REQUERIDO">
+                    <i class="fa-brands fa-ethereum"></i> ETH REQUIRED
+                </div>
+                <a href="https://blockscout.com" target="_blank" rel="noopener noreferrer" class="nav-btn-robust gabbar-gold" data-translate data-en="AUDIT CONTRACT" data-es="AUDITAR CONTRATO">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i> AUDIT CONTRACT
                 </a>
             </div>
+            
+            <!-- Centro: Eje de Identidad Inmutable Presidiendo el Muelle -->
             <div class="nav-brand-center">
                 <span class="brand-top">TENDER</span>
                 <span class="brand-bottom">PARAKEET</span>
             </div>
+            
+            <!-- Ala Derecha: Comunidad, Comercio Seguro y Control de Idioma (4 Botones) -->
             <div class="nav-wing-right">
-                <a href="https://x.com/LinguaMemeCoin" target="_blank" rel="noopener noreferrer" class="nav-btn-robust lingua-white">
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="nav-btn-robust lingua-white" data-translate data-en="DR. LINGUA" data-es="DR. LINGUA">
                     <i class="fa-solid fa-feather-pointed"></i> DR. LINGUA
                 </a>
-                <button class="nav-btn-robust uniswap-pink">
-                    <i class="fa-solid fa-clover"></i> UNISWAP
-                </button>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-btn-robust readme-skull">
-                    <i class="fa-solid fa-skull-crossbones"></i> README
+                <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="nav-btn-robust telegram-blue" data-translate data-en="TELEGRAM CREW" data-es="TRIPULACIÓN">
+                    <i class="fa-brands fa-telegram"></i> TELEGRAM CREW
                 </a>
-                <button class="nav-btn-robust github-dark">
-                    <i class="fa-brands fa-github"></i> GITHUB
+                <a href="https://uniswap.org" target="_blank" rel="noopener noreferrer" class="nav-btn-robust uniswap-pink" data-translate data-en="UNISWAP POOL" data-es="POOL UNISWAP">
+                    <i class="fa-solid fa-clover"></i> UNISWAP POOL
+                </a>
+                <a href="https://binance.com" target="_blank" rel="noopener noreferrer" class="nav-btn-robust binance-yellow" data-translate data-en="BINANCE WEB3" data-es="BINANCE WEB3">
+                    <i class="fa-solid fa-wallet"></i> BINANCE WEB3
+                </a>
+                
+                <!-- Selector de Idioma Táctico Manual (Memoria integrada por LocalStorage) -->
+                <button class="nav-btn-robust language-toggle-btn" id="lang-switcher">
+                    <i class="fa-solid fa-language"></i> <span id="lang-label">EN</span>
                 </button>
             </div>
         </nav>
 
-        <!-- FILA HORIZONTAL 2: BANNER PRINCIPAL CORREGIDO (Logos Oficiales HD) -->
+        <!-- Fila Horizontal 2: Banner de Logos del Proyecto (Tamaño Máximo Seguro 120px) -->
         <div class="nav-project-banner">
             <div class="banner-logo-container border-esmeralda">
                 <img src="assets/tender-emblema.png" alt="Logo Oficial Tender Parakeet" class="project-logo-hd">
@@ -66,7 +79,7 @@
             <div class="banner-text-center">
                 <h2>TENDER PARAKEET</h2>
                 <div class="banner-divider"></div>
-                <h3>PROYECTO DE LINGUA</h3>
+                <h3 data-translate data-en="PROJECT LINGUA" data-es="PROYECTO DE LINGUA">PROJECT LINGUA</h3>
             </div>
             <div class="banner-logo-container border-cyan">
                 <img src="assets/lingua-capitan.png" alt="Logo Oficial Proyecto de Lingua" class="project-logo-hd">
@@ -76,376 +89,534 @@
 
     <!-- CUERPO PRINCIPAL DEL OCÉANO -->
     <main class="ocean-container">
-        <!-- EL MENSAJE EN LA BOTELLA: Manifiesto de Guerra con Máxima Actitud Corsaria -->
+        <!-- ==========================================================================
+             PARTE 2: CORPORATE WAR TACTICS, LIQUIDITY THEATER & ACCIONES TÉCNICAS
+             ========================================================================== -->
+        
+        <!-- TÁCTICAS DE GUERRA CORPORATIVA (El pergamino educativo de contrainteligencia) -->
         <section class="pergamino-manifiesto-guerra mensaje-en-botella-box">
-            <p>¡Abran paso a los Flyers... [código HTML del manifiesto y la barra de hitos de conquista con el estado del contrato graduado y contador ETH al 100%] ...4.20 / 4.20 ETH</p>
+            <h3 class="tactics-title" data-translate 
+                data-en="🏴‍☠️ CORPORATE WAR TACTICS: THE FLYERS' DEFENSE PROTOCOL" 
+                data-es="🏴‍☠️ TÁCTICAS DE GUERRA CORPORATIVA: PROTOCOLO DE DEFENSA DE LOS FLYERS">
+                🏴‍☠️ CORPORATE WAR TACTICS: THE FLYERS' DEFENSE PROTOCOL
+            </h3>
+            
+            <div class="tactics-content">
+                <!-- Introducción Ideológica -->
+                <p class="manifesto-intro" data-translate 
+                    data-en="<strong>THE ANTI-BOT MANIFESTO:</strong> Tender Parakeet is an open declaration of war against the corporate web3 system and trash meme tokens artificially pumped by malicious bots. We are here to tear down the endless sea of copycats engineered with a single corporate purpose: to drain your wallet and empty your funds. The Flyers fly free—fueling a pure, transparent, and non-custodial revolution on the Robinhood Chain." 
+                    data-es="<strong>EL MANIFIESTO ANTI-BOTS:</strong> Tender Parakeet es una declaración abierta de guerra contra el sistema corporativo web3 y los tokens meme basura inflados artificialmente por bots maliciosos. Estamos aquí para derribar el océano infinito de copias diseñadas con un único propósito corporativo: drenar tu billetera y vaciar tus fondos. Los Flyers vuelan libres, impulsando una revolución pura, transparente y no custodia en la Robinhood Chain.">
+                    <strong>THE ANTI-BOT MANIFESTO:</strong> Tender Parakeet is an open declaration of war against the corporate web3 system and trash meme tokens artificially pumped by malicious bots. We are here to tear down the endless sea of copycats engineered with a single corporate purpose: to drain your wallet and empty your funds. The Flyers fly free—fueling a pure, transparent, and non-custodial revolution on the Robinhood Chain.
+                </p>
+                
+                <!-- Las 4 Armas de Contrainteligencia Web3 -->
+                <div class="tactics-grid">
+                    <div class="tactic-item">
+                        <span data-translate data-en="🛡️ SEED PHRASE SHIELD" data-es="🛡️ ESCUDO DE FRASE SEMILLA">🛡️ SEED PHRASE SHIELD</span>
+                        <p data-translate 
+                           data-en="We will NEVER ask for your seed phrase, private keys, or account access. Your chest is yours alone to guard." 
+                           data-es="JAMÁS te pediremos tu frase semilla, claves privadas o acceso a tu cuenta. Tu cofre es tuyo y solo tuyo para protegerlo.">
+                           We will NEVER ask for your seed phrase, private keys, or account access. Your chest is yours alone to guard.
+                        </p>
+                    </div>
+                    
+                    <div class="tactic-item">
+                        <span data-translate data-en="🔒 NON-CUSTODIAL CLARITY" data-es="🔒 CLARIDAD NO CUSTODIA">🔒 NON-CUSTODIAL CLARITY</span>
+                        <p data-translate 
+                           data-en="Pure non-custodial dApp. We do NOT hold your tokens at any moment, nor do we track your balance. Complete on-chain privacy." 
+                           data-es="Entorno dApp puro y no custodio. NO retenemos tus tokens en ningún momento ni rastreamos tu saldo. Privacidad absoluta en cadena.">
+                           Pure non-custodial dApp. We do NOT hold your tokens at any moment, nor do we track your balance. Complete on-chain privacy.
+                        </p>
+                    </div>
+                    
+                    <div class="tactic-item">
+                        <span data-translate data-en="🚫 ANTI-PHISHING EDICT" data-es="🚫 EDICTO ANTI-PHISHING">🚫 ANTI-PHISHING EDICT</span>
+                        <p data-translate 
+                           data-en="Never accept DMs or third-party links. Official smart contracts and channels are permanently pinned and accessible on our official social vaults." 
+                           data-es="No aceptes mensajes directos (DMs) ni enlaces de terceros. Los contratos inteligentes y canales oficiales estarán siempre visibles y disponibles en nuestras redes sociales.">
+                           Never accept DMs or third-party links. Official smart contracts and channels are permanently pinned and accessible on our official social vaults.
+                        </p>
+                    </div>
+                    
+                    <div class="tactic-item">
+                        <span data-translate data-en="⚙️ ROBINHOOD CHAIN INFRASTRUCTURE" data-es="⚙️ INFRAESTRUCTURA DE ROBINHOOD CHAIN">⚙️ ROBINHOOD CHAIN INFRASTRUCTURE</span>
+                        <p data-translate 
+                           data-en="Technical Disclosure: The Robinhood Chain is a modified port of Arbitrum, engineered with a custom ETH gas structure. Always double-check your network settings—you are navigating a new, yet regulated blockchain frontier." 
+                           data-es="Declaración Técnica: La Robinhood Chain es un port modificado de Arbitrum, diseñado con una estructura personalizada de gas ETH. Revisa al máximo tus ajustes: estás ante una red nueva pero regulada.">
+                           Technical Disclosure: The Robinhood Chain is a modified port of Arbitrum, engineered with a custom ETH gas structure. Always double-check your network settings—you are navigating a new, yet regulated blockchain frontier.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Cierre de Paciencia Orgánica -->
+                <p class="manifesto-outro" data-translate 
+                    data-en="<strong>⏳ THE DECREE OF THE PATIENCE CURVE:</strong> Since we operate with ZERO malicious bots and NO inflated marketing, progress along the Pons curve might seem slow at first. Do NOT over-invest: We strictly advise you not to invest too much capital until we have forged a real, battle-tested, and strong community. It is infinitely better to have 3 months of transparent, organic development than to fake artificial volume using internal insider wallets just to dump on you and drain your funds." 
+                    data-es="<strong>⏳ EL DECRETO DE LA CURVA DE PACIENCIA:</strong> Al no contar con bots ni marketing inflado, el avance por la curva Pons podría parecer lento al principio. Te pedimos que NO inviertas demasiado: te aconsejamos estrictamente no comprometer demasiado capital hasta que tengamos una comunidad real, fuerte y probada en batalla. Es mucho mejor trabajar bien durante 3 meses que simular volumen artificial con billeteras internas de iniciados para acabar vaciándote los fondos.">
+                    <strong>⏳ THE DECREE OF THE PATIENCE CURVE:</strong> Since we operate with ZERO malicious bots and NO inflated marketing, progress along the Pons curve might seem slow at first. Do NOT over-invest: We strictly advise you not to invest too much capital until we have forged a real, battle-tested, and strong community. It is infinitely better to have 3 months of transparent, organic development than to fake artificial volume using internal insider wallets just to dump on you and drain your funds.
+                </p>
+            </div>
         </section>
 
-        <!-- EL GRAN TEATRO DE CONQUISTA (BARRA DE HITOS ESTÁTICA HONESTA) -->
+        <!-- EL GRAN TEATRO DE LIQUIDEZ (BARRA DE PROGRESO INTEGRADA) -->
         <section class="liquidity-theater">
-            <!-- Estructura de la barra de progreso de liquidez y avatares de rivales -->
+            <div class="king-avatar-track">
+                <span class="king-token-avatar">🦜</span>
+            </div>
+            <div class="progress-bar-canal">
+                <div class="marea-progress gold-multicolor-metal" style="width: 100%;"></div>
+                <span class="rival-mark puppy-25">🐶</span>
+                <span class="rival-mark hopper-50">🐸</span>
+                <span class="rival-mark wingless-75">🐧</span>
+                <span class="rival-mark unicorn-100">🦄</span>
+            </div>
+            <div class="progress-labels">
+                <span data-translate data-en="PONS LAUNCHPAD START" data-es="INICIO LAUNCHPAD PONS">PONS LAUNCHPAD START</span>
+                <span id="eth-counter" data-translate 
+                      data-en="GRADUATED: 4.20 / 4.20 ETH (100%)" 
+                      data-es="GRADUADO: 4.20 / 4.20 ETH (100%)">
+                      GRADUATED: 4.20 / 4.20 ETH (100%)
+                </span>
+                <span data-translate data-en="UNISWAP DESTINY" data-es="DESTINO UNISWAP">UNISWAP DESTINY</span>
+            </div>
         </section>
-        <!-- ==========================================================================
-             PARTE 4: BANNER CONTINUO DE ALTA MAR (TARJETAS TÉCNICAS)
-             ========================================================================== -->
+
+        <!-- BANNER DE ACCIONES TÉCNICAS (TRILOGÍA DE UTILIDAD DE GRAN FORMATO) -->
         <section class="grid-cards-container banner-continuo-altamar">
-            <!-- Tarjeta 1: Contract -->
+            <!-- Tarjeta 1: Contract con Portapapeles Autónomo -->
             <div class="card-pirate panel-card" id="btn-chest">
                 <div class="chest-visual-box">
-                    <i class="fa-solid fa-file-signature" style="font-size: 32px;"></i>
+                    <i class="fa-solid fa-file-signature" style="font-size: 32px; color: var(--glow-cyan-web3);"></i>
                 </div>
-                <span class="card-title">CONTRACT</span>
-                <span class="card-subtitle">PLUMA Y PERGAMINO LEGAL</span>
-                <button class="btn-audit-blockchain custom-class-audit" id="btn-audit">AUDITAR EN BLOCKCHAIN</button>
+                <span class="card-title" data-translate data-en="CONTRACT" data-es="CONTRATO">CONTRACT</span>
+                <span class="card-subtitle" data-translate data-en="DIGITAL INK & LEGAL SCROLL" data-es="TINTA DIGITAL Y PERGAMINO LEGAL">DIGITAL INK & LEGAL SCROLL</span>
+                <button class="btn-audit-blockchain custom-class-audit" id="btn-audit" data-translate data-en="COPY CONTRACT ADDRESS" data-es="COPIAR DIRECCIÓN">COPY CONTRACT ADDRESS</button>
             </div>
             
             <div class="divisor-nautico-vertical"></div>
             
-            <!-- Tarjeta 2: Sea Storm -->
+            <!-- Tarjeta 2: Sea Storm Launchpad Directo -->
             <div class="card-pirate panel-card" id="btn-storm">
                 <div class="storm-visual-box">
                     <i class="fa-solid fa-ship" style="font-size: 32px; color: var(--glow-esmeralda);"></i>
                 </div>
-                <span class="card-title">SEA STORM</span>
-                <span class="card-subtitle">LAUNCHPAD CURVE PONS</span>
+                <span class="card-title" data-translate data-en="SEA STORM" data-es="TORMENTA MARINA">SEA STORM</span>
+                <span class="card-subtitle" data-translate data-en="PONS CURVE LAUNCHPAD" data-es="LAUNCHPAD CURVA PONS">PONS CURVE LAUNCHPAD</span>
             </div>
             
             <div class="divisor-nautico-vertical"></div>
             
-            <!-- Tarjeta 3: Telegram Crew -->
-            <div class="card-pirate panel-card" id="btn-telegram">
-                <div class="telegram-visual-box">
-                    <i class="fa-brands fa-telegram" style="font-size: 32px;"></i>
-                </div>
-                <span class="card-title">TELEGRAM CREW</span>
-                <span class="card-subtitle">TABERNA DE LAS AVES</span>
-            </div>
-            
-            <div class="divisor-nautico-vertical"></div>
-            
-            <!-- Tarjeta 4: Nest on X -->
-            <div class="card-pirate panel-card" id="btn-x">
+            <!-- Tarjeta 3: Nest on X Independiente (Búnker de Anuncios) -->
+            <div class="card-pirate panel-card" id="btn-x-vault">
                 <div class="merkle-visual-box">
-                    <div class="diamond-nest">
-                        <i class="fa-brands fa-x-twitter" style="font-size: 32px; color: var(--glow-cyan-web3);"></i>
-                    </div>
+                    <i class="fa-brands fa-x-twitter" style="font-size: 32px; color: #ffffff;"></i>
                 </div>
-                <span class="card-title" id="merkle-text">NEST ON X</span>
-                <span class="card-subtitle">TESORO DE DIAMANTES</span>
+                <span class="card-title" data-translate data-en="NEST ON X" data-es="NIDO EN X">NEST ON X</span>
+                <span class="card-subtitle" data-translate data-en="DIAMOND VAULT PROTOCOL" data-es="PROTOCOLO BÓVEDA DE DIAMANTE">DIAMOND VAULT PROTOCOL</span>
             </div>
         </section>
 
-        <!-- ANCLAJE DE NOTIFICACIONES ASÍNCRONAS PARA TELEGRAM (MANEJADO POR JS) -->
+        <!-- ÁREA DE NOTIFICACIONES ASÍNCRONAS PARA EL PORTAPAPELES (MANEJADO POR JS) -->
         <div id="notification-area" class="notif-anchor"></div>
+
         <!-- ==========================================================================
-             PARTE 5: TABLÓN DE ANUNCIOS "WANTED" (CORSARIOS TERRESTRES)
+             TABLÓN DE ANUNCIOS "WANTED" (CORSARIOS TERRESTRES CON IMÁGENES LOCALES HD)
              ========================================================================== -->
         <section class="tablon-anuncios-wanted-container">
             <div class="tablon-header-title">
-                <h3>CORSARIOS TERRESTRES: TABLÓN DE RECOMPENSAS</h3>
+                <h3 data-translate data-en="LAND CORSARS: BOUNTY BOARD" data-es="CORSARIOS TERRESTRES: TABLÓN DE RECOMPENSAS">LAND CORSARS: BOUNTY BOARD</h3>
             </div>
             <div class="banner-continuo-wanted row-edictos-wanted">
-                <!-- PEPE -->
+                
+                <!-- CARTEL PEPE -->
                 <div class="wanted-poster poster-pepe-hd">
                     <span class="wanted-stamp-top">WANTED</span>
                     <div class="wanted-image-frame">
-                        <img src="https://coingecko.com" alt="Retrato PEPE" class="enemy-avatar-real">
+                        <img src="assets/pepe-retrato.png" alt="Retrato PEPE" class="enemy-avatar-real">
                     </div>
                     <h4>PEPE</h4>
-                    <span class="blockchain-network-badge eth-network">RED: ETHEREUM MAINNET 🌐</span>
-                    <p class="enemy-criminal-record">Buscado por congestión de red maliciosa en Capa 1 [1.1, 1.2].</p>
+                    <span class="blockchain-network-badge eth-network" data-translate data-en="CHAIN: ETHEREUM MAINNET 🌐" data-es="RED: ETHEREUM MAINNET 🌐">CHAIN: ETHEREUM MAINNET 🌐</span>
+                    <p class="enemy-criminal-record" data-translate 
+                       data-en="Wanted for malicious Layer 1 network congestion and catastrophic gas fee spikes." 
+                       data-es="Buscado por congestión maliciosa en Capa 1 y picos catastróficos en las tarifas de gas.">
+                       Wanted for malicious Layer 1 network congestion and catastrophic gas fee spikes.
+                    </p>
                     <div class="gas-fee-reward-badge">
-                        <span class="reward-title-label">TARIFA DE GAS POR SU CABEZA</span>
+                        <span class="reward-title-label" data-translate data-en="GAS FEE ON THEIR HEAD" data-es="TARIFA DE GAS POR SU CABEZA">GAS FEE ON THEIR HEAD</span>
                         <span class="reward-amount-eth">0.0000000015 ETH</span>
                     </div>
                 </div>
 
                 <div class="divisor-wanted-vertical"></div>
 
-                <!-- DOGECOIN -->
+                <!-- CARTEL DOGECOIN -->
                 <div class="wanted-poster poster-doge-hd">
                     <span class="wanted-stamp-top">WANTED</span>
                     <div class="wanted-image-frame">
-                        <img src="https://coingecko.com" alt="Retrato DOGE" class="enemy-avatar-real">
+                        <img src="assets/doge-retrato.png" alt="Retrato DOGE" class="enemy-avatar-real">
                     </div>
                     <h4>DOGECOIN</h4>
-                    <span class="blockchain-network-badge doge-network">RED: CHAIN PROPIA 🪙</span>
-                    <p class="enemy-criminal-record">Tecnología obsoleta y dependiente de redes sociales [1.1, 1.3].</p>
+                    <span class="blockchain-network-badge doge-network" data-translate data-en="CHAIN: NATIVE MAINNET 🪙" data-es="RED: CHAIN PROPIA 🪙">CHAIN: NATIVE MAINNET 🪙</span>
+                    <p class="enemy-criminal-record" data-translate 
+                       data-en="Wanted for utilizing outdated blockchain architecture and operating completely dependent on social-media corporate manipulation." 
+                       data-es="Buscado por utilizar una arquitectura blockchain obsoleta y operar de forma completamente dependiente de la manipulación corporativa en redes sociales.">
+                       Wanted for utilizing outdated blockchain architecture and operating completely dependent on social-media corporate manipulation.
+                    </p>
                     <div class="gas-fee-reward-badge">
-                        <span class="reward-title-label">TARIFA DE GAS POR SU CABEZA</span>
+                        <span class="reward-title-label" data-translate data-en="GAS FEE ON THEIR HEAD" data-es="TARIFA DE GAS POR SU CABEZA">GAS FEE ON THEIR HEAD</span>
                         <span class="reward-amount-eth">0.000034 ETH</span>
                     </div>
                 </div>
 
                 <div class="divisor-wanted-vertical"></div>
 
-                <!-- PENGUIN -->
+                <!-- CARTEL PENGUIN -->
                 <div class="wanted-poster poster-penguin-hd">
                     <span class="wanted-stamp-top">WANTED</span>
                     <div class="wanted-image-frame">
-                        <img src="https://coingecko.com" alt="Retrato PENGU" class="enemy-avatar-real">
+                        <img src="assets/pengu-retrato.png" alt="Retrato PENGU" class="enemy-avatar-real">
                     </div>
                     <h4>PENGUIN</h4>
-                    <span class="blockchain-network-badge abstract-network">RED: SOLANA / ETH L2 🧊</span>
-                    <p class="enemy-criminal-record">NFTs congelados en busca de liquidez [1.1, 1.4].</p>
+                    <span class="blockchain-network-badge abstract-network" data-translate data-en="CHAIN: SOLANA / ETH L2 🧊" data-es="RED: SOLANA / ETH L2 🧊">CHAIN: SOLANA / ETH L2 🧊</span>
+                    <p class="enemy-criminal-record" data-translate 
+                       data-en="Wanted for locking investor capital in frozen NFTs, starving for actual liquidity across layers." 
+                       data-es="Buscado por bloquear el capital de los inversores en NFTs congelados, hambrientos de liquidez real en las capas.">
+                       Wanted for locking investor capital in frozen NFTs, starving for actual liquidity across layers.
+                    </p>
                     <div class="gas-fee-reward-badge">
-                        <span class="reward-title-label">TARIFA DE GAS POR SU CABEZA</span>
+                        <span class="reward-title-label" data-translate data-en="GAS FEE ON THEIR HEAD" data-es="TARIFA DE GAS POR SU CABEZA">GAS FEE ON THEIR HEAD</span>
                         <span class="reward-amount-eth">0.0000035 ETH</span>
                     </div>
                 </div>
 
                 <div class="divisor-wanted-vertical"></div>
 
-                <!-- NIU LAI -->
+                <!-- CARTEL NIU LAI -->
                 <div class="wanted-poster poster-niulai-hd">
                     <span class="wanted-stamp-top">WANTED</span>
                     <div class="wanted-image-frame">
-                        <img src="https://coingecko.com" alt="Retrato NIU LAI" class="enemy-avatar-real">
+                        <img src="assets/niulai-retrato.png" alt="Retrato NIU LAI" class="enemy-avatar-real">
                     </div>
                     <h4>NIU LAI</h4>
-                    <span class="blockchain-network-badge bsc-network">RED: BNB SMART CHAIN 🐉</span>
-                    <p class="enemy-criminal-record">Transacciones amarradas a validadores centralizados [1.1, 1.5].</p>
+                    <span class="blockchain-network-badge bsc-network" data-translate data-en="CHAIN: BNB SMART CHAIN 🐉" data-es="RED: BNB SMART CHAIN 🐉">CHAIN: BNB SMART CHAIN 🐉</span>
+                    <p class="enemy-criminal-record" data-translate 
+                       data-en="Wanted for running a centralized algorithm bound to gatekept corporate validators." 
+                       data-es="Buscado por ejecutar un algoritmo centralizado amarrado a validadores corporativos con control de acceso.">
+                       Wanted for running a centralized algorithm bound to gatekept corporate validators.
+                    </p>
                     <div class="gas-fee-reward-badge">
-                        <span class="reward-title-label">TARIFA DE GAS POR SU CABEZA</span>
+                        <span class="reward-title-label" data-translate data-en="GAS FEE ON THEIR HEAD" data-es="TARIFA DE GAS POR SU CABEZA">GAS FEE ON THEIR HEAD</span>
                         <span class="reward-amount-eth">0.000031 ETH</span>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- ==========================================================================
-             PARTE 6: MANIFIESTO FINANCIERO (LOS 3 PUERTOS DE ALTA MAR)
+             MANIFIESTO FINANCIERO: LOS 3 PUERTOS DE ALTA MAR (TOKENOMICS PURA)
              ========================================================================== -->
         <section class="tokenomics-scroll-area banner-continuo-tres-puertos">
             <div class="tokenomics-banner-header">
-                <h3>MANIFIESTO FINANCIERO: LOS 3 PUERTOS DE ALTA MAR</h3>
+                <h3 data-translate data-en="FINANCIAL MANIFESTO: THE 3 PORTS OF THE HIGH SEAS" data-es="MANIFIESTO FINANCIERO: LOS 3 PUERTOS DE ALTA MAR">FINANCIAL MANIFESTO: THE 3 PORTS OF THE HIGH SEAS</h3>
             </div>
             <div class="row-pergaminos-tokenomics unificado-puertos-row">
-                <!-- PUERTO I: El Almacén del Supply -->
+                
+                <!-- PUERTO I -->
                 <article class="pergamino-quemado puerto-col border-cannon">
-                    <h4>PUERTO I</h4>
+                    <h4 data-translate data-en="PORT I" data-es="PUERTO I">PORT I</h4>
                     <h5>1,000,000,000 $THND</h5>
-                    <p class="txt-centered-short">EL ALMACÉN DEL SUPPLY</p>
-                    <p class="txt-desc">Suministro fijo de 1,000,000,000 $THND [1.1] en la curva de vinculación de Pons [1.1]. Sin preminados ni tokens ocultos [1.1]. El 100% nace en el mar y el equipo debe comprarlos como cualquier usuario [1.1, 3].</p>
+                    <p class="txt-centered-short" data-translate data-en="THE SUPPLY WAREHOUSE" data-es="EL ALMACÉN DEL SUPPLY">THE SUPPLY WAREHOUSE</p>
+                    <p class="txt-desc" data-translate 
+                       data-en="Hardcoded total supply of 1,000,000,000 $THND. Mint functions are strictly renounced; the supply can never be increased. 100% of tokens were deployed directly into the Pons bonding curve. No pre-mines and no hidden team allocations. The team holds zero tokens and will never buy within the curve to inflate volume or fake on-chain metrics. If we want tokens, we buy from the open market just like any other flyer." 
+                       data-es="Suministro total inmutable programado de 1,000,000,000 $THND. Las funciones de emisión están estrictamente renunciadas; el suministro nunca puede ser aumentado. El 100% de los tokens se desplegaron directamente en la curva de vinculación de Pons. Sin preminados y sin asignaciones ocultas para el equipo. El equipo posee cero tokens y nunca comprará dentro de la curva para inflar el volumen o fingir métricas en cadena. Si queremos tokens, los compramos en el mercado abierto como cualquier otro flyer.">
+                       Hardcoded total supply of 1,000,000,000 $THND. Mint functions are strictly renounced; the supply can never be increased. 100% of tokens were deployed directly into the Pons bonding curve. No pre-mines and no hidden team allocations. The team holds zero tokens and will never buy within the curve to inflate volume or fake on-chain metrics. If we want tokens, we buy from the open market just like any other flyer.
+                    </p>
                 </article>
 
                 <div class="divisor-muelle-vertical"></div>
 
                 <!-- PUERTO II: El Salario y las Quemas -->
                 <article class="pergamino-quemado puerto-col border-ash-red">
-                    <h4>PUERTO II</h4>
-                    <h5>EL SALARIO Y LAS QUEMAS</h5>
-                    <p class="txt-centered-short">LA ADUANA DEL CAPITÁN</p>
-                    <p class="txt-desc">Impuesto del 3% en transacciones destinado al mantenimiento operativo y desarrollo al no contar con tokens asignados [1.1, 3]. Incluye eventos de quema masiva en el mercado abierto tras llegar a Uniswap [1.1, 3].</p>
+                    <h4 data-translate data-en="PORT II" data-es="PUERTO II">PORT II</h4>
+                    <h5 data-translate data-en="TRANSACTION TAX" data-es="IMPUESTO DE TRANSACCIÓN">TRANSACTION TAX</h5>
+                    <p class="txt-centered-short" data-translate data-en="THE CAPTAIN'S CUSTOMS" data-es="LA ADUANA DEL CAPITÁN">THE CAPTAIN'S CUSTOMS</p>
+                    <p class="txt-desc" data-translate 
+                       data-en="Hardcoded 3% transaction tax that can never be increased, decreased, or modified by the deployer. Since the team holds zero tokens, this fee serves as our direct salary and fuels the budget for marketing, infrastructure maintenance, community dynamics, and buyback-and-burn events. Accumulated fees will fund strategic buybacks on the open market after the Uniswap listing, sending tokens to the dead address to permanently reduce the circulating supply." 
+                       data-es="Impuesto de transacción del 3% programado que nunca puede ser aumentado, disminuido o modificado por el implementador. Debido a que el equipo posee cero tokens, esta tarifa sirve como nuestro salario directo y financia el presupuesto para marketing, mantenimiento de infraestructura, dinámicas comunitarias y eventos de recompra y quema. Las tarifas acumuladas financiarán recompras estratégicas en el mercado abierto tras el listado en Uniswap, enviando tokens a la dirección muerta para reducir permanentemente el suministro circulante.">
+                       Hardcoded 3% transaction tax that can never be increased, decreased, or modified by the deployer. Since the team holds zero tokens, this fee serves as our direct salary and fuels the budget for marketing, infrastructure maintenance, community dynamics, and buyback-and-burn events. Accumulated fees will fund strategic buybacks on the open market after the Uniswap listing, sending tokens to the dead address to permanently reduce the circulating supply.
+                    </p>
                 </article>
 
                 <div class="divisor-muelle-vertical"></div>
 
-                <!-- PUERTO III: 0% Utilidad Intrínseca -->
+                <!-- PUERTO III: ETIQUETA REPARADA SIN LETRAS EN EL AIRE -->
                 <article class="pergamino-quemado puerto-col border-rust-gold">
-                    <h4>PUERTO III</h4>
-                    <h5>0% UTILIDAD INTRÍNSECA</h5>
-                    <p class="txt-centered-short">LA TABERNA DE LA VERDAD</p>
-                    <p class="txt-desc">Sin promesas falsas de staking místico o metaversos; un enfoque transparente centrado en especulación, cultura de memes y diversión comunitaria [1.1, 3].</p>
+                    <h4 data-translate data-en="PORT III" data-es="PUERTO III">PORT III</h4>
+                    <h5>0% INTRINSIC UTILITY</h5>
+                    <p class="txt-centered-short" data-translate data-en="THE TAVERN OF TRUTH" data-es="LA TABERNA DE LA VERDAD">THE TAVERN OF TRUTH</p>
+                    
+                       Zero fake roadmap promises. No useless staking mechanisms, no inflationary airdrops, and no shadow listings on sketchy or manipulated central exchanges. Our ultimate mission is to reach the top and crown ourselves as the new king of memecoins and the definitive, community-driven mascot of the Robinhood Chain. We hold absolutely no official relationship with the corporate entity—but it is time to support our own frontier. America for Americans. Pure community backing, organic culture, speculation, and zero corporate control.
+                    </p>
                 </article>
             </div>
         </section>
-        <!-- ==========================================================================
-             PARTE 7: BODEGA DEL CAPITÁN (LAS 5 BOTELLAS DE RON - BROMA INTERNA)
-             ========================================================================== -->
+
+        <!-- SECCIÓN LA BODEGA: GRÁFICO CIRCULAR DE LA SÁTIRA AL 100% -->
         <section class="pergamino-bodega-completo banner-continuo-ron">
             <div class="bodega-banner-header">
-                <h3>EDICTO OFICIAL: LAS 5 BOTELLAS DE RON (BROMA INTERNA)</h3>
+                <h3 data-translate data-en="OFFICIAL EDICT: THE 5 RUM BOTTLES (THE INSIDE JOKE)" data-es="EDICTO OFICIAL: LAS 5 BOTELLAS DE RON (LA BROMA INTERNA)">OFFICIAL EDICT: THE 5 RUM BOTTLES (THE INSIDE JOKE)</h3>
+                <p class="satire-subtitle" data-translate 
+                   data-en="Corporate Tokenomics Satire: 100% Inverted, 0% Team Allocations. Everything belongs to the community." 
+                   data-es="Sátira de Tokenomics Corporativos: 100% Invertido, 0% Asignaciones del Equipo. Todo pertenece a la comunidad.">
+                   Corporate Tokenomics Satire: 100% Inverted, 0% Team Allocations. Everything belongs to the community.
+                </p>
             </div>
             
-            <div class="repisa-roble-container unificado-bodega-row">
-                <!-- Columna 1: Cofre Personal -->
-                <div class="bottle-item muelle-botella" data-index="0">
-                    <div class="bottle-shape ron-chata"></div>
-                    <span class="bottle-label-title">20% COFRE PERSONAL</span>
-                    <p class="bottle-joke-desc">¡Broma de alta mar! Representa el 20% del ron del Capitán [1.1, 3]. Cero tokens reservados; el 100% real está inyectado de forma inmutable en Pons [1.1, 3].</p>
+            <div class="unificado-bodega-row">
+                <div class="pie-chart-wrapper">
+                    <div class="pie-chart-conic"></div>
                 </div>
-
-                <div class="divisor-repisa-vertical"></div>
-
-                <!-- Columna 2: Alianza Corsaria -->
-                <div class="bottle-item muelle-botella" data-index="1">
-                    <div class="bottle-shape whisky-oscura"></div>
-                    <span class="bottle-label-title">20% ALIANZA CORSARIA</span>
-                    <p class="bottle-joke-desc">El destilado exclusivo de la Alianza de los Flyers [1.1, 3]. No hay asignaciones ocultas; el único tesoro verdadero es la preventa [1.1, 3].</p>
-                </div>
-
-                <div class="divisor-repisa-vertical"></div>
-
-                <!-- Columna 3: Defensor Abismo -->
-                <div class="bottle-item muelle-botella" data-index="2">
-                    <div class="bottle-shape tequila-ceramica"></div>
-                    <span class="bottle-label-title">20% DEFENSOR ABISMO</span>
-                    <p class="bottle-joke-desc">Trago amargo para los corsarios del fango [1.1, 3]. Una botella virtual para celebrar cada perro y rana que dejemos atrás [1.1, 3].</p>
-                </div>
-
-                <div class="divisor-repisa-vertical"></div>
-
-                <!-- Columna 4: Bucaneros Ballena -->
-                <div class="bottle-item muelle-botella" data-index="3">
-                    <div class="bottle-shape gin-esmeralda"></div>
-                    <span class="bottle-label-title">20% BUCANEROS BALLENA</span>
-                    <p class="bottle-joke-desc">Licor de alta graduación para las carteras en Uniswap [1.1, 3]. El equipo tiene 0 monedas; si queremos festejar, compramos en la marea [1.1, 3].</p>
-                </div>
-
-                <div class="divisor-repisa-vertical"></div>
-
-                <!-- Columna 5: Abordajes Tardíos -->
-                <div class="bottle-item muelle-botella" data-index="4">
-                    <div class="bottle-shape elixir-polvora"></div>
-                    <span class="bottle-label-title">20% ABORDAJES TARDÍOS</span>
-                    <p class="bottle-joke-desc">La última ronda antes del desembarco [1.1, 3]. Toda la matemática real está en la curva de venta al público para los degen [1.1, 3].</p>
+                
+                <div class="pie-chart-legends">
+                    <div class="legend-item" data-index="0">
+                        <span class="legend-color p1"></span>
+                        <strong data-translate data-en="20% PUBLIC PRESALE (The Personal Chest)" data-es="20% PREVENTA PÚBLICA (El Cofre Personal)">20% PUBLIC PRESALE (The Personal Chest)</strong>
+                        <p data-translate 
+                           data-en="0% Team Reserve. 100% deployed on the Pons bonding curve. The Captain's chest is completely empty." 
+                           data-es="0% Reserva del equipo. 100% desplegado en la curva de vinculación de Pons. El cofre del Capitán está completamente vacío.">
+                           0% Team Reserve. 100% deployed on the Pons bonding curve. The Captain's chest is completely empty.
+                        </p>
+                    </div>
+                    <div class="legend-item" data-index="1">
+                        <span class="legend-color p2"></span>
+                        <strong data-translate data-en="20% LIQUIDITY POOL (The Flyers Alliance)" data-es="20% POOL DE LIQUIDIDAD (La Alianza de los Flyers)">20% LIQUIDITY POOL (The Flyers Alliance)</strong>
+                        <p data-translate 
+                           data-en="0% Insider control. Hardcoded for automated migration and permanent lock on Uniswap." 
+                           data-es="0% Control interno. Programado para miagrarión automatizada y bloqueo permanente en Uniswap.">
+                           0% Insider control. Hardcoded for automated migration and permanent lock on Uniswap.
+                        </p>
+                    </div>
+                    <div class="legend-item" data-index="2">
+                        <span class="legend-color p3"></span>
+                        <strong data-translate data-en="20% ANTI-BOT SHIELD (The Abyss Defender)" data-es="20% ESCUDO ANTI-BOTS (El Defensor del Abismo)">20% ANTI-BOT SHIELD (The Abyss Defender)</strong>
+                        <p data-translate 
+                           data-en="0% Whitelist allocations. Pure fair-launch mechanics designed to crush corporate snipers." 
+                           data-es="0% Asignaciones de lista blanca. Mecánicas puras de lanzamiento justo diseñadas para aplastar a los francotiradores corporativos.">
+                           0% Whitelist allocations. Pure fair-launch mechanics designed to crush corporate snipers.
+                        </p>
+                    </div>
+                    <div class="legend-item" data-index="3">
+                        <span class="legend-color p4"></span>
+                        <strong data-translate data-en="20% DEGEN INCENTIVES (Whale Buccaneers)" data-es="20% INCENTIVOS DEGEN (Bucaneros Ballena)">20% DEGEN INCENTIVES (Whale Buccaneers)</strong>
+                        <p data-translate 
+                           data-en="0% Dev fund. Every single drop of liquidity belongs exclusively to the hands of the real flyers." 
+                           data-es="0% Fondo de desarrollo. Cada gota de liquidez pertenece exclusivamente a las manos de los verdaderos flyers.">
+                           0% Dev fund. Every single drop of liquidity belongs exclusively to the hands of the real flyers.
+                        </p>
+                    </div>
+                    <div class="legend-item" data-index="4">
+                        <span class="legend-color p5"></span>
+                        <strong data-translate data-en="20% ORGANIC BURN (Late Boardings)" data-es="20% QUEMA ORGÁNICA (Abordajes Tardíos)">20% ORGANIC BURN (Late Boardings)</strong>
+                        <p data-translate 
+                           data-en="0% Marketing tokens. Funded purely by the 3% transaction tax on the open market." 
+                           data-es="0% Tokens de marketing. Financiado puramente por el impuesto de transacción del 3% en el mercado abierto.">
+                           0% Marketing tokens. Funded purely by the 3% transaction tax on the open market.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="bodega-text-display" id="bodega-info" style="display: none;"></div>
         </section>
-        <!-- ==========================================================================
-             PARTE 8: NIDO SAGRADO (LAS 4 FASES DE LA ECLOSIÓN AÉREA)
-             ========================================================================== -->
+
+        <!-- THE SACRED NEST: EL ROADMAP DE LAS 4 FASES DE CONQUISTA AÉREA -->
         <section class="nido-sagrado-area banner-continuo-incubadora">
             <div class="incubadora-banner-header">
-                <h3>NIDO SAGRADO: LAS 4 FASES DE LA ECLOSIÓN AÉREA</h3>
+                <h3 data-translate data-en="THE SACRED NEST: THE 4 STAGES OF AERIAL HATCHING" data-es="EL NIDO SAGRADO: LAS 4 FASES DE LA ECLOSIÓN AÉREA">THE SACRED NEST: THE 4 STAGES OF AERIAL HATCHING</h3>
             </div>
             <div class="row-huevos-roadmap unificado-incubadora-row">
-                <!-- Stage 01 -->
+                
+                <!-- STAGE 01 -->
                 <div class="huevo-container fase-col">
-                    <div class="huevo-diamond-shell huevo-mutante-hierro">🥚</div>
+                    <div class="huevo-vector-icon"><i class="fa-solid fa-egg" style="color: #718096; font-size: 45px;"></i></div>
                     <h4>STAGE 01</h4>
-                    <h5>CERO CRONÓMETROS</h5>
-                    <p class="txt-desc">Sin relojes fraudulentos ni etapas infinitas; el contrato inteligente en la curva de Pons no tiene prisa y busca devorar el supply para llenar el nido.</p>
+                    <h5 data-translate data-en="THE SILENT SIEGE" data-es="EL ASEDIO SILENCIOSO">THE SILENT SIEGE</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="Zero Fake Clocks. We operate with NO countdown timers, NO forced deadlines, and NO psychological corporate pressure. The Pons smart contract has no haste—it is designed as an unstoppable gravity well engineered to steadily devour the circulating supply and fill the nest." 
+                       data-es="Cero relojes falsos. Operamos sin temporizadores de cuenta regresiva, sin plazos forzados y sin presión psicológica corporativa. El contrato inteligente de Pons no tiene prisa: está diseñado como un pozo de gravedad imparable programado para devorar constantemente el suministro circulante y llenar el nido.">
+                       Zero Fake Clocks. We operate with NO countdown timers, NO forced deadlines, and NO psychological corporate pressure. The Pons smart contract has no haste—it is designed as an unstoppable gravity well engineered to steadily devour the circulating supply and fill the nest.
+                    </p>
                 </div>
 
                 <div class="divisor-nido-vertical"></div>
 
-                <!-- Stage 02 -->
+                <!-- STAGE 02 -->
                 <div class="huevo-container fase-col">
-                    <div class="huevo-diamond-shell huevo-mutante-cristal">🥚</div>
+                    <div class="huevo-vector-icon"><i class="fa-solid fa-shield-halved" style="color: #00e5ff; font-size: 45px;"></i></div>
                     <h4>STAGE 02</h4>
-                    <h5>CERO ESCUDOS FALSOS</h5>
-                    <p class="txt-desc">Contrato de código abierto, inmutable y funciones renunciadas, sin auditorías de pago falsas. La matemática se defiende sola.</p>
+                    <h5 data-translate data-en="THE RENOUNCED SHELL" data-es="EL CASCARÓN RENUNCIADO">THE RENOUNCED SHELL</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="Code is Law. Pure open-source architecture, fully immutable, and contract ownership officially renounced. We reject paid, corrupted auditing agencies and fake badges of trust. The advanced 256-bit mathematical code stands completely alone—transparent, weaponized, and unrugable." 
+                       data-es="El código es la ley. Arquitectura pura de código abierto, completamente inmutable y la propiedad del contrato oficialmente renunciada. Rechazamos las agencias de auditoría pagadas y corruptas y las insignias falsas de confianza. El código matemático avanzado de 256 bits se defiende solo: transparente, armado e inmune a rug-pulls.">
+                       Code is Law. Pure open-source architecture, fully immutable, and contract ownership officially renounced. We reject paid, corrupted auditing agencies and fake badges of trust. The advanced 256-bit mathematical code stands completely alone—transparent, weaponized, and unrugable.
+                    </p>
                 </div>
 
                 <div class="divisor-nido-vertical"></div>
 
-                <!-- Stage 03 -->
+                <!-- STAGE 03 -->
                 <div class="huevo-container fase-col">
-                    <div class="huevo-diamond-shell huevo-mutante-garras">🥚</div>
+                    <div class="huevo-vector-icon"><i class="fa-solid fa-feather-pointed" style="color: #00ff88; font-size: 45px;"></i></div>
                     <h4>STAGE 03</h4>
-                    <h5>LA ALIANZA DE LOS FLYERS</h5>
-                    <p class="txt-desc">Misión para limpiar el cielo de copias y dominar el mercado abierto mediante la fuerza comunitaria en la Robinhood Chain.</p>
+                    <h5 data-translate data-en="THE FLYERS MOBILIZATION" data-es="LA MOVILIZACIÓN DE LOS FLYERS">THE FLYERS MOBILIZATION</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="Crushing the Clones. A massive air strike coordinated by the true organic community to completely purge the skies of bot-fueled copies and trash tokens. Operating on the modified Arbitrum port of the Robinhood Chain, we deploy tactical social dominance to establish our nest at the absolute peak of the meme culture." 
+                       data-es="Aplastando a los clones. Un ataque aéreo masivo coordinado por la verdadera comunidad orgánica para purgar por completo los cielos de copias impulsadas por bots y tokens basura. Operando en el puerto modificado de Arbitrum de la Robinhood Chain, desplegamos dominación social táctica para establecer nuestro nido en la cima absoluta de la cultura meme.">
+                       Crushing the Clones. A massive air strike coordinated by the true organic community to completely purge the skies of bot-fueled copies and trash tokens. Operating on the modified Arbitrum port of the Robinhood Chain, we deploy tactical social dominance to establish our nest at the absolute peak of the meme culture.
+                    </p>
                 </div>
 
                 <div class="divisor-nido-vertical"></div>
 
-                <!-- Destiny -->
+                <!-- DESTINY -->
                 <div class="huevo-container fase-col">
-                    <div class="huevo-diamond-shell huevo-mutante-fuego">🔥</div>
-                    <h4>DESTINY</h4>
-                    <h5>EL PUERTO DE GRADUACIÓN</h5>
-                    <p class="txt-desc">Al completar 4.2 ETH en Pons, inyecta liquidez en Uniswap, libera tokens y activa quemas masivas del supply.</p>
+                    <div class="huevo-vector-icon"><i class="fa-solid fa-anchor" style="color: #ff007a; font-size: 45px;"></i></div>
+                    <h4 data-translate data-en="DESTINY" data-es="DESTINO">DESTINY</h4>
+                    <h5 data-translate data-en="THE UNISWAP GRADUATION" data-es="LA GRADUACIÓN EN UNISWAP">THE UNISWAP GRADUATION</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="The Volatility Unleashed. The exact moment the Pons curve triggers the hard cap of 4.20 ETH. The smart contract automatically migrates, injects, and locks the liquidity permanently on Uniswap. No human intervention, no gatekeepers. The 3% transaction tax is officially weaponized, igniting massive on-chain buyback-and-burn events that incinerate the circulating supply forever." 
+                       data-es="La volatilidad desatada. El momento exacto en que la curva Pons activa el tope estricto de 4.20 ETH. El contrato inteligente migra, inyecta y bloquea la liquidez de forma automática y permanente en Uniswap. Sin intervención humana, sin intermediarios. El impuesto de transacción del 3% se activa oficialmente como arma, encendiendo eventos masivos de recompra y quema en cadena que incineran el suministro circulante para siempre.">
+                       The Volatility Unleashed. The exact moment the Pons curve triggers the hard cap of 4.20 ETH. The smart contract automatically migrates, injects, and locks the liquidity permanently on Uniswap. No human intervention, no gatekeepers. The 3% transaction tax is officially weaponized, igniting massive on-chain buyback-and-burn events that incinerate the circulating supply forever.
+                    </p>
                 </div>
             </div>
         </section>
+
         <!-- ==========================================================================
-             PARTE 9: LA TABERNA OCULTA (MANUAL DE CONTRABANDO - FINANZAS REALES)
+             LA TABERNA OCULTA (MANUAL DE CONTRABANDO DE BARRILES)
              ========================================================================== -->
-        <section class="taberna-oculta-area banner-continuo-sotano-contrabando">
+        <section class="tabrena-oculta-area banner-continuo-sotano-contrabando">
             <div class="sotano-banner-header">
-                <h3>LA TABERNA OCULTA: MANUAL DE CONTRABANDO (FINANZAS REALES)</h3>
+                <h3 data-translate data-en="THE HIDDEN TAVERN: SMUGGLING MANUAL (REAL FINANCE)" data-es="LA TABERNA OCULTA: MANUAL DE CONTRABANDO (FINANZAS REALES)">THE HIDDEN TAVERN: SMUGGLING MANUAL (REAL FINANCE)</h3>
             </div>
             <div class="row-barriles-contrabando unificado-sotano-row">
-                <!-- Barril 01 -->
+                
+                <!-- BARRIL 01 -->
                 <div class="barril-contrabando-box barril-col">
                     <div class="barril-graphic-inside">
-                        <i class="fa-solid fa-wallet main-wallet-icon" style="font-size: 32px;"></i>
-                        <div class="logos-compat-row">
-                            <span class="wallet-mini-ico">🦊</span>
-                            <span class="wallet-mini-ico">🌐</span>
-                            <span class="wallet-mini-ico">🔗</span>
+                        <i class="fa-solid fa-wallet" style="font-size: 32px; color: #64748b;"></i>
+                        <div class="logos-compat-row" style="margin-top: 5px;">
+                            <span>🦊</span><span>🌐</span><span>🔗</span>
                         </div>
                     </div>
-                    <h4>BARRIL 01</h4>
-                    <h5>PREPARA EL BARCO</h5>
-                    <p class="txt-desc">Crea una "Burner Wallet" (Billetera de Sacrificio) independiente en tu Web3 para interactuar con preventas y evitar conectar tu tesoro principal [1.1].</p>
+                    <h4>BARREL 01</h4>
+                    <h5 data-translate data-en="PREPARE THE WARSHIP" data-es="PREPARA EL BARCO DE GUERRA">PREPARE THE WARSHIP</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="Deploy the Burner Wallet. Create a clean, independent secondary account strictly to interact with the Pons curve. This is a non-custodial environment: you can completely delete or wipe this burner account from your software at any moment without ever affecting your main vault. Isolate your gold—test the waters with zero friction." 
+                       data-es="Despliega la Billetera de Sacrificio. Crea una cuenta secundaria limpia e independiente estrictamente para interactuar con la curva de Pons. Este es un entorno no custodio: puedes borrar o eliminar por completo esta cuenta de sacrificio de tu software en cualquier momento sin afectar jamás a tu bóveda principal. Aísla tu oro: prueba las aguas con cero fricción.">
+                       Deploy the Burner Wallet. Create a clean, independent secondary account strictly to interact with the Pons curve. This is a non-custodial environment: you can completely delete or wipe this burner account from your software at any moment without ever affecting your main vault. Isolate your gold—test the waters with zero friction.
+                    </p>
                 </div>
-
-                <div class="divisor-barril-vertical"></div>
-
-                <!-- Barril 02 -->
+                
+                <!-- BARRIL 02 -->
                 <div class="barril-contrabando-box barril-col">
                     <div class="barril-graphic-inside">
-                        <div class="gears-bridge"><i class="fa-brands fa-ethereum" style="font-size: 28px;"></i> <i class="fa-solid fa-link"></i> <i class="fa-solid fa-cube"></i></div>
+                        <i class="fa-solid fa-gears" style="font-size: 32px; color: #00e5ff;"></i>
                     </div>
-                    <h4>BARRIL 02</h4>
-                    <h5>CARGA LA PÓLVORA</h5>
-                    <p class="txt-desc">Configura la <strong>Robinhood Chain (Chain ID: 4663)</strong> pagando gas en Ether ($ETH) para asegurar el flujo hacia la curva de Pons [1.1].</p>
+                    <h4>BARREL 02</h4>
+                    <h5 data-translate data-en="LOAD THE BLACK POWDER" data-es="CARGA LA PÓLVORA NEGRA">LOAD THE BLACK POWDER</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="Calibrate the Fleet. Tender Parakeet operates exclusively on the Robinhood Chain (Chain ID: 4663). This network is a custom-engineered, regulated port of Arbitrum utilizing Ether ($ETH) for native gas optimization. Set your compass to the exact RPC coordinates to ensure smooth sailing." 
+                       data-es="Calibra la Flota. Tender Parakeet opera exclusivamente en la Robinhood Chain (Chain ID: 4663). Esta red es un puerto de Arbitrum modificado, regulado y diseñado a medida que utiliza Ether ($ETH) para la optimización nativa del gas. Configura tu brújula con las coordenadas RPC exactas para asegurar una navegación fluida.">
+                       Calibrate the Fleet. Tender Parakeet operates exclusively on the Robinhood Chain (Chain ID: 4663). This network is a custom-engineered, regulated port of Arbitrum utilizing Ether ($ETH) for native gas optimization. Set your compass to the exact RPC coordinates to ensure smooth sailing.
+                    </p>
                 </div>
 
-                <div class="divisor-barril-vertical"></div>
-
-                <!-- Barril 03 -->
+                <!-- BARRIL 03 -->
                 <div class="barril-contrabando-box barril-col">
                     <div class="barril-graphic-inside">
-                        <div class="verification-leds-stack">
-                            <span class="led-indicator-row green-on"><i class="fa-solid fa-circle-check"></i> Red OK (4663)</span>
-                            <span class="led-indicator-row green-on"><i class="fa-solid fa-circle-check"></i> Saldo Gas OK</span>
-                            <span class="led-indicator-row green-on"><i class="fa-solid fa-circle-check"></i> Pons Link</span>
-                        </div>
+                        <i class="fa-solid fa-list-check" style="font-size: 32px; color: #00ff88;"></i>
                     </div>
-                    <h4>BARRIL 03</h4>
-                    <h5>EL FILTRO DE ALTA MAR</h5>
-                    <p class="txt-desc">Verifica la conexión al nodo 4663, el saldo de $ETH y usa únicamente el enlace oficial de Pons Family [1.1].</p>
+                    <h4>BARREL 03</h4>
+                    <h5 data-translate data-en="THE SMUGGLER'S FILTER" data-es="EL FILTRO DEL CONTRABANDISTA">THE SMUGGLER'S FILTER</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="The Network Verification: Ensure your Ether ($ETH) is fully compatible and bridging directly within the Robinhood Chain parameters (Chain ID: 4663). Never blind-send heavy bags. We strictly advise you to transfer a tiny fraction of native $ETH first as a test run to verify that your connection, gas fees, and node compatibility are operating flawlessly before entering the marea." 
+                       data-es="La Verificación de Red: Asegúrate de que tu Ether ($ETH) sea completamente compatible y esté cruzando directamente dentro de los parámetros de la Robinhood Chain (Chain ID: 4663). Nunca envíes bolsas pesadas a ciegas. Te aconsejamos estrictamente transferir primero una fracción diminuta de $ETH como prueba para verificar que tu conexión, tarifas de gas y compatibilidad de nodo operen sin fallos antes de entrar a la marea.">
+                       The Network Verification: Ensure your Ether ($ETH) is fully compatible and bridging directly within the Robinhood Chain parameters (Chain ID: 4663). Never blind-send heavy bags. We strictly advise you to transfer a tiny fraction of native $ETH first as a test run to verify that your connection, gas fees, and node compatibility are operating flawlessly before entering the marea.
+                    </p>
                 </div>
 
-                <div class="divisor-barril-vertical"></div>
-
-                <!-- Barril Final -->
+                <!-- BARRIL FINAL -->
                 <div class="barril-contrabando-box barril-col">
                     <div class="barril-graphic-inside">
-                        <div class="gold-amount-badge" style="font-weight: 900; color: #ffd700;">4.2 ETH</div>
-                        <div class="fire-flames-animated">🔥</div>
+                        <div class="gold-amount-badge" style="font-weight: 900; color: #ffd700; font-size: 22px;">4.20 ETH</div>
+                        <i class="fa-solid fa-fire-flames-curved" style="color: #ff007a; font-size: 24px; margin-top: 5px;"></i>
                     </div>
-                    <h4>BARRIL FINAL</h4>
-                    <h5>EL PUERTO DE DESTINO</h5>
-                    <p class="txt-desc">Al alcanzar los 4.2 ETH en la curva de Pons, se migra la liquidez a Uniswap y se activan quemas por comisiones del 3% [1.1]. El código completo de los bloques detallados puede consultarse en la documentación referenciada [1.1].</p>
+                    <h4>FINAL BARREL</h4>
+                    <h5 data-translate data-en="THE DESTINATION PORT" data-es="EL PUERTO DE DESTINO">THE DESTINATION PORT</h5>
+                    <p class="txt-desc" data-translate 
+                       data-en="The Graduation Influx. The exact second the automated curve touches 4.20 ETH, the code locks the gates. The contract autonomously deploys the entire liquidity pool directly into Uniswap, permanently burning the LP keys. From that point on, the 3% creator tax fuels relentless buybacks and supply incineration." 
+                       data-es="El Influjo de la Graduación. El segundo exacto en que la curva automatizada toca los 4.20 ETH, el código cierra las compuertas. El contrato despliega autónomamente todo el pool de liquidez directo en Uniswap, quemando permanentemente las llaves LP. A partir de ese momento, el impuesto del 3% del creador financia recompras implacables e incineración del suministro.">
+                       The Graduation Influx. The exact second the automated curve touches 4.20 ETH, the code locks the gates. The contract autonomously deploys the entire liquidity pool directly into Uniswap, permanently burning the LP keys. From that point on, the 3% creator tax fuels relentless buybacks and supply incineration.
+                    </p>
                 </div>
             </div>
         </section>
-        <!-- ==========================================================================
-             PARTE 10: LA CORTE CORSARIA, ISLA DE RIESGO Y CIERRES DEL SITIO
-             ========================================================================== -->
-        <!-- SECCIÓN DE LA CORTE CORSARIA (Los 30 acordiones se inyectan aquí con JS) -->
+
+        <!-- LA CORTE CORSARIA (30 ACORDEONES ELÁSTICOS INTERACTIVOS BILINGÜES) -->
         <section class="corte-corsaria-pergamino banner-continuo-corte-corsaria">
-            <h3>LA CORTE CORSARIA: LOS 30 VEREDICTOS DE ALTA MAR</h3>
+            <h3 data-translate data-en="THE COURT OF THE HIGH SEAS: THE 30 DEFINITIVE VERDICTS" data-es="LA CORTE DE ALTA MAR: LOS 30 VEREDICTOS DEFINITIVOS">THE COURT OF THE HIGH SEAS: THE 30 DEFINITIVE VERDICTS</h3>
             <div class="grid-acordeones-30" id="corte-faq-grid"></div>
-            
             <div class="escudo-altamar-sello-bloque">
-                <p>CÓDIGO FUENTE VERIFICADO Y LIQUIDIDAD DEPOSITADA EN EL IMPLEMENTADOR AUTOMATIZADO.</p>
+                <p data-translate 
+                   data-en="VERIFIED SOURCE CODE AND LIQUIDITY LOCKED WITHIN THE AUTOMATED IMPLEMENTER PROTOCOL." 
+                   data-es="CÓDIGO FUENTE VERIFICADO Y LIQUIDIDAD BLOQUEADA BAJO EL PROTOCOLO IMPLEMENTADOR AUTOMATIZADO.">
+                   VERIFIED SOURCE CODE AND LIQUIDITY LOCKED WITHIN THE AUTOMATED IMPLEMENTER PROTOCOL.
+                </p>
             </div>
         </section>
 
-        <!-- ISLA DEL PENSAMIENTO (3 Decretos de Riesgo Absoluto) -->
+        <!-- LA ISLA DEL PENSAMIENTO (LOS 3 DECRETOS DE RIESGO ABSOLUTO) -->
         <section class="isla-pensamiento-canvas banner-continuo-descargos-finales">
             <h2 class="monumental-brand-title">TENDER PARAKEET</h2>
             <div class="row-objetos-riesgo-mezclados unificado-decretos-row">
+                
+                <!-- DECRETO 01 -->
                 <div class="object-box-risk decreto-col wood-barrel">
-                    <span>🛢️ DECRETO 01: VOLATILIDAD</span>
-                    <p>Las memecoins operan en un entorno especulativo y de alta volatilidad [1.1].</p>
+                    <span data-translate data-en="🛢️ DECREE 01: VOLATILITY & SLIPPAGE" data-es="🛢️ DECRETO 01: VOLATILIDAD Y DESLIZAMIENTO">🛢️ DECREE 01: VOLATILITY & SLIPPAGE</span>
+                    <p data-translate 
+                       data-en="Extreme Volatility Warning: Memecoins operate in a high-risk speculative environment. Price swings on the bonding curve and open market are violent. Always audit your slippage settings before confirming any transaction. High slippage protects your order from failing in rapid waves, but it can execute at higher prices. Adjust your gears carefully; tight slippage rules the marea." 
+                       data-es="Alerta de Volatilidad Extrema: Las memecoins operan en un entorno especulativo de alto riesgo. Las fluctuaciones de precio en la curva de vinculación y el mercado abierto son violentas. Audita siempre tus ajustes de deslizamiento (slippage) antes de confirmar cualquier transacción. Un slippage alto protege tu orden de fallar en olas rápidas, pero puede ejecutarse a precios más altos. Ajusta tus engranajes con cuidado; un slippage preciso gobierna la marea.">
+                       Extreme Volatility Warning: Memecoins operate in a high-risk speculative environment. Price swings on the bonding curve and open market are violent. Always audit your slippage settings before confirming any transaction. High slippage protects your order from failing in rapid waves, but it can execute at higher prices. Adjust your gears carefully; tight slippage rules the marea.
+                    </p>
                 </div>
+                
+                <!-- DECRETO 02 -->
                 <div class="object-box-risk decreto-col diamond-egg">
-                    <span>🥚 DECRETO 02: UTILIDAD</span>
-                    <p>El token $THND tiene una utilidad inicial del 0% [1.1, 3].</p>
+                    <span data-translate data-en="🥚 DECREE 02: GRADUATION PROTOCOL" data-es="🥚 DECRETO 02: PROTOCOLO DE GRADUACIÓN">🥚 DECREE 02: GRADUATION PROTOCOL</span>
+                    <p data-translate 
+                       data-en="The Inmutable Graduation Protocol: The 4.20 ETH hard cap is automated by smart contract mathematics. The exact millisecond the cap is hit, the contract freezes the curve and autonomously deploys the entire liquidity pool directly into Uniswap, permanently burning the LP keys. If you buy near the top of the curve, understand the immediate transition to the open-market order book. Audit the contract details on Blockscout to verify the inmutable state in real-time." 
+                       data-es="El Protocolo de Graduación Inmutable: El tope estricto de 4.20 ETH está automatizado por la matemática del contrato inteligente. El milisegundo exacto en que se alcanza el tope, el contrato congeal la curva y despliega autónomamente todo el pool de liquidez directo en Uniswap, quemando permanentemente las llaves LP. Si compras cerca del tope de la curva, comprende la transición inmediata al libro de órdenes del mercado abierto. Audita los detalles del contrato en Blockscout para verificar el estado inmutable en tiempo real.">
+                       The Inmutable Graduation Protocol: The 4.20 ETH hard cap is automated by smart contract mathematics. The exact millisecond the cap is hit, the contract freezes the curve and autonomously deploys the entire liquidity pool directly into Uniswap, permanently burning the LP keys. If you buy near the top of the curve, understand the immediate transition to the open-market order book. Audit the contract details on Blockscout to verify the inmutable state in real-time.
+                    </p>
                 </div>
+                
+                <!-- DECRETO 03 -->
                 <div class="object-box-risk decreto-col glass-bottle">
-                    <span>🍾 DECRETO 03: INMUTABILIDAD</span>
-                    <p>Las transacciones en la red son inmutables e irreversibles por código [1.1].</p>
+                    <span data-translate data-en="🍾 DECREE 03: CHAIN COMPATIBILITY" data-es="🍾 DECRETO 03: COMPATIBILIDAD DE RED">🍾 DECREE 03: CHAIN COMPATIBILITY</span>
+                    <p data-translate 
+                       data-en="Mandatory Network Check: Your Ether ($ETH) must be bridged and fully compatible with the specific Robinhood Chain parameters (Chain ID: 4663). Sending native Layer 1 $ETH or funds from incompatible EVM networks directly to the contract will result in catastrophic, irreversible loss. The code cannot refund errant transactions. Test the flow with a tiny fraction first. Verify or perish." 
+                       data-es="Verificación de Red Obligatoria: Tu Ether ($ETH) debe estar puenteado y ser completamente compatible con los parámetros específicos de la Robinhood Chain (Chain ID: 4663). Enviar $ETH nativo de Capa 1 o fondos de redes EVM incompatibles directamente al contrato resultará en una pérdida catastrófica e irreversible. El código no puede reembolsar transacciones erróneas. Prueba el flujo con una fracción de centavo primero. Verifica o perece.">
+                       Mandatory Network Check: Your Ether ($ETH) must be bridged and fully compatible with the specific Robinhood Chain parameters (Chain ID: 4663). Sending native Layer 1 $ETH or funds from incompatible EVM networks directly to the contract will result in catastrophic, irreversible loss. The code cannot refund errant transactions. Test the flow with a tiny fraction first. Verify or perish.
+                    </p>
                 </div>
             </div>
         </section>
+
+        <!-- ==========================================================================
+             🚢 EL CIERRE DE ALTA MAR: EL GRAN MURAL PANORÁMICO DE DESEMBARCO FINAL
+             ========================================================================== -->
+        <section class="mural-desembarco-final-container">
+            <img src="assets/rivales-pericos.png" alt="Mural Oficial de Alta Mar - Tender Parakeet" class="mural-final-hd-asset">
+        </section>
+
     </main>
 </body>
 </html>
