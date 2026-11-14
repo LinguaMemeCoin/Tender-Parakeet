@@ -1,11 +1,11 @@
-# 🏴‍☠️ TENDER PARAKEET — PROYECTO DE LINGUA 🦜
+# 🏴‍☠️ TENDER PARAKEET ($THND) — PROYECTO DE LINGUA 🦜
 
 <div align="center">
 
 <!-- LOGO OFICIAL CON PERICO TIERNO VERDE Y BANDERA DEL MURCIÉLAGO BLANCO HONDUREÑO -->
 <img src="logo-readme.png" alt="Tender Parakeet - Proyecto de Lingua" width="600" />
 
-### 🦅 EL MONARCA ABSOLUTO DEL AIRE DE LA ROBINHOOD CHAIN 🦅
+### 🦅 EL RECETARIO (THE GRIMOIRE) — LABORATORIO EDUCATIVO EN ROBINHOOD CHAIN 🦅
 
 ---
 
@@ -18,53 +18,80 @@
 | 💀 | 📜 EDICTO OFICIAL DE INTELIGENCIA NAVAL CRIPTOGRÁFICA 📜 | 💀 |
 | :--- | :---: | :--- |
 | | | |
-| 💀 | **Transparencia Total — Cero Tokens para el Capitán** | 💀 |
+| 💀 | **Transparencia Total — Cero Tokens para el Capitán — 100% Educativo** | 💀 |
 
 </div>
 
-### 📊 Especificaciones Técnicas del Contrato Inteligente
+---
 
-Las coordenadas están grabadas a fuego directo en la cadena de bloques [4.1]. Este documento certifica los parámetros técnicos auditables de la preventa para la tripulación de alta mar y los registros de indexación global [4.1].
+## 🧭 Nuestro Manifiesto Único (Eslogan Oficial)
 
-*   **Smart Contract (CA):** `0x54BF9EcF6b09E86DE19688E636a0368cc8844020`
-*   **Red de Operación / Blockchain:** **Robinhood Chain** (Requiere configuración de RPC personalizado)
-*   **Suministro Máximo Fijo:** **1,000,000,000** \$THND (No se pueden acuñar más monedas)
-*   **Meta de Graduación de la Curva:** **4.2 ETH** acumulados estrictamente en Pons Launchpad
-*   **Asignación para el Equipo (Dev):** **0%** (Normas estrictas de Fair Launch absoluto)
-*   **Impuesto del Código (Ecosystem Tax):** **3% Creator Tax** (Se ejecuta únicamente al graduarse en Uniswap)
-*   **Custodia del Oro de la Preventa:** **100% Descentralizada** y resguardada por contratos inteligentes robóticos
+> *"Somos un proyecto comunitario y educativo. Usamos las memecoins como herramienta y las culturas de América como apoyo para evitar estafas, pérdidas de dinero y compras por impulso (FOMO). Enseñamos desde nuestra experiencia real, nunca vendiendo humo, señales, grupos VIP ni enlaces de referido. Como crecemos de forma natural, no buscamos listados rápidos, modas pasajeras ni falsas promesas de multiplicar tu dinero por 1000. Queremos avanzar paso a paso junto a la comunidad. Porque cada centavo cuenta y aprender no tiene precio."*
+
+Nacido en **Honduras con $0 de presupuesto**, **Tender Parakeet (Project Lingua)** utiliza una red económica como taller práctico para aprender cómo funciona realmente la blockchain sin arriesgar ahorros en tarifas absurdas de gas.
 
 ---
 
-## 🗺️ Enrutamiento de Liquidez y Graduación Automática
+## 🌐 Arquitectura del Ecosistema y Enlaces Oficiales
 
-Cualquier plataforma de agregación e indexación de medios (Alerta **CoinGabbar**) debe rastrear los datos del mercado única y exclusivamente a través de la dirección oficial del contrato inteligente (CA) [4.1].
-
-*   **Aviso de Liquidez Inicial:** En estricto cumplimiento con la arquitectura del contrato, **\$THND mostrará un 0% de liquidez visible en los trackers de DEX públicos antes de su graduación [4.1].** Todo el capital permanece bloqueado e inaccesible de forma segura dentro del motor algorítmico de la curva de vinculación (*Bonding Curve*) de *Pons* [4.1].
-*   **El Salto Deflacionario:** Al alcanzar la meta inalterable de **4.2 ETH**, el contrato inteligente ejecuta de forma automatizada la migración hacia **Uniswap v4**, inyectando el pozo acumulado de forma permanente y destruyendo las llaves de acceso para siempre (*LP Keys Burned*) [4.1]. En ese mismísimo milisegundo, se desata el **Acelerador Deflacionario**: el 50% de todas las comisiones acumuladas del creador se enviarán a la dirección muerta de destrucción perpetua [4.1].
-
----
-
-## 🛡️ Protocolo de Seguridad de Alta Mar (Cero Contacto)
-
-Para salvaguardar tu botín de los depredadores del mercado abierto, la tripulación de **Project Lingua** establece una política inquebrantable de cero contacto directo [4.1]:
-
-1.  **Cero Airdrops o Sorteos:** No realizamos ninguna actividad promocional de distribución gratuita ni sorteos ocultos. Toda adquisición legítima se ejecuta únicamente a través de la interfaz de *Pons* [4.1].
-2.  **Cero Solicitudes de Tarifas o Datos:** Jamás te pediremos datos de identificación personal ni cobros de comisiones extras para procesar tus retiros de tokens [4.1].
-3.  **Cero Mensajes Directos Privados (DM):** Ningún miembro oficial del equipo te escribirá jamás por privado en ninguna red social [4.1]. Nunca te pediremos tus 12 palabras de recuperación ni tu frase semilla (*Seed Phrase*) [4.1]. Quien lo hace, es un absoluto estafador en el puerto [4.1].
-4.  **Uso Recomendado de Burner Wallet:** Como regla de oro de seguridad Web3, aconsejamos estrictamente crear una billetera secundaria aislada exclusivamente para interactuar con esta preventa, manteniendo tu bóveda principal totalmente desconectada de los riesgos de alta mar [4.1].
+| Nombre Oficial | Función en el Ecosistema | Enlace / Coordenada Verificada |
+| :--- | :--- | :--- |
+| **🏥 El Hospital Cripto** (*The Crypto Hospital*) | Red Layer 2 oficial donde ocurren las operaciones reales con gas en centavos. | **Robinhood Chain** (`Chain ID: 4663`) — RPC: `https://robinhood.com` |
+| **🧪 El Laboratorio On-Chain** (*The On-Chain Lab*) | Curva automática de precios donde vive el 100% del suministro antes de graduarse. | [Pons Launchpad ($THND)](https://ponsfamily.com) |
+| **🔭 El Periscopio** (*The Periscope*) | Explorador abierto para auditar el contrato y verificar que no tiene dueño. | [Blockscout Robinhood Chain](https://blockscout.com) |
+| **🦄 Puerto Libre Uniswap** (*Free Port Uniswap*) | Destino automático de la liquidez bloqueada al alcanzar exactamente los 4.20 ETH. | [Uniswap App](https://uniswap.org) |
+| **🩺 La Consulta** (*Binance Square*) | Artículos en español de Dr. Lingua: experiencias reales y prevención de estafas. | [Binance Square](https://binance.com) |
+| **⚗️ El Boticario** (*Farcaster*) | Bitácora técnica en inglés: fórmulas, pruebas en vivo y seguimiento on-chain. | [Farcaster](https://warpcast.com) |
+| **⏳ Sala de Espera** (*Telegram*) | Canal comunitario en pausa temporal hasta reunir 200 miembros reales y orgánicos. | [Telegram Oficial](https://t.me) |
 
 ---
 
-## ⚠️ Decreto de Riesgo del Capitán (High-Risk Entertainment Mandate)
+## 📊 Especificaciones Técnicas del Contrato Inteligente
 
-Este proyecto ha sido diseñado estrictamente como un vehículo de entretenimiento criptográfico y exploración especulativa de máximo riesgo basado en la fauna y el patrimonio regional del continente americano [4.1]. **Estipulamos que \$THND no constituye una inversión financiera, no ofrece acciones comerciales de ninguna entidad ni promete rendimientos de capital preservado [4.1].**
+Las coordenadas están grabadas de forma inmutable en la cadena de bloques. Este documento certifica los parámetros técnicos auditables de **$THND**:
 
-El equipo de desarrollo ejerce cero control sobre las restricciones geográficas de red o los bloqueos locales impuestos por las jurisdicciones soberanas de tu región [4.1]. Comercia con la cabeza despejada, arriesgando únicamente el oro degen que estés estrictamente dispuesto a perder bajo las leyes implacables de la blockchain [4.1]. ¡Vuela alto con garras de diamante, o quédate en el suelo como un no volador! [4.1]
+* **Smart Contract (CA):** `0x54BF9EcF6b09E86DE19688E636a0368cc8844020`
+* **Contrato de la Curva (Pons):** `0x16c8fe…26b2d8`
+* **Red de Operación:** **Robinhood Chain** (`Chain ID: 4663`) — Combustible nativo: **ETH-RH** (ETH puenteado a Red 4663)
+* **Suministro Máximo Fijo:** **1,000,000,000 $THND** (100% enviado a la curva; funciones de emisión renunciadas para siempre)
+* **Asignación para el Equipo (Dev):** **0%** (Cero minado previo, cero billeteras ocultas y cero listas blancas)
+* **Impuesto por Transferir (Transfer Tax):** **0%** (Contrato limpio estándar; mover tus tokens no resta monedas ni bloquea futuros listados)
+* **Comisión de Creador (Creator Fee):** **3% en ETH** (Tarifa nativa del protocolo en Pons acumulada en ETH para sostener el trabajo operativo y educativo; al menos el **50%** de estas comisiones se destina a recompras y quemas por hitos comunitarios como gratitud por el apoyo, sin constituir promesa de pago ni inversión)
+* **Meta de Graduación Automática:** **4.20 ETH** acumulados de forma orgánica en Pons
+
+---
+
+## 🗺️ La Ruta del Contrato y Bitácora de Transparencia
+
+1. **📍 Nacimiento en la Curva de Pons:** El 100% de los tokens vive dentro del contrato automático en Pons Family. Antes de completar los 4.20 ETH, los agregadores externos mostrarán 0% de liquidez en DEX porque todo el capital permanece resguardado dentro de la curva automática.
+2. **⚓ Construcción Orgánica:** Avanzamos paso a paso mediante educación real, sin bots de volumen ni marketing pagado.
+3. **🌊 Meta de los 4.20 ETH:** Al alcanzar exactamente los 4.20 ETH por apoyo natural, el contrato cierra la curva automáticamente sin intervención humana.
+4. **🦄 Migración a Puerto Libre Uniswap:** El código envía toda la liquidez directamente a Uniswap y quema las llaves de acceso para siempre (*LP Keys Burned*).
+
+> **📜 Bitácora de Aprendizaje (Nota de Transparencia):**
+> Al lanzar el contrato en septiembre de 2026 cometimos el error de novato de usar lenguaje típico de FOMO en la descripción inicial de Pons (texto que queda grabado de forma inmutable en la plataforma). Tras intentar construir en X sin presupuesto y ser saturados por redes de bots de spam, aprendimos que ese camino no construye nada real. Hoy mantenemos exactamente el mismo contrato limpio y renunciado, pero con un enfoque 100% educativo y libre de humo.
+
+---
+
+## 🛡️ Protocolo de Supervivencia Práctica (Reglas de Oro)
+
+1. **Usa una Billetera Desechable (Burner Wallet):** Crea una cartera totalmente nueva e independiente (con su propia frase semilla de 12 palabras anotada en papel) para interactuar con contratos nuevos. Nunca uses tu cartera de ahorros principales.
+2. **Verifica la Red y el ETH-RH:** Asegúrate de operar exclusivamente en **Robinhood Chain (Chain ID: 4663)** con ETH puenteado (donde el gas cuesta centavos). Haz siempre una prueba con centavos antes de mover más saldo.
+3. **Configura el Antideslizamiento (Slippage) al 4%:** Ajusta el slippage manualmente en **4% mínimo** (para cubrir la comisión de curva del 3% más 1% de margen por volatilidad); nunca lo dejes en el 20% predeterminado.
+4. **Cero Contacto Privado (Anti-Phishing):** Ningún miembro del equipo te escribirá jamás por mensaje directo ni te pedirá tus 12 palabras, claves privadas o verificaciones biométricas (KYC).
+5. **Auditoría Propia en El Periscopio:** Antes de operar, verifica siempre en `https://blockscout.com` que el contrato sea el oficial (`0x54BF...4020`) y que la casilla `owner` esté renunciada (`0x0000...0000`).
+
+---
+
+## ⚠️ Decreto de Riesgo y Aviso Legal
+
+**Tender Parakeet ($THND) — Project Lingua** es un espacio 100% educativo, cultural y comunitario basado en el patrimonio del continente americano. **No somos asesores financieros, no vendemos señales de trading, no ofrecemos acciones comerciales ni garantizamos rendimientos.**
+
+Las memecoins operan en un entorno altamente volátil y especulativo donde puedes perder la totalidad del capital utilizado. Al ser una infraestructura descentralizada y no custodial, cada usuario es el único responsable de sus decisiones, la custodia de sus llaves privadas y el cumplimiento de las leyes locales de su jurisdicción.
 
 ---
 
 <div align="center">
   <strong>DIFERENTES CULTURAS, UNA SOLA LINGUA 🌎</strong><br>
-  © 2026 Tender Parakeet (\$THND). Proyecto de Entretenimiento Meme Absoluto.
+  <em>Nacido en Honduras con $0 de presupuesto — Porque cada centavo cuenta y aprender no tiene precio.</em>
 </div>
